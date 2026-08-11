@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import { toProblemView, groupProblemsByOj, assertOjRegistered, paginate } from '../../lib/problem';
+import SidebarLayout from '../../layouts/SidebarLayout.astro';
+import OjSidebar from '../../components/OjSidebar.astro';
+import ProblemList from '../../components/ProblemList.astro';
+
+const entries = await getCollection('problems');
+const problems = entries.map(toProblemView);
+const byOj = groupProblemsByOj(problems);
+
+export async function getStaticPaths() {
+  const allEntries = await getCollection('problems');
+  const ojIds = [...new Set(allEntries.map((e) => e.data.oj))];
+  return ojIds
+    .filter((oj) => {
+      assertOjRegistered(oj);
+      return true;
+    })
+    .map((oj) => ({ params: { oj } }));
+}
+
+const { oj } = Astro.params;
+const adapter = assertOjRegistered(oj!);
+const fullList = byOj.get(oj!) ?? [];
+const pagination = paginate(fullList, 1);
+---
+
+<SidebarLayout title={`${adapter.displayName} · Awesome Cangjie`}>
+  <Fragment slot="sidebar">
+    <OjSidebar activeOj={oj} counts={byOj} />
+  </Fragment>
+
+  <header class="mb-8">
+    <h1 class="text-2xl font-bold tracking-tight" style="color: var(--text);">
+      {adapter.displayName}
+    </h1>
+    <p class="mt-1 font-mono text-xs" style="color: var(--text-faint);">
+      [{adapter.id}] · {pagination.total} 题
+    </p>
+  </header>
+
+  <ProblemList oj={oj!} pagination={pagination} />
+</SidebarLayout>

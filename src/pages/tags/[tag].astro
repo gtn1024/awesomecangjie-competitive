@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import { toProblemView, groupProblemsByTag, groupProblemsByOj } from '../../lib/problem';
+import SidebarLayout from '../../layouts/SidebarLayout.astro';
+import OjSidebar from '../../components/OjSidebar.astro';
+
+const allProblems = (await getCollection('problems')).map(toProblemView);
+
+export async function getStaticPaths() {
+  const problems = (await getCollection('problems')).map(toProblemView);
+  const byTag = groupProblemsByTag(problems);
+  return [...byTag.keys()].map((tag) => ({
+    params: { tag },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+const byTag = groupProblemsByTag(allProblems);
+const byOj = groupProblemsByOj(allProblems);
+const items = byTag.get(tag) ?? [];
+---
+
+<SidebarLayout title={`${tag} · 标签 · Awesome Cangjie`}>
+  <Fragment slot="sidebar">
+    <OjSidebar counts={byOj} />
+  </Fragment>
+
+  <header class="mb-8">
+    <div class="font-mono text-xs mb-3 flex items-center gap-2" style="color: var(--text-faint);">
+      <a href="/tags/" class="hover:text-[var(--color-accent)] transition-colors">标签</a>
+      <span>/</span>
+    </div>
+    <h1 class="text-2xl font-bold tracking-tight" style="color: var(--text);">
+      {tag}
+    </h1>
+    <p class="mt-1 font-mono text-xs" style="color: var(--text-faint);">
+      {items.length} 题
+    </p>
+  </header>
+
+  {items.length === 0 ? (
+    <p class="font-mono text-sm" style="color: var(--text-faint);">暂无题目</p>
+  ) : (
+    <ul class="space-y-1">
+      {items.map((p) => (
+        <li>
+          <a
+            href={`/${p.oj}/solution/${p.pid}`}
+            class="group flex items-baseline gap-3 rounded-[var(--radius-tag)] px-3 py-2.5 transition-colors hover:bg-[var(--bg-hover)] active:translate-y-px"
+          >
+            <span class="font-mono text-xs shrink-0 px-1.5 py-0.5 rounded-[var(--radius-tag)]" style="background: var(--bg-elevated); color: var(--text-faint);">
+              {p.oj}
+            </span>
+            <span class="font-mono text-sm shrink-0" style="color: var(--color-accent);">
+              #{p.pid}
+            </span>
+            <span class="text-sm flex-1" style="color: var(--text);">
+              {p.title}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  )}
+</SidebarLayout>

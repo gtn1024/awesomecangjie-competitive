@@ -1,0 +1,166 @@
+---
+import { listOjs } from '../adapters/registry';
+import type { ProblemView } from '../lib/problem';
+
+interface Props {
+  activeOj?: string;
+  counts: Map<string, ProblemView[]>;
+}
+const { activeOj, counts } = Astro.props;
+const adapters = listOjs();
+const orphanOjs = [...counts.keys()].filter((oj) => !adapters.some((a) => a.id === oj));
+---
+
+<nav class="oj-nav" aria-label="OJ 导航">
+  <div class="oj-nav__full">
+    {adapters.map((a) => {
+      const isActive = a.id === activeOj;
+      const count = counts.get(a.id)?.length ?? 0;
+      return (
+        <a
+          href={count > 0 ? `/${a.id}/` : '/'}
+          class="oj-nav__item group"
+          class:list={[{ 'oj-nav__item--active': isActive }]}
+          aria-current={isActive ? 'page' : undefined}
+        >
+          <span class="oj-nav__marker font-mono">{isActive ? '▸' : '·'}</span>
+          <span class="oj-nav__label font-mono">
+            <span class="oj-nav__id">[{a.id}]</span>
+            <span class="oj-nav__name">{a.displayName}</span>
+          </span>
+          <span class="oj-nav__count font-mono">{count}</span>
+        </a>
+      );
+    })}
+
+    {orphanOjs.map((oj) => (
+      <span class="oj-nav__item oj-nav__item--orphan font-mono">
+        <span class="oj-nav__marker">·</span>
+        <span class="oj-nav__id">[{oj}]</span>
+        <span class="oj-nav__warn">适配器缺失</span>
+      </span>
+    ))}
+  </div>
+
+  <div class="oj-nav__icons">
+    {adapters.map((a) => {
+      const isActive = a.id === activeOj;
+      const count = counts.get(a.id)?.length ?? 0;
+      return (
+        <a
+          href={count > 0 ? `/${a.id}/` : '/'}
+          class="oj-nav__icon"
+          class:list={[{ 'oj-nav__icon--active': isActive }]}
+          title={`${a.displayName} · ${count} 题`}
+          aria-current={isActive ? 'page' : undefined}
+        >
+          {a.id.charAt(0).toUpperCase()}
+        </a>
+      );
+    })}
+  </div>
+</nav>
+
+<style>
+  .oj-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+  .oj-nav__full {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+  .oj-nav__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: var(--radius-tag);
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: background 0.15s, color 0.15s;
+  }
+  .oj-nav__item:hover {
+    background: var(--bg-hover);
+    color: var(--text);
+  }
+  .oj-nav__item--active {
+    background: var(--bg-elevated);
+    color: var(--text);
+  }
+  .oj-nav__item--orphan {
+    color: var(--text-faint);
+    cursor: not-allowed;
+  }
+  .oj-nav__marker {
+    color: var(--color-accent);
+    font-size: 0.7rem;
+    width: 0.5rem;
+  }
+  .oj-nav__label {
+    flex: 1;
+    display: flex;
+    gap: 0.4rem;
+    align-items: baseline;
+  }
+  .oj-nav__id {
+    color: var(--text-faint);
+    font-size: 0.75rem;
+  }
+  .oj-nav__name {
+    color: inherit;
+  }
+  .oj-nav__count {
+    color: var(--text-faint);
+    font-size: 0.7rem;
+  }
+  .oj-nav__warn {
+    color: #d29922;
+    font-size: 0.65rem;
+    margin-left: auto;
+  }
+
+  .oj-nav__icons {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .oj-nav__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    border-radius: var(--radius-tag);
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    transition: background 0.15s, color 0.15s;
+  }
+  .oj-nav__icon:hover {
+    background: var(--bg-hover);
+    color: var(--text);
+  }
+  .oj-nav__icon--active {
+    background: var(--bg-elevated);
+    color: var(--color-accent);
+  }
+
+  :global(html.sidebar-collapsed) .oj-nav__full {
+    display: none;
+  }
+  :global(html.sidebar-collapsed) .oj-nav__icons {
+    display: flex;
+  }
+  @media (max-width: 1023px) {
+    :global(html.sidebar-open) .oj-nav__full {
+      display: flex;
+    }
+    :global(html.sidebar-open) .oj-nav__icons {
+      display: none;
+    }
+  }
+</style>

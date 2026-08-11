@@ -1,0 +1,170 @@
+---
+import type { ProblemView } from '../lib/problem';
+
+interface Props {
+  oj: string;
+  ojDisplayName: string;
+  activePid: string;
+  problems: ProblemView[];
+}
+const { oj, ojDisplayName, activePid, problems } = Astro.props;
+---
+
+<nav class="ps-nav" aria-label="题目列表">
+  <div class="ps-nav__full">
+    <a href={`/${oj}/`} class="ps-nav__back font-mono">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      返回 {ojDisplayName}
+    </a>
+
+    <div class="ps-nav__list">
+      {problems.map((p) => {
+        const isActive = p.pid === activePid;
+        return (
+          <a
+            href={`/${oj}/solution/${p.pid}`}
+            class="ps-nav__item"
+            class:list={[{ 'ps-nav__item--active': isActive }]}
+            aria-current={isActive ? 'page' : undefined}
+          >
+            <span class="ps-nav__pid font-mono">#{p.pid}</span>
+            <span class="ps-nav__title">{p.title}</span>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+  <div class="ps-nav__icons">
+    <a href={`/${oj}/`} class="ps-nav__icon ps-nav__icon--back" title={`返回 ${ojDisplayName}`}>
+      ←
+    </a>
+    {problems.map((p) => (
+      <a
+        href={`/${oj}/solution/${p.pid}`}
+        class="ps-nav__icon"
+        class:list={[{ 'ps-nav__icon--active': p.pid === activePid }]}
+        title={p.title}
+        aria-current={p.pid === activePid ? 'page' : undefined}
+      >
+        {p.pid}
+      </a>
+    ))}
+  </div>
+</nav>
+
+<style>
+  .ps-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .ps-nav__full {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .ps-nav__back {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.6rem;
+    color: var(--text-faint);
+    text-decoration: none;
+    font-size: 0.72rem;
+    border-radius: var(--radius-tag);
+    transition: color 0.15s, background 0.15s;
+  }
+  .ps-nav__back:hover {
+    color: var(--color-accent);
+    background: var(--bg-hover);
+  }
+  .ps-nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+  .ps-nav__item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: var(--radius-tag);
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .ps-nav__item:hover {
+    background: var(--bg-hover);
+    color: var(--text);
+  }
+  .ps-nav__item--active {
+    background: var(--bg-elevated);
+    color: var(--text);
+  }
+  .ps-nav__item--active .ps-nav__pid {
+    color: var(--color-accent);
+  }
+  .ps-nav__pid {
+    color: var(--text-faint);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    min-width: 2rem;
+  }
+  .ps-nav__title {
+    flex: 1;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ps-nav__icons {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .ps-nav__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    padding: 0 0.15rem;
+    border-radius: var(--radius-tag);
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+  }
+  .ps-nav__icon:hover {
+    background: var(--bg-hover);
+    color: var(--text);
+  }
+  .ps-nav__icon--active {
+    background: var(--bg-elevated);
+    color: var(--color-accent);
+  }
+  .ps-nav__icon--back {
+    font-size: 0.9rem;
+  }
+
+  :global(html.sidebar-collapsed) .ps-nav__full {
+    display: none;
+  }
+  :global(html.sidebar-collapsed) .ps-nav__icons {
+    display: flex;
+  }
+  @media (max-width: 1023px) {
+    :global(html.sidebar-open) .ps-nav__full {
+      display: flex;
+    }
+    :global(html.sidebar-open) .ps-nav__icons {
+      display: none;
+    }
+  }
+</style>

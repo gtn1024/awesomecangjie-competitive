@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import { toProblemView, groupProblemsByTag, groupProblemsByOj } from '../../lib/problem';
+import SidebarLayout from '../../layouts/SidebarLayout.astro';
+import OjSidebar from '../../components/OjSidebar.astro';
+
+const entries = await getCollection('problems');
+const problems = entries.map(toProblemView);
+const byOj = groupProblemsByOj(problems);
+const byTag = groupProblemsByTag(problems);
+const tags = [...byTag.entries()].sort((a, b) => b[1].length - a[1].length);
+---
+
+<SidebarLayout title="标签 · Awesome Cangjie">
+  <Fragment slot="sidebar">
+    <OjSidebar counts={byOj} />
+  </Fragment>
+
+  <header class="mb-8">
+    <h1 class="text-2xl font-bold tracking-tight" style="color: var(--text);">
+      标签
+    </h1>
+    <p class="mt-1 font-mono text-xs" style="color: var(--text-faint);">
+      {tags.length} 个标签 · {problems.length} 题
+    </p>
+  </header>
+
+  <ul class="flex flex-wrap gap-2">
+    {tags.map(([tag, list]) => (
+      <li>
+        <a
+          href={`/tags/${tag}/`}
+          class="inline-flex items-baseline gap-1.5 rounded-[var(--radius-tag)] px-2 py-1 transition-colors hover:bg-[var(--bg-hover)]"
+          style="background: var(--bg-elevated); color: var(--text-dim);"
+        >
+          <span class="text-sm">{tag}</span>
+          <span class="font-mono text-xs" style="color: var(--text-faint);">{list.length}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</SidebarLayout>

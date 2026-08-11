@@ -1,0 +1,226 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description } = Astro.props as Props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <script is:inline>
+      (function () {
+        try {
+          if (localStorage.getItem('sidebar') === 'collapsed') {
+            document.documentElement.classList.add('sidebar-collapsed');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <Header />
+
+    <div class="shell">
+      <aside class="layout-sidebar" id="site-sidebar">
+        <div class="layout-sidebar__inner">
+          <slot name="sidebar" />
+        </div>
+
+        <button
+          type="button"
+          data-sidebar-toggle
+          aria-label="折叠侧边栏"
+          class="layout-sidebar__toggle"
+        >
+          <svg class="icon-collapse" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          <svg class="icon-expand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </aside>
+
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+      <div class="main">
+        <main class="max-w-3xl mx-auto px-4 py-10">
+          <slot />
+        </main>
+      </div>
+    </div>
+
+    <style is:global>
+      .shell {
+        --sidebar-w: 15rem;
+        --sidebar-collapsed-w: 3rem;
+        --header-h: 3.5rem;
+      }
+      .layout-sidebar {
+        position: fixed;
+        top: var(--header-h);
+        left: 0;
+        bottom: 0;
+        width: var(--sidebar-w);
+        background: var(--bg);
+        border-right: 1px solid var(--border);
+        transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 40;
+        display: flex;
+        flex-direction: column;
+      }
+      .layout-sidebar__toggle {
+        flex-shrink: 0;
+        height: 2.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 0.85rem;
+        background: transparent;
+        border: none;
+        border-top: 1px solid var(--border);
+        color: var(--text-dim);
+        cursor: pointer;
+        transition: color 0.15s, background 0.15s;
+      }
+      .layout-sidebar__toggle:hover {
+        color: var(--color-accent);
+        background: var(--bg-hover);
+      }
+      .layout-sidebar__inner {
+        flex: 1;
+        min-height: 0; /* flex 收缩必须，否则内容撑高后滚动失效 */
+        overflow-y: auto;
+        padding: 1rem 0.75rem;
+        transition: opacity 0.15s, visibility 0.15s;
+      }
+      .icon-expand { display: none; }
+      html.sidebar-collapsed .icon-collapse { display: none; }
+      html.sidebar-collapsed .icon-expand { display: block; }
+
+      html.sidebar-collapsed .layout-sidebar {
+        width: var(--sidebar-collapsed-w);
+      }
+      html.sidebar-collapsed .layout-sidebar__toggle {
+        justify-content: center;
+        padding: 0;
+      }
+      html.sidebar-collapsed .layout-sidebar__inner {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+      }
+
+      .main {
+        margin-left: var(--sidebar-w);
+        transition: margin-left 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      html.sidebar-collapsed .main {
+        margin-left: var(--sidebar-collapsed-w);
+      }
+
+      @media (max-width: 1023px) {
+        .main {
+          margin-left: 0;
+        }
+        .layout-sidebar {
+          width: var(--sidebar-w) !important;
+          transform: translateX(-100%);
+        }
+        .layout-sidebar__toggle {
+          display: none;
+        }
+        html.sidebar-collapsed .layout-sidebar {
+          transform: translateX(-100%);
+        }
+        html.sidebar-open .layout-sidebar {
+          transform: translateX(0);
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+        }
+        .layout-sidebar__inner {
+          visibility: hidden;
+        }
+        html.sidebar-open .layout-sidebar__inner {
+          opacity: 1;
+          pointer-events: auto;
+          visibility: visible;
+          transition: opacity 0.15s, visibility 0s;
+        }
+        html.sidebar-open .sidebar-backdrop {
+          opacity: 1;
+          pointer-events: auto;
+        }
+        .sidebar-backdrop {
+          position: fixed;
+          inset: var(--header-h) 0 0 0;
+          background: rgba(0, 0, 0, 0.5);
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.2s;
+          z-index: 35;
+        }
+        html.sidebar-open .icon-collapse { display: block; }
+        html.sidebar-open .icon-expand { display: none; }
+        html:not(.sidebar-open) .icon-collapse { display: none; }
+        html:not(.sidebar-open) .icon-expand { display: block; }
+      }
+      @media (min-width: 1024px) {
+        .sidebar-backdrop {
+          display: none;
+        }
+      }
+    </style>
+
+    <script>
+      const mqMobile = window.matchMedia('(max-width: 1023px)');
+      function syncToggleA11y() {
+        const btn = document.querySelector('.layout-sidebar__toggle');
+        if (!btn) return;
+        if (mqMobile.matches) {
+          const open = document.documentElement.classList.contains('sidebar-open');
+          btn.setAttribute('aria-label', open ? '关闭侧边栏' : '打开侧边栏');
+          btn.setAttribute('aria-expanded', String(open));
+        } else {
+          const collapsed = document.documentElement.classList.contains('sidebar-collapsed');
+          btn.setAttribute('aria-label', collapsed ? '展开侧边栏' : '折叠侧边栏');
+          btn.setAttribute('aria-expanded', String(!collapsed));
+        }
+      }
+      function toggleSidebar() {
+        if (mqMobile.matches) {
+          document.documentElement.classList.toggle('sidebar-open');
+        } else {
+          const collapsed = document.documentElement.classList.toggle('sidebar-collapsed');
+          try {
+            localStorage.setItem('sidebar', collapsed ? 'collapsed' : 'expanded');
+          } catch (e) {}
+        }
+        syncToggleA11y();
+      }
+      mqMobile.addEventListener('change', (e) => {
+        if (!e.matches) document.documentElement.classList.remove('sidebar-open');
+        syncToggleA11y();
+      });
+      document.addEventListener('click', (e) => {
+        const t = e.target as HTMLElement;
+        if (t.closest('[data-sidebar-toggle]')) toggleSidebar();
+      });
+      document.getElementById('sidebar-backdrop')?.addEventListener('click', () => {
+        document.documentElement.classList.remove('sidebar-open');
+        syncToggleA11y();
+      });
+      document.querySelector('#site-sidebar')?.addEventListener('click', (e) => {
+        if (!mqMobile.matches) return;
+        if ((e.target as HTMLElement).closest('a')) {
+          document.documentElement.classList.remove('sidebar-open');
+        }
+      });
+      syncToggleA11y();
+    </script>
+  </body>
+</html>

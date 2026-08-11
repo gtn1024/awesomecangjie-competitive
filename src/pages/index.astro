@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import { toProblemView, groupProblemsByOj, groupProblemsByTag, recentSolutions } from '../lib/problem';
+import SidebarLayout from '../layouts/SidebarLayout.astro';
+import OjSidebar from '../components/OjSidebar.astro';
+import RecentSolutions from '../components/RecentSolutions.astro';
+import TagCloud from '../components/TagCloud.astro';
+
+const entries = await getCollection('problems');
+const problems = entries.map(toProblemView);
+const byOj = groupProblemsByOj(problems);
+const byTag = groupProblemsByTag(problems);
+const tagCounts = new Map([...byTag.entries()].map(([tag, list]) => [tag, list.length]));
+const recent = recentSolutions(problems);
+---
+
+<SidebarLayout title="Awesome Cangjie Competitive">
+  <Fragment slot="sidebar">
+    <OjSidebar counts={byOj} />
+  </Fragment>
+
+  <header class="mb-12">
+    <h1 class="text-3xl font-bold tracking-tight" style="color: var(--text);">
+      Awesome Cangjie
+    </h1>
+    <p class="mt-2 text-sm" style="color: var(--text-dim);">
+      用仓颉，刷竞赛。
+    </p>
+    <hr class="mt-6 border-0 border-t" style="border-color: var(--border);" />
+  </header>
+
+  <section class="mb-12">
+    <h2 class="mb-4 flex items-baseline gap-2">
+      <span class="text-lg font-semibold" style="color: var(--text);">标签</span>
+      <a href="/tags/" class="font-mono text-xs transition-colors hover:text-[var(--color-accent)]" style="color: var(--text-faint);">
+        全部 →
+      </a>
+    </h2>
+    <TagCloud tags={tagCounts} />
+  </section>
+
+  <section>
+    <h2 class="mb-4 flex items-baseline gap-2">
+      <span class="text-lg font-semibold" style="color: var(--text);">最新题解</span>
+      <span class="font-mono text-xs" style="color: var(--text-faint);">
+        {recent.length} 篇
+      </span>
+    </h2>
+    <RecentSolutions items={recent} />
+  </section>
+</SidebarLayout>

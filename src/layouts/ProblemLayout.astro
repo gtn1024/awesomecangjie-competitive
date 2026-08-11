@@ -1,0 +1,92 @@
+---
+import path from 'node:path';
+import type { ProblemView } from '../lib/problem';
+import SidebarLayout from './SidebarLayout.astro';
+import ProblemSidebar from '../components/ProblemSidebar.astro';
+
+interface Props {
+  view: ProblemView;
+  ojProblems: ProblemView[];
+}
+const { view, ojProblems } = Astro.props;
+const { adapter } = view;
+const editUrl = view.entry.filePath
+  ? `https://github.com/gtn1024/awesomecangjie-competitive/edit/master/${path.relative(process.cwd(), view.entry.filePath)}`
+  : undefined;
+---
+
+<SidebarLayout title={`${view.title} · ${adapter.displayName} · Awesome Cangjie`}>
+  <Fragment slot="sidebar">
+    <ProblemSidebar oj={view.oj} ojDisplayName={adapter.displayName} activePid={view.pid} problems={ojProblems} />
+  </Fragment>
+
+  <article>
+    <header class="mb-6">
+      <div class="font-mono text-xs flex items-center gap-2 mb-3" style="color: var(--text-faint);">
+        <span class="rounded-[var(--radius-tag)] border px-1.5 py-0.5" style="border-color: var(--border);">
+          {adapter.id}
+        </span>
+        <span style="color: var(--color-accent);">#{view.pid}</span>
+        <div class="ml-auto flex items-center gap-3">
+          {view.sourceUrl && (
+            <a
+              href={view.sourceUrl}
+              rel="noopener"
+              target="_blank"
+              class="hover:text-[var(--color-accent)] transition-colors flex items-center gap-1"
+            >
+              原题
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          )}
+          {editUrl && (
+            <a
+              href={editUrl}
+              rel="noopener"
+              target="_blank"
+              class="hover:text-[var(--color-accent)] transition-colors flex items-center gap-1"
+            >
+              编辑此页
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          )}
+        </div>
+      </div>
+
+      <h1 class="text-2xl font-bold tracking-tight mb-4" style="color: var(--text);">
+        {view.title}
+      </h1>
+
+      <ul class="font-mono text-xs flex flex-wrap gap-x-3 gap-y-1.5" style="color: var(--text-dim);">
+        {view.difficulty && (
+          <li><span style="color: var(--text-faint);">难度</span> {view.difficulty}</li>
+        )}
+        {view.timeLimit && (
+          <li><span style="color: var(--text-faint);">时限</span> {view.timeLimit}</li>
+        )}
+        {view.memoryLimit && (
+          <li><span style="color: var(--text-faint);">空限</span> {view.memoryLimit}</li>
+        )}
+        {view.tags.length > 0 && (
+          <li class="flex gap-1.5">
+            {view.tags.map((tag) => (
+              <a
+                href={`/tags/${tag}/`}
+                class="rounded-[var(--radius-tag)] px-1.5 py-0.5 transition-colors hover:bg-[var(--bg-hover)]"
+                style="background: var(--bg-elevated); color: var(--text-dim); text-decoration: none;"
+              >
+                {tag}
+              </a>
+            ))}
+          </li>
+        )}
+      </ul>
+
+      <hr class="mt-4 border-0 border-t" style="border-color: var(--border);" />
+    </header>
+
+    <section class="problem__body">
+      <slot />
+    </section>
+  </article>
+</SidebarLayout>

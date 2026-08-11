@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from 'astro:content';
+import ProblemLayout from '../../../layouts/ProblemLayout.astro';
+import { toProblemView, assertOjRegistered, groupProblemsByOj } from '../../../lib/problem';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('problems');
+  return entries.map((entry) => {
+    assertOjRegistered(entry.data.oj);
+    return {
+      params: { oj: entry.data.oj, pid: entry.data.pid },
+      props: { entry },
+    };
+  });
+}
+
+const { entry } = Astro.props;
+const view = toProblemView(entry);
+
+const allEntries = await getCollection('problems');
+const byOj = groupProblemsByOj(allEntries.map(toProblemView));
+const ojProblems = byOj.get(view.oj) ?? [];
+
+const Content = (await render(entry)).Content;
+---
+
+<ProblemLayout view={view} ojProblems={ojProblems}>
+  {Content && <Content />}
+</ProblemLayout>

@@ -1,0 +1,82 @@
+---
+interface Props {
+  tags: Map<string, number>;
+  limit?: number;
+}
+const { tags, limit = 15 } = Astro.props;
+const sorted = [...tags.entries()].sort((a, b) => b[1] - a[1]);
+const visible = sorted.slice(0, limit);
+const extra = sorted.slice(limit);
+const hasExtra = extra.length > 0;
+---
+
+<ul class="flex flex-wrap gap-2">
+  {visible.map(([tag, count]) => (
+    <li>
+      <a
+        href={`/tags/${tag}/`}
+        class="inline-flex items-baseline gap-1.5 rounded-[var(--radius-tag)] px-2 py-1 transition-colors hover:bg-[var(--bg-hover)]"
+        style="background: var(--bg-elevated); color: var(--text-dim);"
+      >
+        <span class="text-sm">{tag}</span>
+        <span class="font-mono text-xs" style="color: var(--text-faint);">{count}</span>
+      </a>
+    </li>
+  ))}
+
+  {hasExtra && (
+    <li data-tag-extra-wrapper class="hidden">
+      <ul class="flex flex-wrap gap-2">
+        {extra.map(([tag, count]) => (
+          <li>
+            <a
+              href={`/tags/${tag}/`}
+              class="inline-flex items-baseline gap-1.5 rounded-[var(--radius-tag)] px-2 py-1 transition-colors hover:bg-[var(--bg-hover)]"
+              style="background: var(--bg-elevated); color: var(--text-dim);"
+            >
+              <span class="text-sm">{tag}</span>
+              <span class="font-mono text-xs" style="color: var(--text-faint);">{count}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </li>
+  )}
+</ul>
+
+{hasExtra && (
+  <button
+    type="button"
+    data-tag-toggle
+    data-tag-extra-count={extra.length}
+    class="mt-3 inline-flex items-center gap-1 font-mono text-xs transition-colors hover:text-[var(--color-accent)]"
+    style="color: var(--text-faint);"
+  >
+    <span data-tag-toggle-label>展开更多 ({extra.length})</span>
+    <svg data-tag-toggle-icon width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+)}
+
+<script>
+  document.querySelectorAll('[data-tag-toggle]').forEach((btn) => {
+    const wrapper = btn.previousElementSibling?.querySelector<HTMLElement>('[data-tag-extra-wrapper]');
+    const label = btn.querySelector<HTMLElement>('[data-tag-toggle-label]');
+    const icon = btn.querySelector<HTMLElement>('[data-tag-toggle-icon]');
+    if (!wrapper || !label || !icon) return;
+
+    let expanded = false;
+    btn.addEventListener('click', () => {
+      expanded = !expanded;
+      if (expanded) {
+        wrapper.classList.remove('hidden');
+        label.textContent = '收起';
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        wrapper.classList.add('hidden');
+        const count = btn.getAttribute('data-tag-extra-count');
+        label.textContent = `展开更多 (${count})`;
+        icon.style.transform = '';
+      }
+    });
+  });
+</script>

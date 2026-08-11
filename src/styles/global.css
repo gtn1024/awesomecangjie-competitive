@@ -1,0 +1,165 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/geist';
+@import '@fontsource-variable/geist-mono';
+@import 'katex/dist/katex.min.css';
+
+@theme {
+  --font-sans: 'Geist Variable', system-ui, sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, monospace;
+
+  --color-accent: #3fb950;
+  --color-accent-soft: #2ea043;
+
+  --radius-card: 6px;
+  --radius-tag: 4px;
+}
+
+:root {
+  --bg: #0e0e10;
+  --bg-elevated: #161618;
+  --bg-hover: #1e1e22;
+  --border: #2a2a2e;
+  --text: #e6e6e8;
+  --text-dim: #8b8b92;
+  --text-faint: #5c5c63;
+  --code-bg: #0d1117;
+}
+
+html.light {
+  --bg: #ffffff;
+  --bg-elevated: #f6f6f8;
+  --bg-hover: #eef0f3;
+  --border: #e4e4e7;
+  --text: #1a1a1f;
+  --text-dim: #52525b;
+  --text-faint: #a1a1aa;
+  --code-bg: #ffffff;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-accent) 30%, transparent);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+/* 深色默认用 --shiki-dark 变量覆盖 Shiki inline 的 light 色板 */
+.astro-code {
+  border-radius: var(--radius-card);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  background: var(--code-bg) !important;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  border: 1px solid var(--border);
+}
+
+html:not(.light) .astro-code span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
+}
+
+.problem__body {
+  font-family: var(--font-sans);
+}
+.problem__body h2 {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: -0.01em;
+}
+.problem__body h3 {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+}
+.problem__body h4 {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+}
+.problem__body p {
+  margin: 0.75rem 0;
+  color: var(--text);
+}
+.problem__body a {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-accent) 30%, transparent);
+}
+.problem__body a:hover {
+  border-bottom-color: var(--color-accent);
+}
+.problem__body ul,
+.problem__body ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+/* 用 list-style-type 而非 list-style：Lightning CSS 压缩简写会丢掉符号 */
+.problem__body ul {
+  list-style-type: disc;
+}
+.problem__body ol {
+  list-style-type: decimal;
+}
+.problem__body ul ul {
+  list-style-type: circle;
+}
+.problem__body ul ul ul {
+  list-style-type: square;
+}
+.problem__body li {
+  margin: 0.3rem 0;
+}
+.problem__body blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 3px solid var(--border);
+  color: var(--text-dim);
+}
+.problem__body code:not(pre code) {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.1rem 0.35rem;
+}
+.problem__body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}

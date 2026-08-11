@@ -1,0 +1,45 @@
+---
+import type { ProblemView } from '../lib/problem';
+
+interface Props {
+  items: ProblemView[];
+}
+const { items } = Astro.props;
+
+function formatDate(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+---
+
+{items.length === 0 ? (
+  <p class="font-mono text-sm" style="color: var(--text-faint);">暂无题解</p>
+) : (
+  <ul class="space-y-1">
+    {items.map((p) => (
+      <li>
+        <a
+          href={`/${p.oj}/solution/${p.pid}`}
+          class="group flex items-baseline gap-3 rounded-[var(--radius-tag)] px-3 py-2.5 transition-colors hover:bg-[var(--bg-hover)] active:translate-y-px"
+        >
+          <span class="font-mono text-xs shrink-0" style="color: var(--text-dim);">
+            {p.adapter.displayName}
+          </span>
+          <span class="font-mono text-sm shrink-0" style="color: var(--color-accent);">
+            #{p.pid}
+          </span>
+          <span class="text-sm flex-1 truncate" style="color: var(--text);">
+            {p.title}
+          </span>
+          {p.date && (
+            <span class="font-mono text-[10px] shrink-0" style="color: var(--text-faint);">
+              {formatDate(p.date)}
+            </span>
+          )}
+        </a>
+      </li>
+    ))}
+  </ul>
+)}
