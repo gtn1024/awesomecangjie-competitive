@@ -188,18 +188,13 @@ func solve(n: Int64, s1: String, s2: String): Int64 {
 main(): Int64 {
     let reader = Console.stdIn
     let t = Int64.parse(reader.readln().getOrThrow())
-    var sb = StringBuilder()
     for (tc in 0..t) {
         let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true)
         let n = Int64.parse(parts[0])
         let s1 = parts[1]
         let s2 = parts[2]
-        if (tc > 0) {
-            sb.append("\n")
-        }
-        sb.append(solve(n, s1, s2))
+        println(solve(n, s1, s2))
     }
-    println(sb.toString())
     return 0
 }
 ```
