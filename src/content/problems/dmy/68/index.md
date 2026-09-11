@@ -40,11 +40,7 @@ main(): Int64 {
             b = b - a
         }
     }
-    let out = StringBuilder()
-    out.append(sa)
-    out.append(" ")
-    out.append(sb)
-    println(out.toString())
+    println("${sa} ${sb}")
     return 0
 }
 ```
@@ -52,4 +48,4 @@ main(): Int64 {
 要点：
 
 - 循环中同一轮内「加分」和「改数」是原子操作，不存在两人同时加分的情况，因为 $a \ne b$ 时必有大小关系。
-- 输出用 `StringBuilder` 拼接两个得分，避免行尾多余空格。
+- 直接用 `println` 输出两个得分，避免行尾多余空格。
