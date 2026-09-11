@@ -284,7 +284,6 @@ main(): Int64 {
         bi += 1
     }
 
-    var sb = StringBuilder()
     var qi = Int64(0)
     while (qi < q) {
         // parse l
@@ -393,10 +392,8 @@ main(): Int64 {
         }
 
         insertNode(L, R)
-        sb.append(ans.toString())
-        sb.append(r'\n')
+        println(ans)
     }
-    println(sb.toString())
     return 0
 }
 ```
