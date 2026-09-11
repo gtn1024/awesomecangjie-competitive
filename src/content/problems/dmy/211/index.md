@@ -60,16 +60,13 @@ main(): Int64 {
     let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let l = parts[0]
     let r = parts[1]
-    var sb = StringBuilder()
     var x = l
     while (x <= r) {
         if (isNearPal(x)) {
-            sb.append(x.toString())
-            sb.append("\n")
+            println(x)
         }
         x = x + 1
     }
-    print(sb.toString())
     return 0
 }
 ```
