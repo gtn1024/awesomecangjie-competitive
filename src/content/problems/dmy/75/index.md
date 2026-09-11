@@ -54,11 +54,10 @@ main(): Int64 {
             inStack[idx] = true
         }
     }
-    let sb = StringBuilder()
     for (ch in stack) {
-        sb.append(ch)
+        print(ch)
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
