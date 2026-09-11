@@ -35,7 +35,6 @@ main(): Int64 {
         xs[i] = p[0]
         ys[i] = p[1]
     }
-    let out = StringBuilder()
     var first = true
     for (i in 0..n) {
         var best: Int64 = 1 << 62
@@ -53,12 +52,12 @@ main(): Int64 {
             }
         }
         if (!first) {
-            out.append(" ")
+            print(" ")
         }
-        out.append(bestj + 1)
+        print(bestj + 1)
         first = false
     }
-    println(out.toString())
+    println()
     return 0
 }
 ```
