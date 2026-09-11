@@ -18,7 +18,7 @@ memoryLimit: 512m
 
 由于扫描方向本身就是编号递增的方向，第一次见到的那个就是该颜色的最小编号；并且记录下来的编号也自然按从小到大的顺序排列，无需再排序。
 
-用一个大小为 $m+1$ 的布尔数组 `seen` 标记每种颜色是否已出现，边扫描边把答案拼进 `StringBuilder` 即可。
+用一个大小为 $m+1$ 的布尔数组 `seen` 标记每种颜色是否已出现，边扫描边直接用 println 输出即可。
 
 ## 复杂度
 
@@ -38,22 +38,21 @@ main(): Int64 {
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
 
     let seen = Array<Bool>(m + 1, { _ => false })
-    let sb = StringBuilder()
     var first = true
     for (i in 0..n) {
         let c = a[i]
         if (!seen[c]) {
             seen[c] = true
             if (first) {
-                sb.append((i + 1).toString())
+                print(i + 1)
                 first = false
             } else {
-                sb.append(" ")
-                sb.append((i + 1).toString())
+                print(" ")
+                print(i + 1)
             }
         }
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
