@@ -48,7 +48,6 @@ main(): Int64 {
             grid[i][j] = row[j]
         }
     }
-    let sb = StringBuilder()
     // 行线索
     for (i in 0..nn) {
         let segs = ArrayList<Int64>()
@@ -66,12 +65,11 @@ main(): Int64 {
         if (run > 0) {
             segs.add(run)
         }
-        sb.append(Int64(segs.size).toString())
+        print(segs.size)
         for (s in segs) {
-            sb.append(" ")
-            sb.append(s.toString())
+            print(" ${s}")
         }
-        sb.append("\n")
+        println()
     }
     // 列线索
     for (j in 0..nn) {
@@ -90,14 +88,12 @@ main(): Int64 {
         if (run > 0) {
             segs.add(run)
         }
-        sb.append(Int64(segs.size).toString())
+        print(segs.size)
         for (s in segs) {
-            sb.append(" ")
-            sb.append(s.toString())
+            print(" ${s}")
         }
-        sb.append("\n")
+        println()
     }
-    print(sb.toString())
     return 0
 }
 ```
