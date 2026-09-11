@@ -52,7 +52,6 @@ main() {
     let r = Array<UInt32>(n + 1, { i => UInt32(i) })
     let c = Array<UInt32>(m + 1, { i => UInt32(i) })
 
-    let out = StringBuilder()
     var i = 0
     while (i < q) {
         let line = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
@@ -69,16 +68,14 @@ main() {
             c[y] = t
         } else {
             let ans = (Int64(r[x]) - 1) * m + Int64(c[y])
-            out.append(ans)
-            out.append("\n")
+            println(ans)
         }
         i = i + 1
     }
-    print(out.toString())
 }
 ```
 
 要点：
 
 - 「行交换只动行置换、列交换只动列置换」是本题的核心；想清楚这一点后，三 类询问就是一次 $O(1)$ 的合成，完全摆脱了方阵规模。
-- $q$ 次输出逐条 `print` 会产生大量 IO 开销，用 `StringBuilder` 收集后再一次性输出更稳妥。
+- 每条 $3$ 类询问算出答案后直接用 `println` 输出即可。
