@@ -72,7 +72,6 @@ main(): Int64 {
     func rect(xl: Int64, xr: Int64, yl: Int64, yr: Int64): Int64 {
         return sum(xr, yr) - sum(xl - 1, yr) - sum(xr, yl - 1) + sum(xl - 1, yl - 1)
     }
-    let out = StringBuilder()
     for (_ in 0..q) {
         let lr = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
         let x = lr[0]
@@ -82,10 +81,8 @@ main(): Int64 {
         let xr = OFFR + (x + w) + y
         let yl = OFFC + (x - w) - y
         let yr = OFFC + x - (y - w)
-        out.append(rect(xl, xr, yl, yr))
-        out.append("\n")
+        println(rect(xl, xr, yl, yr))
     }
-    print(out.toString())
     return 0
 }
 ```
