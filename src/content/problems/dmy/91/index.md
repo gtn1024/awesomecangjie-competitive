@@ -28,11 +28,9 @@ main(): Int64 {
     let abc = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let mx = abc[0] * 79 + abc[1] * 89 + abc[2] * 100
     let mn = abc[0] * 60 + abc[1] * 80 + abc[2] * 90
-    let out = StringBuilder()
-    out.append(mx)
-    out.append(" ")
-    out.append(mn)
-    println(out.toString())
+    print(mx)
+    print(" ")
+    println(mn)
     return 0
 }
 ```
