@@ -268,14 +268,13 @@ main(): Int64 {
         ans[u] = su % MOD
     }
 
-    let sb = StringBuilder()
     for (u in 0..n) {
         if (u > 0) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(ans[u].toString())
+        print(ans[u])
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
