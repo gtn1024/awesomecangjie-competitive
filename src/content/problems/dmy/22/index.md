@@ -48,13 +48,10 @@ func solve() {
     for (j in 0..nn) {
         total += wait[j]
     }
-    let sb = StringBuilder()
     for (i in 0..nn) {
         let j = pos[i]
-        sb.append(total - wait[j] - a[i] * (n - 1 - j))
-        sb.append("\n")
+        println(total - wait[j] - a[i] * (n - 1 - j))
     }
-    print(sb.toString())
 }
 
 main() {
