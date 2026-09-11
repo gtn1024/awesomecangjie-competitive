@@ -50,16 +50,15 @@ main(): Int64 {
     let L = np1
     let total = L * (L + 1) / 2
     var prev = total
-    let out = StringBuilder()
     for (i in 0..=n) {
         let nxt = mn[i] * (L - mx[i] + 1)
-        out.append(prev - nxt)
+        print(prev - nxt)
         if (i < n) {
-            out.append(" ")
+            print(" ")
         }
         prev = nxt
     }
-    println(out.toString())
+    println()
     return 0
 }
 ```
