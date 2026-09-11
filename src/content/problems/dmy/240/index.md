@@ -69,16 +69,15 @@ main(): Int64 {
         top = top + 1
         i = i + 1
     }
-    let sb = StringBuilder()
     var k: Int64 = 0
     while (k < nn) {
         if (k > 0) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(ans[k])
+        print(ans[k])
         k = k + 1
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
