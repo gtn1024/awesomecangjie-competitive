@@ -73,12 +73,9 @@ main(): Int64 {
             i = i - 1
         }
     }
-    let sb = StringBuilder()
     for (i in 0..n) {
-        sb.append(String.fromUtf8(grid[i]))
-        sb.append(r'\n')
+        println(String.fromUtf8(grid[i]))
     }
-    print(sb.toString())
     return 0
 }
 ```
