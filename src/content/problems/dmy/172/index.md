@@ -134,7 +134,6 @@ main(): Int64 {
     }
 
     // f(i) = G - g0[i] + max(g0[i], max_{c != S[i]} g1[i][c])
-    let sb = StringBuilder()
     for (i in 0..n) {
         let si = Int64(s[i]) - 97
         var best = g0[i]
@@ -148,11 +147,11 @@ main(): Int64 {
         }
         let ans = goodTotal - g0[i] + best
         if (i > 0) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(ans)
+        print(ans)
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
