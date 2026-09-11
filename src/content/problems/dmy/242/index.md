@@ -243,9 +243,7 @@ main(): Int64 {
         idx -= 1
     }
 
-    let sb = StringBuilder()
-    sb.append(tree[1])
-    sb.append("\n")
+    println(tree[1])
     for (_ in 0..q) {
         let w = nextInt()
         let x = a[w]
@@ -326,11 +324,8 @@ main(): Int64 {
             a[w] = y
             a[w + 1] = x
         }
-        sb.append(tree[1])
-        sb.append("\n")
+        println(tree[1])
     }
-    print(sb.toString())
     return 0
 }
-
 ```
