@@ -186,27 +186,24 @@ class Solver {
     }
 }
 
-func solve(reader: ConsoleReader, sb: StringBuilder): Unit {
+func solve(reader: ConsoleReader): Unit {
     let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let l = parts[0]
     let r = parts[1]
     let k = parts[2]
     let solver = Solver(k)
     let ans = solver.calc(r) - solver.calc(l - 1)
-    sb.append(ans)
-    sb.append("\n")
+    println(ans)
 }
 
 main(): Int64 {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
-    let sb = StringBuilder()
     var i: Int64 = 0
     while (i < t) {
-        solve(reader, sb)
+        solve(reader)
         i += 1
     }
-    print(sb.toString())
     return 0
 }
 ```
