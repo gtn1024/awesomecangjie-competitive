@@ -45,7 +45,7 @@ $$\mathrm{MEX}(l, r) = \min \{\, v \ge 0 \mid \mathrm{pos}[v] < l \text{ 或 } \
 - 稀疏表预处理 $O(n \log n)$，查询 $O(1)$。
 - 线段树：$n$ 次激活 + $q$ 次查询，各 $O(\log n)$。
 
-总计 $O((n + q) \log n)$，$n, q = 10^6$、$\log n \approx 20$ 时约 $4 \times 10^7$ 次操作，配合迭代式线段树与 `StringBuilder` 批量输出，在 $3\text{s}$ 时限内可过（实测最大点约 $1.3\text{s}$，内存约 $290\text{MB}$）。
+总计 $O((n + q) \log n)$，$n, q = 10^6$、$\log n \approx 20$ 时约 $4 \times 10^7$ 次操作，配合迭代式线段树，算出答案后直接用 `println` 输出，在 $3\text{s}$ 时限内可过（实测最大点约 $1.3\text{s}$，内存约 $265\text{MB}$）。
 
 ## 仓颉实现
 
@@ -214,15 +214,12 @@ main(): Int64 {
         ans[i] = mn * mex
     }
 
-    // 输出：用 StringBuilder 一次打印
-    let sb = StringBuilder()
+    // 输出：按询问顺序直接 println
     var i = 0
     while (i < qq) {
-        sb.append(ans[i])
-        sb.append('\n')
+        println(ans[i])
         i += 1
     }
-    print(sb.toString())
     return 0
 }
 ```
