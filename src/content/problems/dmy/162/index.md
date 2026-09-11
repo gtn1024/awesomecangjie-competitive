@@ -86,7 +86,6 @@ main(): Int64 {
         }
     }
 
-    let sb = StringBuilder()
     for (i in 0..n) {
         for (j in 0..m) {
             var ch = "."
@@ -99,11 +98,10 @@ main(): Int64 {
             if (blueR[i] || blueC[j]) {
                 ch = "B"
             }
-            sb.append(ch)
+            print(ch)
         }
-        sb.append("\n")
+        println()
     }
-    print(sb.toString())
     return 0
 }
 ```
