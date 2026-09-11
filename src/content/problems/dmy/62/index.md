@@ -31,18 +31,17 @@ main(): Int64 {
     let b = Array<Int64>(n, { i => a[i] })
     sort(b)
     let m3 = b[2]
-    let sb = StringBuilder()
     var first = true
     for (x in a) {
         if (x <= m3) {
             if (!first) {
-                sb.append(" ")
+                print(" ")
             }
-            sb.append(x)
+            print(x)
             first = false
         }
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
