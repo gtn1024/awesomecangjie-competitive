@@ -35,14 +35,12 @@ main(): Int64 {
     let m = Int64.parse(parts[1])
     let a = parts[2]
 
-    let sb = StringBuilder()
     var i = m
     while (i < n) {
-        sb.append("0")
+        print("0")
         i += 1
     }
-    sb.append(a)
-    println(sb.toString())
+    println(a)
     return 0
 }
 ```
