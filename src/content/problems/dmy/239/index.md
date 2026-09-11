@@ -63,17 +63,15 @@ main(): Int64 {
         }
         rowSum[i] = rs
     }
-    let sb = StringBuilder()
     for (i in 0..nn) {
         for (j in 0..mm) {
-            sb.append(rowSum[i] + colSum[j] - a[i][j])
+            print(rowSum[i] + colSum[j] - a[i][j])
             if (j + 1 < mm) {
-                sb.append(" ")
+                print(" ")
             }
         }
-        sb.append("\n")
+        println()
     }
-    print(sb.toString())
     return 0
 }
 ```
