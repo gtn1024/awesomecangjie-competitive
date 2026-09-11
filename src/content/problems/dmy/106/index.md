@@ -146,7 +146,6 @@ main(): Int64 {
         pSave[k + 1] = pSave[k] + psave[k]
         pA[k + 1] = pA[k] + pa[k]
     }
-    var out = StringBuilder()
     var qi = Int64(0)
     while (qi < q) {
         let x = Int64.parse(reader.readln().getOrThrow())
@@ -163,11 +162,9 @@ main(): Int64 {
         }
         let cnt = lo
         let ans = pSave[cnt] + (SA - pA[cnt])
-        out.append(ans)
-        out.append('\n')
+        println(ans)
         qi += 1
     }
-    print(out.toString())
     return 0
 }
 ```
