@@ -81,7 +81,6 @@ main() {
         w3[k] = ((a0 - a1 - a2 + a3) % 998244353 + 998244353) % 998244353
     }
 
-    let out = StringBuilder()
     for (_ in 0..q) {
         let line = reader.readln().getOrThrow().split(" ", removeEmpty: true)
         if (line[0] == "1") {
@@ -152,11 +151,8 @@ main() {
                 acc4 = (acc4 + w3[k] * ((cr1m * cc1m) % 998244353)) % 998244353
             }
             let ans = (((lenRm * lenCm) % 998244353) * s0 + lenRm * acc2 + lenCm * acc3 + acc4) % 998244353
-            out.append(ans)
-            out.append("\n")
+            println(ans)
         }
     }
-    print(out.toString())
 }
-
 ```
