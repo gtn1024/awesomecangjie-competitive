@@ -109,15 +109,14 @@ main(): Int64 {
         i -= 1
     }
 
-    var sb = StringBuilder()
     for (k in 1..=nn) {
         let a = pre[k] + suf[k + 1]
-        sb.append(a.toString())
+        print(a)
         if (k < nn) {
-            sb.append(" ")
+            print(" ")
         }
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
