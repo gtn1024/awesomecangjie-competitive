@@ -200,19 +200,11 @@ main(): Int64 {
         }
     }
 
-    let sb = StringBuilder()
-    sb.append("YES\n")
-    sb.append(opCount)
-    sb.append("\n")
+    println("YES")
+    println(opCount)
     for (i in 0..opCount) {
-        sb.append(opU[i])
-        sb.append(" ")
-        sb.append(opV[i])
-        sb.append(" ")
-        sb.append(opX[i])
-        sb.append("\n")
+        println("${opU[i]} ${opV[i]} ${opX[i]}")
     }
-    print(sb.toString())
     return 0
 }
 ```
