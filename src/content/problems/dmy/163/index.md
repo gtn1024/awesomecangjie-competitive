@@ -120,12 +120,9 @@ main(): Int64 {
     // 收尾：剩余队列按窗口空出顺序处理
     drainQueue(9223372036854775807)
 
-    let sb = StringBuilder()
     for (i in 0..n) {
-        sb.append(leave[i])
-        sb.append("\n")
+        println(leave[i])
     }
-    print(sb.toString())
     return 0
 }
 ```
