@@ -90,19 +90,17 @@ main(): Int64 {
         k -= 1
     }
 
-    let sb = StringBuilder()
-    sb.append("Yes\n")
+    println("Yes")
     var m: Int64 = 1
     while (m <= maxLen) {
         var c = suffix[m]
         while (c > 0) {
-            sb.append('#')
+            print('#')
             c -= 1
         }
-        sb.append('\n')
+        println()
         m += 1
     }
-    print(sb.toString())
     return 0
 }
 ```
