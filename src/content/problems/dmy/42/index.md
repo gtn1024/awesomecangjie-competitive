@@ -112,7 +112,6 @@ main(): Int64 {
         }
         return l
     }
-    let out = StringBuilder()
     let seenStamp = Array<Int64>(K, { _ => -1 })
     let curCnt = Array<Int64>(K, { _ => 0 })
     var stamp: Int64 = 0
@@ -172,10 +171,8 @@ main(): Int64 {
             }
         }
         let res = (R - L + 1) - ans
-        out.append(res)
-        out.append("\n")
+        println(res)
     }
-    print(out.toString())
     return 0
 }
 ```
