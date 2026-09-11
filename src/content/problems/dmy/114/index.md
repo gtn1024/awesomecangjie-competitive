@@ -126,7 +126,6 @@ func findFirst(mn: Array<Int64>, size: Int64, D: Int64, buf: Array<Int64>, pos: 
 main(): Int64 {
     let reader = getStdIn()
     let T = Int64.parse(reader.readln().getOrThrow())
-    let sb = StringBuilder()
     for (tt in 0..T) {
         let nq = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
         let nn = nq[0]
@@ -311,12 +310,9 @@ main(): Int64 {
             }
         }
         for (i in 0..q) {
-            sb.append(ans[i])
-            sb.append("\n")
+            println(ans[i])
         }
     }
-    print(sb.toString())
     return 0
 }
-
 ```
