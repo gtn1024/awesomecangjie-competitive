@@ -78,7 +78,6 @@ main(): Int64 {
         bitAdd(cntBit, v, 1)
     }
     let q = Int64.parse(reader.readln().getOrThrow())
-    var sb = StringBuilder()
     for (_ in 0..q) {
         let toks = reader.readln().getOrThrow().split(" ", removeEmpty: true)
         let op = Int64.parse(toks[0])
@@ -94,11 +93,11 @@ main(): Int64 {
         } else if (op == 2) {
             let v = Int64.parse(toks[1])
             if (v <= 0) {
-                sb.append("0\n")
+                println(0)
             } else {
                 let total = bitSum(sumBit, MAXV)
                 if (total < v) {
-                    sb.append("-1\n")
+                    println(-1)
                 } else {
                     let qpos = findPos(total - v)
                     let p = qpos + 1
@@ -106,14 +105,13 @@ main(): Int64 {
                     let cntAfterP = bitSum(cntBit, MAXV) - bitSum(cntBit, p)
                     let need = v - sumAfterP
                     let take = (need + p - 1) / p
-                    sb.append((cntAfterP + take).toString())
-                    sb.append("\n")
+                    println(cntAfterP + take)
                 }
             }
         } else {
             let v = Int64.parse(toks[1])
             if (v <= 0) {
-                sb.append("0\n")
+                println(0)
             } else {
                 let qpos = findPos(v)
                 var ans = bitSum(cntBit, qpos)
@@ -123,12 +121,10 @@ main(): Int64 {
                     let extra = if (rem / (qpos + 1) < atNext) { rem / (qpos + 1) } else { atNext }
                     ans += extra
                 }
-                sb.append(ans.toString())
-                sb.append("\n")
+                println(ans)
             }
         }
     }
-    print(sb.toString())
     return 0
 }
 ```
