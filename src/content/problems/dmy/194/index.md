@@ -121,25 +121,23 @@ main() {
     // 输出
     if (unified) {
         // 所有元素值 = a[k] + uniAdd
-        let sb = StringBuilder()
         for (k in 0..n) {
             if (k > 0) {
-                sb.append(" ")
+                print(" ")
             }
-            sb.append(a[k] + uniAdd)
+            print(a[k] + uniAdd)
         }
-        println(sb.toString())
+        println()
     } else {
         // 两桶分别结算
-        let sb = StringBuilder()
         for (k in 0..n) {
             if (k > 0) {
-                sb.append(" ")
+                print(" ")
             }
             let v = if (a[k] % Int64(2) != Int64(0)) { a[k] + addOdd } else { a[k] + addEven }
-            sb.append(v)
+            print(v)
         }
-        println(sb.toString())
+        println()
     }
 }
 ```
