@@ -49,7 +49,6 @@ main(): Int64 {
             row[i] = row[i - 1] + add
         }
     }
-    let sb = StringBuilder()
     var idx = 0
     while (idx < q) {
         let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -62,13 +61,13 @@ main(): Int64 {
             let x = row[r] - row[l - 1]
             ans += 2 * x * (len - x) * (Int64(1) << b)
         }
-        sb.append(ans)
+        print(ans)
         if (idx < q - 1) {
-            sb.append(" ")
+            print(" ")
         }
         idx++
     }
-    println(sb)
+    println()
     return 0
 }
 ```
