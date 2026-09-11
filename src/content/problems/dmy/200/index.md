@@ -61,7 +61,6 @@ main(): Int64 {
     for (i in 0..n - 1) {
         sumAbs += if (p[i] >= Int64(0)) { p[i] } else { -p[i] }
     }
-    let sb = StringBuilder()
     for (_ in 0..q) {
         let qline = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ x: String => Int64.parse(x) })
         let typ = qline[0]
@@ -80,13 +79,11 @@ main(): Int64 {
         let newAbs = if (p[idx] >= Int64(0)) { p[idx] } else { -p[idx] }
         sumAbs += newAbs
         if (possible) {
-            sb.append(sumAbs)
+            println(sumAbs)
         } else {
-            sb.append("-1")
+            println(-1)
         }
-        sb.append("\n")
     }
-    print(sb.toString())
     return 0
 }
 ```
