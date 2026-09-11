@@ -95,7 +95,7 @@ func tryPair(x: Int64, y: Int64, d: Int64, ans: ArrayList<Array<Int64>>): Unit {
     ans.add([g * a, g * b])
 }
 
-func solve(reader: ConsoleReader, sb: StringBuilder): Unit {
+func solve(reader: ConsoleReader): Unit {
     let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let x = parts[0]
     let y = parts[1]
@@ -110,26 +110,20 @@ func solve(reader: ConsoleReader, sb: StringBuilder): Unit {
         i += 1
     }
     sort(ans, key: { p: Array<Int64> => p[0] })
-    sb.append(ans.size)
-    sb.append("\n")
+    println(ans.size)
     for (p in ans) {
-        sb.append(p[0])
-        sb.append(" ")
-        sb.append(p[1])
-        sb.append("\n")
+        println("${p[0]} ${p[1]}")
     }
 }
 
 main(): Int64 {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
-    let sb = StringBuilder()
     var i: Int64 = 0
     while (i < t) {
-        solve(reader, sb)
+        solve(reader)
         i += 1
     }
-    print(sb.toString())
     return 0
 }
 ```
