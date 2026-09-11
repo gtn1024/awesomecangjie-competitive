@@ -114,15 +114,12 @@ main(): Int64 {
         j += 1
     }
 
-    let sb = StringBuilder()
     var k: Int64 = 0
     while (k < q) {
         let f = Int64.parse(reader.readln().getOrThrow())
-        sb.append(best[f])
-        sb.append('\n')
+        println(best[f])
         k += 1
     }
-    print(sb.toString())
     return 0
 }
 ```
