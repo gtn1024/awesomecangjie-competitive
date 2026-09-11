@@ -43,31 +43,8 @@ $$\mathrm{sum}_y \ge \mathrm{level}_p$$
 
 ```cangjie
 import std.env.*
+import std.convert.*
 import std.sort.*
-
-class Scanner {
-    let data: Array<Byte>
-    let len: Int64
-    var pos: Int64
-
-    init(text: String) {
-        this.data = text.toArray()
-        this.len = this.data.size
-        this.pos = 0
-    }
-
-    func nextInt(): Int64 {
-        while (this.pos < this.len && this.data[this.pos] <= UInt8(32)) {
-            this.pos++
-        }
-        var x: Int64 = 0
-        while (this.pos < this.len && this.data[this.pos] > UInt8(32)) {
-            x = x * 10 + Int64(this.data[this.pos]) - 48
-            this.pos++
-        }
-        return x
-    }
-}
 
 func findRoot(p: Array<Int64>, start: Int64): Int64 {
     var x = start
@@ -84,13 +61,11 @@ func findRoot(p: Array<Int64>, start: Int64): Int64 {
 }
 
 main() {
-    let sc = Scanner(getStdIn().readToEnd().getOrThrow())
-    let n = sc.nextInt()
-    let m = sc.nextInt()
-    let a = Array<Int64>(n, { _ => 0 })
-    for (i in 0..n) {
-        a[i] = sc.nextInt()
-    }
+    let reader = getStdIn()
+    let nm = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
+    let n = nm[0]
+    let m = nm[1]
+    let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
 
     // 每条边按 max(a_u, a_v) 排序；键低位存放边编号，权重上限 1e9 < 2^30，编号 < 2^18
     let pw: Int64 = 262144
@@ -99,8 +74,9 @@ main() {
     let ev = Array<Int64>(m, { _ => 0 })
     let keys = Array<Int64>(m, { _ => 0 })
     for (i in 0..m) {
-        let u = sc.nextInt() - 1
-        let v = sc.nextInt() - 1
+        let uv = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
+        let u = uv[0] - 1
+        let v = uv[1] - 1
         eu[i] = u
         ev[i] = v
         let w = if (a[u] > a[v]) {
