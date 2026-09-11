@@ -105,7 +105,6 @@ main(): Int64 {
 
     // 路径 (u, v) 好当且仅当 popcount(mask[u] ^ mask[v]) <= 1，
     // 即 mask[v] 属于 {mask[u]} ∪ {mask[u] ^ 2^c}，最后去掉 v == u 自身
-    let sb = StringBuilder()
     for (u in 1..=n) {
         let m = mask[u]
         var res: Int64 = 0
@@ -120,11 +119,11 @@ main(): Int64 {
         }
         res -= 1
         if (u > 1) {
-            sb.append(' ')
+            print(' ')
         }
-        sb.append(res)
+        print(res)
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
