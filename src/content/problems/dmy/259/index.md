@@ -48,7 +48,6 @@ main(): Int64 {
     let b = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
 
     let INF: Int64 = 4000000005
-    let out = StringBuilder()
     var qi: Int64 = 0
     while (qi < q) {
         let w = Int64.parse(reader.readln().getOrThrow())
@@ -97,11 +96,9 @@ main(): Int64 {
             }
         }
 
-        out.append(ans.toString())
-        out.append("\n")
+        println(ans)
         qi += 1
     }
-    print(out.toString())
     return 0
 }
 ```
