@@ -165,7 +165,6 @@ main(): Int64 {
     let pref = Array<Int64>(cnt + 1, { _ => 0 })
     for (i in 1..=cnt) { pref[i] = pref[i - 1] + chosen[i - 1] }
     let q = nextInt()
-    var sb = StringBuilder()
     for (_ in 0..q) {
         let x = nextInt()
         var lo: Int64 = 0
@@ -174,10 +173,8 @@ main(): Int64 {
             let mid = (lo + hi) / 2
             if (chosen[mid] < x) { lo = mid + 1 } else { hi = mid }
         }
-        sb.append((pref[lo] + (n - 1 - lo) * x).toString())
-        sb.append('\n')
+        println(pref[lo] + (n - 1 - lo) * x)
     }
-    print(sb.toString())
     return 0
 }
 ```
