@@ -65,7 +65,6 @@ main(): Int64 {
         sAB = (sAB + (a * b) % p) % p
     }
     let q = Int64.parse(reader.readln().getOrThrow())
-    let out = StringBuilder()
     for (_ in 0..q) {
         let line = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ x: String => Int64.parse(x) })
         let c = line[0]
@@ -75,10 +74,8 @@ main(): Int64 {
         let cd = (c * d) % p
         let ncd = (n % p * cd) % p
         let ans = (sAB + dsA + csB + ncd) % p
-        out.append(ans)
-        out.append("\n")
+        println(ans)
     }
-    println(out.toString())
     return 0
 }
 ```
