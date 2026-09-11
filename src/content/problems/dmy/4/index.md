@@ -49,7 +49,6 @@ main(): Int64 {
         }
     }
     let q = Int64.parse(reader.readln().getOrThrow())
-    var sb = StringBuilder()
     for (_ in 0..q) {
         let sc = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
         var s = sc[0]
@@ -62,10 +61,8 @@ main(): Int64 {
             c >>= 1
             bit += 1
         }
-        sb.append(s.toString())
-        sb.append("\n")
+        println(s)
     }
-    print(sb.toString())
     return 0
 }
 ```
@@ -73,5 +70,5 @@ main(): Int64 {
 要点：
 
 - 用一维数组 `f[j * stride + i]` 存放倍增表，`stride = n + 1`，避免二维数组带来的额外内存与访问开销。
-- 询问较多，答案用 `StringBuilder` 拼接后一次性输出，避免逐行 `println` 的开销。
+- 每个询问算出答案后直接用 `println` 输出。
 - 输入行尾可能有多余空格，`split(" ")` 默认保留空串，用 `split(" ", removeEmpty: true)` 过滤。
