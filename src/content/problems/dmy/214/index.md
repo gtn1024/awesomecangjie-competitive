@@ -100,16 +100,15 @@ main(): Int64 {
         r = r + 1
     }
 
-    let sb = StringBuilder()
     var k: Int64 = 0
     while (k < m) {
         if (k > 0) {
-            sb.append(' ')
+            print(" ")
         }
-        sb.append(prev[k])
+        print(prev[k])
         k = k + 1
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
