@@ -110,12 +110,9 @@ func solve(): Unit {
         n += 1
     }
 
-    let sb = StringBuilder()
     for (i in 0..t) {
-        sb.append(f[ns[i]])
-        sb.append("\n")
+        println(f[ns[i]])
     }
-    print(sb.toString())
 }
 
 main(): Int64 {
