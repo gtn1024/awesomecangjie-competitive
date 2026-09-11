@@ -76,7 +76,6 @@ main(): Int64 {
         let (ra, rb) = q(2 * node + 1, mid + 1, nr, ql, qr)
         return (ra * la % MOD, (ra * lb % MOD + rb) % MOD)
     }
-    let out = StringBuilder()
     for (_ in 0..m) {
         let lr = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
         let x = lr[0] % MOD
@@ -84,10 +83,8 @@ main(): Int64 {
         let R = lr[2]
         let (A, B) = q(1, 1, N2, L, R)
         let ans = (A * x % MOD + B) % MOD
-        out.append(ans)
-        out.append("\n")
+        println(ans)
     }
-    print(out.toString())
     return 0
 }
 ```
