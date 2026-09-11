@@ -45,7 +45,6 @@ import std.convert.*
 main(): Int64 {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
-    let sb = StringBuilder()
     for (_ in 0..t) {
         let line = reader.readln().getOrThrow().split(" ", removeEmpty: true)
         let a = Int64.parse(line[0])
@@ -68,16 +67,13 @@ main(): Int64 {
             }
             zeros = a
         }
-        // 输出 c 后跟 zeros 个 0
-        sb.append(c.toString())
-        var z = zeros
-        while (z > 0) {
-            sb.append("0")
-            z -= 1
+        // 直接输出 c 后跟 zeros 个 0
+        print(c)
+        for (_ in 0..zeros) {
+            print("0")
         }
-        sb.append("\n")
+        println()
     }
-    print(sb.toString())
     return 0
 }
 ```
