@@ -92,17 +92,16 @@ main(): Int64 {
         i += 2
     }
     let invTotal = powmod(total, MOD - 2, MOD)
-    let sb = StringBuilder()
     var k: Int64 = 1
     while (k <= nn) {
         let prob = h[k] * invTotal % MOD
         if (k > 1) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(prob)
+        print(prob)
         k += 1
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
