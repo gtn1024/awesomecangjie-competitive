@@ -58,7 +58,6 @@ main(): Int64 {
         i = i + 1
     }
     sort(divs)
-    let sb = StringBuilder()
     for (k in divs) {
         // groups: g = 0 .. (n/k - 1), range [g*k+1, (g+1)*k]
         // ones in group g = pre[(g+1)*k] - pre[g*k]
@@ -73,10 +72,8 @@ main(): Int64 {
             }
             g = g + 1
         }
-        sb.append(cnt)
-        sb.append('\n')
+        println(cnt)
     }
-    print(sb.toString())
     return 0
 }
 ```
