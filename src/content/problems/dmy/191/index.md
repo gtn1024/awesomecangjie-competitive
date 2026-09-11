@@ -103,7 +103,6 @@ main(): Int64 {
         tot[k] = (tot[k * 2] + tot[k * 2 + 1]) % MOD
         k = k - 1
     }
-    let sb = StringBuilder()
     for (_ in 0..Q) {
         let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true)
         if (parts[0] == "1") {
@@ -123,11 +122,9 @@ main(): Int64 {
             if (r < 0) {
                 r = r + MOD
             }
-            sb.append(r)
-            sb.append("\n")
+            println(r)
         }
     }
-    print(sb.toString())
     return 0
 }
 ```
