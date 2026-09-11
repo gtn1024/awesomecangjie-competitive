@@ -27,11 +27,7 @@ main(): Int64 {
     let reader = getStdIn()
     let xyt = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let total = (xyt[0] * 60 + xyt[1] + xyt[2]) % 1440
-    let out = StringBuilder()
-    out.append(total / 60)
-    out.append(" ")
-    out.append(total % 60)
-    println(out.toString())
+    println("${total / 60} ${total % 60}")
     return 0
 }
 ```
