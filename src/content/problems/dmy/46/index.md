@@ -20,7 +20,7 @@ Z 形填数就是经典的 Z 阶曲线（Morton code）。把行号 $r$ 和列�
 
 $2^n \times 2^n$ 共 $2^{2n} \le 2^{20}$ 个格子，每个格子的位交错是 $O(n)$。
 
-复杂度：时间 $O(4^n \cdot n)$，空间 $O(4^n)$（用于输出）。
+复杂度：时间 $O(4^n \cdot n)$，空间 $O(1)$（直接用 println 输出）。
 
 ## 仓颉实现
 
@@ -36,7 +36,6 @@ main(): Int64 {
         size *= 2
     }
     let S = size
-    let out = StringBuilder()
     for (r in 0..S) {
         for (c in 0..S) {
             var idx: Int64 = 0
@@ -46,14 +45,13 @@ main(): Int64 {
                 idx = idx | (((r >> bit) & 1) << (2 * bit + 1))
                 bit += 1
             }
-            out.append(idx + 1)
+            print(idx + 1)
             if (c < S - 1) {
-                out.append(" ")
+                print(" ")
             }
         }
-        out.append("\n")
+        println()
     }
-    print(out.toString())
     return 0
 }
 ```
