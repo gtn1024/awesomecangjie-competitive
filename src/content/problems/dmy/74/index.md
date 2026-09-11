@@ -13,7 +13,7 @@ memoryLimit: 512m
 
 ## 思路
 
-答案可能是上千位的整数，不能用整数类型保存，按位构造字符串输出。
+答案可能是上千位的整数，不能用整数类型保存，按位确定每一位后直接用 println 输出。
 
 要得到「最大」的 $n$ 位数，贪心：从高位到低位，每一位在能保证剩余位凑出剩余数位和的前提下尽量取大。设当前已到第 $i$ 位（$0$ 开始），后面还有 $rest = n-i-1$ 位。
 
@@ -36,7 +36,6 @@ main(): Int64 {
     let nm = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let n = nm[0]
     var m = nm[1]
-    let sb = StringBuilder()
     for (i in 0..n) {
         let rest = n - i - 1
         var x = m
@@ -50,10 +49,10 @@ main(): Int64 {
         if (lower > 0 && x < lower) {
             x = lower
         }
-        sb.append(x)
+        print(x)
         m = m - x
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
