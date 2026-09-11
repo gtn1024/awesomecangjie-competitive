@@ -123,13 +123,12 @@ main() {
         nodeCnt[pi] = trieInsert(ch0[pi], ch1[pi], cnt[pi], nodeCnt[pi], v)
         i -= 1
     }
-    let sb = StringBuilder()
     for (i in 0..n) {
-        sb.append(ans[i])
+        print(ans[i])
         if (i < n - 1) {
-            sb.append(" ")
+            print(" ")
         }
     }
-    println(sb.toString())
+    println()
 }
 ```

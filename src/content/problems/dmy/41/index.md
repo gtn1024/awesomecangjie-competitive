@@ -115,14 +115,13 @@ main() {
         pos[j] = finalPos(p, d[id], t, L, R)
     }
     sort(pos)
-    let sb = StringBuilder()
     for (i in 0..n) {
-        sb.append(pos[rank[i]])
-        if (i < n - 1) {
-            sb.append(" ")
+        if (i > 0) {
+            print(" ")
         }
+        print(pos[rank[i]])
     }
-    println(sb.toString())
+    println()
 }
 ```
 
