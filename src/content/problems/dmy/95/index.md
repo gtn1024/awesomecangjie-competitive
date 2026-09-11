@@ -73,7 +73,6 @@ main(): Int64 {
     }
     let reader = Console.stdIn
     let t = Int64(reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })[0])
-    var out = StringBuilder()
     var count: Int64 = 0
     while (count < t) {
         count = count + 1
@@ -82,10 +81,8 @@ main(): Int64 {
         let m = parts[1]
         // dp[n][m]: row n index for value m is m - n.
         let ans = Int64(dp[n][m - n])
-        out.append(ans)
-        out.append('\n')
+        println(ans)
     }
-    print(out.toString())
     return 0
 }
 ```
@@ -95,4 +92,4 @@ main(): Int64 {
 - **分拆数递推**：把合法序列重述为「$m$ 拆成 $n$ 个正整数」，立刻得到经典分拆数递推 $dp[i][j] = dp[i-1][j-1] + dp[i][j-i]$，两个加法项分别对应「划分里有一个 $1$」「所有数都减 $1$」两种情形。
 - **三角化存储省内存**：只有 $j \ge i$ 时状态非零，第 $i$ 行只存下标 $k = j - i \in [0, MAX-i]$，下标换算 $j = i + k$。完整 $8001 \times 8001$ 的 `Int64` 表约 512MB，三角化后约 3200 万项。
 - **用 `UInt32` 存值**：模数 $998244353 < 2^{31}$，两项之和 $< 2^{32}$ 不会溢出，用 `v + row[k-i]` 后比较减模即可。约 3200 万项的 `UInt32` 表约 128MB，实测峰值 160MB，远低于 512MB 上限。逐行只引用「上一行」与「本行左侧」，递推方向天然无依赖冲突。
-- **预处理后查询 $O(1)$**：$T$ 达 $10^5$ 时不能每次重算；整张表离线建好后，每问只查 `dp[n][m-n]` 一次。输出用 `StringBuilder` 汇总再一次性打印，避免逐行 I/O 的开销。
+- **预处理后查询 $O(1)$**：$T$ 达 $10^5$ 时不能每次重算；整张表离线建好后，每问只查 `dp[n][m-n]` 一次。答案算出后直接用 `println` 输出。
