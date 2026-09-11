@@ -185,16 +185,15 @@ main(): Int64 {
         suff[j] = bestSoFar
         j -= 1
     }
-    let sb = StringBuilder()
     var k: Int64 = 1
     while (k <= n - 1) {
         if (k > 1) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(suff[k])
+        print(suff[k])
         k += 1
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
