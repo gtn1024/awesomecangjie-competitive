@@ -44,40 +44,13 @@ memoryLimit: 256m
 
 ```cangjie
 import std.env.*
-
-var gdata = Array<Byte>(0, { _ => 0 })
-var gpos: Int64 = 0
-var glen: Int64 = 0
-
-func nextInt(): Int64 {
-    while (gpos < glen) {
-        if (Int64(gdata[gpos]) > 32) {
-            break
-        }
-        gpos += 1
-    }
-    var x: Int64 = 0
-    while (gpos < glen) {
-        let b = Int64(gdata[gpos])
-        if (b <= 32) {
-            break
-        }
-        x = x * 10 + b - 48
-        gpos += 1
-    }
-    return x
-}
-
-func readAll(): Array<Byte> {
-    let reader = getStdIn()
-    return reader.readToEnd().getOrThrow().toArray()
-}
+import std.convert.*
 
 main(): Int64 {
-    gdata = readAll()
-    glen = gdata.size
-    let n = nextInt()
-    let m = nextInt()
+    let reader = getStdIn()
+    let nm = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
+    let n = nm[0]
+    let m = nm[1]
 
     // 邻接表（链表式）
     let head = Array<Int64>(n + 1, { _ => 0 })
@@ -85,8 +58,9 @@ main(): Int64 {
     let nxt = Array<Int64>(2 * m + 1, { _ => 0 })
     var ec: Int64 = 0
     for (_ in 0..m) {
-        let u = nextInt()
-        let v = nextInt()
+        let uv = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
+        let u = uv[0]
+        let v = uv[1]
         ec += 1
         to[ec] = v
         nxt[ec] = head[u]
