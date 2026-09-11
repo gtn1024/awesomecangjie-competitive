@@ -49,13 +49,10 @@ main(): Int64 {
         ans[i] = s
     }
     let q = Int64.parse(reader.readln().getOrThrow())
-    var sb = StringBuilder()
     for (_ in 0..q) {
         let x = Int64.parse(reader.readln().getOrThrow())
-        sb.append(ans[x].toString())
-        sb.append("\n")
+        println(ans[x])
     }
-    print(sb.toString())
     return 0
 }
 ```
@@ -63,4 +60,4 @@ main(): Int64 {
 要点：
 
 - 值域只有 $5 \times 10^5$，直接开数组计数，不需要排序或哈希。
-- 询问有 $10^6$ 个，答案用 `StringBuilder` 拼接后一次性输出，避免逐行 `println` 的开销。
+- 询问有 $10^6$ 个，每个答案直接用 `println` 输出。
