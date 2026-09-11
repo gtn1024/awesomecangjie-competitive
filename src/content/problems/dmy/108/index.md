@@ -141,7 +141,6 @@ main(): Int64 {
     }
 
     // ans[k] = (-1)^k * invfact[k] * sum_{j} H[k+j] * invfact[j]
-    let sb = StringBuilder()
     for (k in 0..=N) {
         var s: Int64 = 0
         var j: Int64 = 0
@@ -153,12 +152,8 @@ main(): Int64 {
         if (k % 2 == 1) {
             ak = (MOD - ak) % MOD
         }
-        sb.append(ak)
-        if (k != N) {
-            sb.append("\n")
-        }
+        println(ak)
     }
-    println(sb.toString())
     return 0
 }
 ```
