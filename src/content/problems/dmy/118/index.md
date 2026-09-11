@@ -80,14 +80,12 @@ main(): Int64 {
         }
     }
 
-    let sb = StringBuilder()
     for (i in 0..nn) {
         for (j in 0..mm) {
-            sb.append(grid[i][j])
+            print(grid[i][j])
         }
-        sb.append("\n")
+        println()
     }
-    print(sb.toString())
     return 0
 }
 ```
