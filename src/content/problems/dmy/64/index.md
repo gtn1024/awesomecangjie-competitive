@@ -114,14 +114,11 @@ main(): Int64 {
         }
         return l
     }
-    let out = StringBuilder()
     for (_ in 0..q) {
         let lr = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
         let ans = ask(lr[1]) - ask(lr[0] - 1)
-        out.append(ans)
-        out.append("\n")
+        println(ans)
     }
-    print(out.toString())
     return 0
 }
 ```
