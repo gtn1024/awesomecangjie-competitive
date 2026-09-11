@@ -50,14 +50,13 @@ main(): Int64 {
         start += 1
     }
 
-    let sb = StringBuilder()
-    sb.append(a)
+    print(a)
     var j = start
     while (j < m) {
-        sb.append(Rune(UInt32(arr[j])))
+        print(Rune(UInt32(arr[j])))
         j += 1
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
