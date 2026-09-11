@@ -95,11 +95,8 @@ main() {
             }
         }
     }
-    let sb = StringBuilder()
     for (u in 0..n) {
-        sb.append(ans[u])
-        sb.append("\n")
+        println(ans[u])
     }
-    print(sb.toString())
 }
 ```
