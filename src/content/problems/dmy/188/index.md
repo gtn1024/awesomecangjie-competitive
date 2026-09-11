@@ -68,19 +68,15 @@ main(): Int64 {
     }
 
     // 从位置 pos[1] 开始顺时针输出
-    let sb = StringBuilder()
     let start = pos[1]
-    var firstOut = true
     for (i in 0..n) {
         let p = ((start - 1 + i) % n) + 1
-        if (firstOut) {
-            firstOut = false
-        } else {
-            sb.append(" ")
+        print(val[p])
+        if (i < n - 1) {
+            print(" ")
         }
-        sb.append(val[p])
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
