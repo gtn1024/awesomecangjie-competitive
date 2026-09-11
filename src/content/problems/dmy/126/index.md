@@ -81,7 +81,6 @@ main(): Int64 {
         Y[i] = Y[i - 1] + dy * k
     }
     let q = Int64.parse(reader.readln().getOrThrow())
-    var sb = StringBuilder()
     for (qi in 0..q) {
         let vals = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
         let l = vals[0]
@@ -113,12 +112,8 @@ main(): Int64 {
         let dy1 = Y[l - 1] + Y[n] - Y[r]
         let ansX = cycles * dx1 + px
         let ansY = cycles * dy1 + py
-        sb.append(ansX)
-        sb.append(" ")
-        sb.append(ansY)
-        sb.append("\n")
+        println("${ansX} ${ansY}")
     }
-    print(sb.toString())
     return 0
 }
 ```
