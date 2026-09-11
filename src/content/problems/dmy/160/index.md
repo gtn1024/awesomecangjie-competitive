@@ -196,7 +196,6 @@ main(): Int64 {
     var sz: Int64 = 0
     var l: Int64 = 1
     var r: Int64 = 0
-    let out = StringBuilder()
     var idx = 0
     while (idx < nqq) {
         let q = order[idx]
@@ -239,11 +238,9 @@ main(): Int64 {
 
     i = 0
     while (i < m) {
-        out.append(ans[i].toString())
-        out.append("\n")
+        println(ans[i])
         i += 1
     }
-    print(out.toString())
     return 0
 }
 ```
