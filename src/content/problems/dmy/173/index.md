@@ -134,15 +134,14 @@ main(): Int64 {
             sol[c] = rhs[pr]
         }
     }
-    let sb = StringBuilder()
-    sb.append("Yes\n")
+    println("Yes")
     for (i in 0..k) {
         if (i > 0) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(sol[i].toString())
+        print(sol[i])
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
