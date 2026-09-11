@@ -160,13 +160,12 @@ func solve(reader: ConsoleReader) {
         return
     }
 
-    let sb = StringBuilder()
     var idx = 0
     while (idx < nn) {
-        sb.append(ans[idx])
+        print(ans[idx])
         idx = idx + 1
     }
-    println(sb.toString())
+    println()
 }
 
 main() {
