@@ -223,16 +223,13 @@ main(): Int64 {
         bitAdd(bit, n, posArr[id] + 1, (cArr[id] * inv100) % MOD)
     }
 
-    var sb = StringBuilder()
     for (q in 0..Q) {
         var ans = (1 + acc[q] - gArr[kArr[q]]) % MOD
         if (ans < 0) {
             ans += MOD
         }
-        sb.append(ans)
-        sb.append("\n")
+        println(ans)
     }
-    print(sb.toString())
     return 0
 }
 ```
