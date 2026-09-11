@@ -92,7 +92,6 @@ main(): Int64 {
         cost[v][u] = w
     }
 
-    let sb = StringBuilder()
     for (i in 0..n) {
         var ans = INF
         let dist1 = Array<Int64>(n, { _ => INF })   // 到 v 的最优距离及其首个源点
@@ -199,15 +198,15 @@ main(): Int64 {
         }
 
         if (i > 0) {
-            sb.append(" ")
+            print(" ")
         }
         if (ans >= INF) {
-            sb.append(-1)
+            print(-1)
         } else {
-            sb.append(ans)
+            print(ans)
         }
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
