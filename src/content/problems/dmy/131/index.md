@@ -41,7 +41,6 @@ import std.env.*
 main(): Int64 {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
-    let out = StringBuilder()
     for (_ in 0..t) {
         let n = Int64.parse(reader.readln().getOrThrow())
         let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -57,12 +56,11 @@ main(): Int64 {
             }
         }
         if (state == 4) {
-            out.append("Yes\n")
+            println("Yes")
         } else {
-            out.append("No\n")
+            println("No")
         }
     }
-    print(out.toString())
     return 0
 }
 ```
