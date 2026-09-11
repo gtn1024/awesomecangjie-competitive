@@ -239,7 +239,6 @@ main(): Int64 {
     }
 
     // 回答询问
-    var sb = StringBuilder()
     var qi: Int64 = 0
     while (qi < q) {
         let k = Int64.parse(reader.readln().getOrThrow())
@@ -271,11 +270,9 @@ main(): Int64 {
             }
             j = j + 1
         }
-        sb.append(ans)
-        sb.append('\n')
+        println(ans)
         qi = qi + 1
     }
-    print(sb.toString())
     return 0
 }
 
