@@ -145,7 +145,6 @@ main(): Int64 {
     }
 
     // ans[x] = sum_i f[x][i]
-    let sb = StringBuilder()
     var xi = 1
     while (xi <= nn) {
         var s = Int64(0)
@@ -156,13 +155,13 @@ main(): Int64 {
             off += 1
             ii++
         }
-        sb.append(s)
-        if (xi < nn) {
-            sb.append(" ")
+        if (xi > 1) {
+            print(" ")
         }
+        print(s)
         xi++
     }
-    println(sb)
+    println()
     return 0
 }
 ```
