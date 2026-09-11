@@ -152,13 +152,12 @@ main() {
         k -= 1
     }
 
-    let sb = StringBuilder()
     for (i in 0..n) {
         if (i > 0) {
-            sb.append(' ')
+            print(" ")
         }
-        sb.append(ansArr[i])
+        print(ansArr[i])
     }
-    println(sb.toString())
+    println()
 }
 ```
