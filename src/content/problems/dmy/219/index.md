@@ -53,7 +53,6 @@ main(): Int64 {
     let reader = Console.stdIn
     let t = Int64.parse(reader.readln().getOrThrow())
     let limit = Int64(2000000000000000000) // 2e18，防止 len 预处理溢出
-    var sb = StringBuilder()
     for (_ in 0..t) {
         let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true)
         let l = Int64.parse(parts[0])
@@ -77,7 +76,7 @@ main(): Int64 {
             let mid = prevLen + 1
             if (kk == mid) {
                 let c = shift % 26 + 97
-                sb.append(Rune(UInt32(c)))
+                println(Rune(UInt32(c)))
                 done = true
                 break
             } else if (kk < mid) {
@@ -92,11 +91,9 @@ main(): Int64 {
             // level == 0，落到 s_0[kk-1]
             let base = Int64(UInt32(s0[kk - 1])) - 97
             let c = (base + shift) % 26 + 97
-            sb.append(Rune(UInt32(c)))
+            println(Rune(UInt32(c)))
         }
-        sb.append("\n")
     }
-    print(sb.toString())
     return 0
 }
 ```
