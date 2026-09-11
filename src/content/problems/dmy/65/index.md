@@ -259,7 +259,6 @@ main(): Int64 {
         Array<UInt8>(len, { t => UInt8(digs[kk + t] + 48) })
     }
     // 处理每个询问
-    let out = StringBuilder()
     for (parts in lines) {
         let Lstr = parts[0].toArray()
         let Rstr = parts[1].toArray()
@@ -270,10 +269,8 @@ main(): Int64 {
         if (ans < 0) {
             ans = ans + MOD
         }
-        out.append(ans)
-        out.append("\n")
+        println(ans)
     }
-    print(out.toString())
     return 0
 }
 ```
