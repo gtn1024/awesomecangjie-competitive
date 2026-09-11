@@ -117,7 +117,6 @@ main(): Int64 {
 
     let top = Array<Int64>(nn + 1, { _ => 0 })
     let m = Array<Int64>(nn + 1, { _ => 0 })
-    let sb = StringBuilder()
     for (qi in 0..q) {
         let w = Int64.parse(reader.readln().getOrThrow())
 
@@ -164,10 +163,8 @@ main(): Int64 {
             }
             i -= 1
         }
-        sb.append(ans)
-        sb.append("\n")
+        println(ans)
     }
-    print(sb.toString())
     return 0
 }
 ```
