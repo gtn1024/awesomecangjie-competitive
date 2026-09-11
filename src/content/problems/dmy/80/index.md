@@ -43,16 +43,15 @@ main(): Int64 {
             h[pos] = t
         }
     }
-    let sb = StringBuilder()
     var first = true
     for (x in h) {
         if (!first) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(x)
+        print(x)
         first = false
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
