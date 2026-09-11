@@ -89,14 +89,13 @@ main(): Int64 {
         }
     }
 
-    var sb = StringBuilder()
     for (i in 0 .. nn) {
         if (i > 0) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(parent[i])
+        print(parent[i])
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
