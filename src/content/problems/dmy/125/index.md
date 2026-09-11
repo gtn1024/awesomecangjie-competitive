@@ -60,16 +60,15 @@ main(): Int64 {
     }
 
     // 输出人数
-    println("${alive.size}")
+    println(alive.size)
     // 输出编号（升序，本身已升序）
-    var sb = StringBuilder()
     for (i in 0..alive.size) {
         if (i > 0) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(alive[i])
+        print(alive[i])
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
@@ -78,4 +77,4 @@ main(): Int64 {
 
 - 「第 $k$ 轮选手」= 前 $k-1$ 轮淘汰后的存活者，故只模拟 $k-1$ 轮；$k=1$ 时无需淘汰，直接输出全员。
 - 每轮从头扫描相邻编号对，胜者依次写入新表，保证新表仍按编号升序，省去排序。
-- `ArrayList` 的添加方法为 `add`；`StringBuilder` 用 `append` 拼接再 `toString()` 一次性输出。
+- `ArrayList` 的添加方法为 `add`；编号行直接逐个 `print`（非首个元素前补空格），行尾 `println()` 换行。
