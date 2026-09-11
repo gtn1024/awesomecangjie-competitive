@@ -14,7 +14,7 @@ memoryLimit: 512m
 
 ## 思路
 
-读入字符串 $s$，它的长度 $n$ 即为要输出的 `3` 的个数。答案是一个由 $n$ 个 `3` 与 $n-1$ 个 `^` 交替组成的字符串，即在每两个 `3` 之间插入一个 `^`。用一个 `StringBuilder` 循环 $n$ 次，每次追加 `3`，并在非首次时先追加 `^` 即可。
+读入字符串 $s$，它的长度 $n$ 即为要输出的 `3` 的个数。答案是一个由 $n$ 个 `3` 与 $n-1$ 个 `^` 交替组成的字符串，即在每两个 `3` 之间插入一个 `^`。循环 $n$ 次直接用 `print` 输出，非首次时先输出 `^`，最后 `println` 换行即可。
 
 ## 复杂度
 
@@ -29,14 +29,13 @@ main(): Int64 {
     let reader = getStdIn()
     let s = reader.readln().getOrThrow()
     let n = s.size
-    let sb = StringBuilder()
     for (i in 0..n) {
         if (i > 0) {
-            sb.append("^")
+            print("^")
         }
-        sb.append("3")
+        print("3")
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
