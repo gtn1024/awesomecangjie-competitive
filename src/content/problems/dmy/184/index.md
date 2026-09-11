@@ -226,7 +226,6 @@ main(): Int64 {
 
     var openCol: Int64 = -1
     var placed: Int64 = 0
-    var sb = StringBuilder()
     while (placed < nn) {
         if (openCol != -1) {
             if (heapEmpty(openCol)) {
@@ -234,9 +233,9 @@ main(): Int64 {
                 return 0
             }
             let b = heapPop(openCol)
-            sb.append(b.toString())
+            print(b)
             if (placed + 1 < nn) {
-                sb.append(" ")
+                print(" ")
             }
             placed += 1
             remaining[openCol] -= 1
@@ -274,7 +273,7 @@ main(): Int64 {
             }
         }
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
