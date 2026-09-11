@@ -257,15 +257,14 @@ main(): Int64 {
     }
 
     // 答案 = 不含 a[i] 的逆序对数 + 最优插入新增数 = I - L[i] - R[i] + (a[i]-1) + minPrefix[i]
-    let sb = StringBuilder()
     for (i in 0..n) {
-        if (i > 0) {
-            sb.append(" ")
-        }
         let ans = I - L[i] - R[i] + (a[i] - 1) + minPrefix[i]
-        sb.append(ans)
+        if (i > 0) {
+            print(" ")
+        }
+        print(ans)
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
