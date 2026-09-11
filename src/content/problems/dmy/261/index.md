@@ -201,7 +201,6 @@ main(): Int64 {
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let st = SegTree(n)
     st.build(1, 1, n, a)
-    let sb = StringBuilder()
     for (_ in 0..q) {
         let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true)
         let t = Int64.parse(parts[0])
@@ -216,11 +215,9 @@ main(): Int64 {
         } else {
             let l = Int64.parse(parts[1])
             let r = Int64.parse(parts[2])
-            sb.append(st.query(1, 1, n, l, r).toString())
-            sb.append("\n")
+            println(st.query(1, 1, n, l, r))
         }
     }
-    print(sb.toString())
     return 0
 }
 ```
