@@ -26,11 +26,7 @@ import std.convert.*
 main(): Int64 {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
-    let out = StringBuilder()
-    out.append((n - 1) / 30 + 1)
-    out.append(" ")
-    out.append((n - 1) % 30 + 1)
-    println(out.toString())
+    println("${(n - 1) / 30 + 1} ${(n - 1) % 30 + 1}")
     return 0
 }
 ```
