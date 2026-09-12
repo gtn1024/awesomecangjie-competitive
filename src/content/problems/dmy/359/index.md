@@ -172,7 +172,7 @@ func fixEdge(st: SegTree, pos: Array<Int64>, n: Int64, k: Int64): Unit {
     st.updateEdge(k, b)
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line0 = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ s: String => Int64.parse(s) })
     let n = line0[0]
@@ -219,7 +219,6 @@ main(): Int64 {
         }
         println(st.sum[1] - st.mx[1])
     }
-    return 0
 }
 ```
 

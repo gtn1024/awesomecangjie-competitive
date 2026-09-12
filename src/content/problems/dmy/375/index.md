@@ -36,7 +36,7 @@ $$a_{x+1}:=a_{x+1}+a_x,\quad a_x:=0$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line1 = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(line1[0])
@@ -80,7 +80,6 @@ main(): Int64 {
     }
 
     println(ans)
-    return 0
 }
 ```
 

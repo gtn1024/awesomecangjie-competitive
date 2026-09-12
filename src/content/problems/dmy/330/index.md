@@ -48,7 +48,7 @@ $$
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let n = Int64.parse(reader.readln().getOrThrow())
     let predecessor = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -81,6 +81,5 @@ main(): Int64 {
         print(startTime[i])
     }
     println()
-    return 0
 }
 ```

@@ -53,7 +53,7 @@ struct Player <: Comparable<Player> {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let p = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ x: String => Int64.parse(x) })
@@ -79,6 +79,5 @@ main(): Int64 {
     for (i in 1..(nn + 1)) {
         println(ans[i])
     }
-    return 0
 }
 ```

@@ -51,7 +51,7 @@ $$
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let n = Int64.parse(reader.readln().getOrThrow())
     let permutation = Array<Int64>(n, { _ => 1 })
@@ -92,6 +92,5 @@ main(): Int64 {
     }
     answer.append("\n")
     print(answer.toString(), flush: true)
-    return 0
 }
 ```

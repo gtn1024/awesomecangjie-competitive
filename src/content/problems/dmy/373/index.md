@@ -29,12 +29,11 @@ $$t = \left\lceil \frac{5(y-x)}{2} \right\rceil = \left\lfloor \frac{5(y-x)+1}{2
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let xy = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let d = xy[1] - xy[0]
     println((5 * d + 1) / 2)
-    return 0
 }
 ```
 

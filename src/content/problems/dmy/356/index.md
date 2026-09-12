@@ -50,7 +50,7 @@ $$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let q = first[1]
@@ -83,6 +83,5 @@ main(): Int64 {
         let ans = if (c > 0) { ss - 2 * l * s + l * l * c } else { 0 }
         println(ans)
     }
-    return 0
 }
 ```

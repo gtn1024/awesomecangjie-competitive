@@ -74,7 +74,7 @@ func countLess(b: Array<Int64>, n: Int64, key: Int64): Int64 {
     return lo
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ t: String => Int64.parse(t) })
     let n = first[0]
@@ -133,6 +133,5 @@ main(): Int64 {
         s += 1
     }
     println(base + m * minBreak)
-    return 0
 }
 ```

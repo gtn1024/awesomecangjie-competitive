@@ -29,7 +29,7 @@ $$1 + \left\lceil \frac{X - A}{B} \right\rceil = 1 + \left\lfloor \frac{X - A + 
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let s = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let X = s[0]
@@ -37,6 +37,5 @@ main(): Int64 {
     let B = s[2]
     let rest = X - A
     println(1 + (rest + B - 1) / B)
-    return 0
 }
 ```

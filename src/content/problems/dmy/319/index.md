@@ -143,7 +143,7 @@ func countRay(length: Int64): Int64 {
     return numerator / 9
 }
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let input = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = input[0]
@@ -176,6 +176,5 @@ main(): Int64 {
     let total = powMod(4, n * n, MOD)
     let answer = (total - invalid + MOD) % MOD
     println(answer)
-    return 0
 }
 ```

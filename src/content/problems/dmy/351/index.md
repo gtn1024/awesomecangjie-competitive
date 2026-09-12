@@ -66,7 +66,7 @@ func bfs(n: Int64, head: Array<Int64>, to: Array<Int64>, nxt: Array<Int64>, src:
     return dist
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nm = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = nm[0]
@@ -130,7 +130,6 @@ main(): Int64 {
         }
     }
     if (ans >= INF) { println(-1) } else { println(ans) }
-    return 0
 }
 ```
 

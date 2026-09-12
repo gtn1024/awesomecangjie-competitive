@@ -38,13 +38,12 @@ $$p = n - \left\lfloor \frac{n}{4} \right\rfloor$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = a[0]
     let x = a[1]
     println((n - n / 4) * x)
-    return 0
 }
 ```
 

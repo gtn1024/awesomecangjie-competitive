@@ -104,7 +104,7 @@ func solve(a: Int64, primes: ArrayList<Int64>): Int64 {
     return best
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let tLine = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let T = tLine[0]
@@ -134,7 +134,6 @@ main(): Int64 {
         let aa = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })[0]
         println(solve(aa, primes))
     }
-    return 0
 }
 ```
 

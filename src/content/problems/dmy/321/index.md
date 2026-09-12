@@ -186,7 +186,7 @@ func inverseNtt(a: Array<Int64>, inverseRoots: Array<Int64>): Unit {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
 
@@ -368,6 +368,5 @@ main(): Int64 {
     }
 
     println(answer)
-    return 0
 }
 ```

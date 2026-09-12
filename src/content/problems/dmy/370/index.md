@@ -37,7 +37,7 @@ $jsum$ 与 $ab$ 始终对 $998244353$ 取模即可。
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let s = reader.readln().getOrThrow()
@@ -60,6 +60,5 @@ main(): Int64 {
         }
     }
     println(ans)
-    return 0
 }
 ```

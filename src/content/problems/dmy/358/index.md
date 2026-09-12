@@ -35,7 +35,7 @@ import std.convert.*
 import std.env.*
 import std.collection.*
 
-main(): Int64 {
+main() {
     let MAXN = 1000000
     let MAXZ = 10000
     // 最小质因子筛，用于分解 z
@@ -109,7 +109,6 @@ main(): Int64 {
         let n = Int64.parse(reader.readln().getOrThrow())
         println(ans[n])
     }
-    return 0
 }
 ```
 

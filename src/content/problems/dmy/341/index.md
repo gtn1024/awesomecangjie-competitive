@@ -30,13 +30,12 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let v = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let a = v[0]
     let b = v[1]
     let c = v[2]
     println((c - b) / a)
-    return 0
 }
 ```

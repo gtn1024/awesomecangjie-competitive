@@ -27,7 +27,7 @@ memoryLimit: 512m
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let price = Int64.parse(reader.readln().getOrThrow())
 
@@ -37,6 +37,5 @@ main(): Int64 {
     }
 
     println(answer)
-    return 0
 }
 ```

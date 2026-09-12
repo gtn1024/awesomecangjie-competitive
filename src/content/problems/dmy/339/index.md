@@ -151,13 +151,12 @@ func solve(reader: ConsoleReader): Int64 {
     return answer
 }
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let firstLine = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let t = firstLine[1]
     for (_ in 0..t) {
         println(solve(reader))
     }
-    return 0
 }
 ```

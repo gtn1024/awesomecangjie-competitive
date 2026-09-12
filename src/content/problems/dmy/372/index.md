@@ -67,7 +67,7 @@ func power(a: Int64, b: Int64): Int64 {
     return res
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow().split(" ", removeEmpty: true)[0])
     let nn = n
@@ -128,7 +128,6 @@ main(): Int64 {
         fact = fact * x % MOD
     }
     println(fact * f1 % MOD)
-    return 0
 }
 ```
 

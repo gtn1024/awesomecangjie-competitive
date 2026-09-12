@@ -117,12 +117,11 @@ func solve(reader: ConsoleReader): Unit {
     println(if (possible) { "Yes" } else { "No" })
 }
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let t = Int64.parse(reader.readln().getOrThrow())
     for (_ in 0..t) {
         solve(reader)
     }
-    return 0
 }
 ```

@@ -91,7 +91,7 @@ func multiply(tree: Array<Int64>, target: Int64, left: Int64, right: Int64, dime
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let firstLine = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = firstLine[0]
@@ -165,6 +165,5 @@ main(): Int64 {
         println(total % MOD)
         query += 1
     }
-    return 0
 }
 ```

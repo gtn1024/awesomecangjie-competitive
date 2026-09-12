@@ -87,7 +87,7 @@ func power(base0: Int64, exponent0: Int64): Int64 {
     return result
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let input = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = input[0]
@@ -172,6 +172,5 @@ main(): Int64 {
 
     let answer = power(k, n + 1) * connectedOddSum % MOD
     println(answer)
-    return 0
 }
 ```

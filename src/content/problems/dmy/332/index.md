@@ -70,7 +70,7 @@ $$
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let n = Int64.parse(reader.readln().getOrThrow())
     let mod: Int64 = 1000000007
@@ -85,6 +85,5 @@ main(): Int64 {
     let remainder = n - highestBit
     answer = (answer + remainder % mod * ((remainder + 1) % mod) % mod) % mod
     println(answer)
-    return 0
 }
 ```

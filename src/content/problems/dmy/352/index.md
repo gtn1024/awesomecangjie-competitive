@@ -44,7 +44,7 @@ $k = 0$ 时 $f(0)$ 就是原数，即 $pre_n$。对每个 $l_i$ 取 $k = l_i \bm
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = first[0]
@@ -87,6 +87,5 @@ main(): Int64 {
         }
     }
     println(ans)
-    return 0
 }
 ```

@@ -24,9 +24,8 @@ memoryLimit: 512m
 ```cangjie
 import std.env.*
 
-main(): Int64 {
+main() {
     let s = getStdIn().readln().getOrThrow()
     println(if (s.contains("WA")) { "NO" } else { "YES" })
-    return 0
 }
 ```

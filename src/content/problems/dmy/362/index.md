@@ -36,7 +36,7 @@ $$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nm = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ q: String => Int64.parse(q) })
     let n = nm[0]
@@ -67,6 +67,5 @@ main(): Int64 {
     for (i in 0..m) {
         println(if (swapped[i]) { "Yes" } else { "No" })
     }
-    return 0
 }
 ```

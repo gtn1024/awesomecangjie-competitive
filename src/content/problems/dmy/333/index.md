@@ -71,7 +71,7 @@ func firstBefore(tree: Array<Int64>, size: Int64, leftBound: Int64): Int64 {
     return node - size
 }
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let firstLine = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = firstLine[0]
@@ -196,6 +196,5 @@ main(): Int64 {
         println(answers[i])
         i += 1
     }
-    return 0
 }
 ```

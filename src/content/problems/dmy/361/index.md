@@ -25,7 +25,7 @@ $X = 0$ 时 `next = i + 1`，即下一秒仍可拍摄，与题意一致。
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = first[0]
@@ -41,7 +41,6 @@ main(): Int64 {
         }
     }
     println(ans)
-    return 0
 }
 ```
 

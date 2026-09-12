@@ -38,7 +38,7 @@ memoryLimit: 512m
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true)[0]
     let n = Int64.parse(reader.readln().getOrThrow().split(" ", removeEmpty: true)[0])
@@ -89,7 +89,6 @@ main(): Int64 {
         if (rel[x] < ans) { ans = rel[x] }
     }
     println(ans + offset)
-    return 0
 }
 ```
 

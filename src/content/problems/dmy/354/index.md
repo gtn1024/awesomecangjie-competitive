@@ -24,10 +24,9 @@ memoryLimit: 512m
 ```cangjie
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     reader.readln()
     println(18)
-    return 0
 }
 ```

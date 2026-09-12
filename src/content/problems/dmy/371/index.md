@@ -43,7 +43,7 @@ $$
 ```cangjie
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     // n 可达 10^2000，按字符串读入
     let ns = reader.readln().getOrThrow()
@@ -89,7 +89,6 @@ main(): Int64 {
     }
     let ans = (loose[m] + (if (jt == m) { 1 } else { 0 })) % mod
     println(ans)
-    return 0
 }
 ```
 

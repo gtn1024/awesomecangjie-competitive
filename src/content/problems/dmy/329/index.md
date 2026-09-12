@@ -53,7 +53,7 @@ $$
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let n = Int64.parse(reader.readln().getOrThrow())
     let water = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -72,6 +72,5 @@ main(): Int64 {
         print(water[i])
     }
     println()
-    return 0
 }
 ```

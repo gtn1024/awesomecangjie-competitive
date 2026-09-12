@@ -185,7 +185,7 @@ func uniqueSorted(xs: ArrayList<Int64>): ArrayList<Int64> {
     return res
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nm = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = nm[0]
@@ -328,7 +328,6 @@ main(): Int64 {
     for (s in ans) {
         println(s)
     }
-    return 0
 }
 ```
 
