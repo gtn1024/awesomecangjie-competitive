@@ -32,25 +32,22 @@ $$
 import std.env.*
 import std.convert.*
 
-func solve(reader: ConsoleReader, writer: StringBuilder): Unit {
+func solve(reader: ConsoleReader): Unit {
     let x = Int64.parse(reader.readln().getOrThrow())
     if (x >= 3) {
-        writer.append("Yes\n")
-        writer.append(x - 1)
-        writer.append("\n")
+        println("Yes")
+        println(x - 1)
     } else {
-        writer.append("No\n")
+        println("No")
     }
 }
 
 main(): Int64 {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
-    let writer = StringBuilder()
     for (_ in 0..t) {
-        solve(reader, writer)
+        solve(reader)
     }
-    print(writer.toString())
     return 0
 }
 ```
