@@ -175,7 +175,7 @@ main(): Int64 {
 
     let total = powMod(4, n * n, MOD)
     let answer = (total - invalid + MOD) % MOD
-    println(answer.toString())
+    println(answer)
     return 0
 }
 ```

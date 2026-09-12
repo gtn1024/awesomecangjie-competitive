@@ -131,7 +131,7 @@ main(): Int64 {
         ans += (H[jr + 1] - H[jl]) - base * cnt
     }
 
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

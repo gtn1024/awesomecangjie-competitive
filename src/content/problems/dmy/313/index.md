@@ -95,7 +95,7 @@ main(): Int64 {
         }
     }
 
-    println(answer.toString())
+    println(answer)
     return 0
 }
 ```

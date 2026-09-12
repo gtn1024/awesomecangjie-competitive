@@ -226,7 +226,7 @@ main(): Int64 {
     }
 
     let answer = total - dinic.maxFlow(source, sink, infinity)
-    println(answer.toString())
+    println(answer)
     return 0
 }
 ```

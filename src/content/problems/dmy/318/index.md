@@ -146,7 +146,7 @@ main(): Int64 {
         mask = mask + 1
     }
 
-    println(answer.toString())
+    println(answer)
     return 0
 }
 ```
