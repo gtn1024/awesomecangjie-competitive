@@ -49,7 +49,7 @@ func lowerBound(a: Array<Int64>, target: Int64): Int64 {
     return lo
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let nn = n
@@ -114,6 +114,5 @@ main(): Int64 {
         let ansY = cycles * dy1 + py
         println("${ansX} ${ansY}")
     }
-    return 0
 }
 ```

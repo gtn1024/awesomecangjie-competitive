@@ -115,7 +115,7 @@ func bitSum(bit: Array<Int64>, idx: Int64): Int64 {
     return s
 }
 
-main(): Int64 {
+main() {
     let MOD: Int64 = 998244353
     let inv100 = modPow(100, MOD - 2, MOD)
     let reader = getStdIn()
@@ -230,6 +230,5 @@ main(): Int64 {
         }
         println(ans)
     }
-    return 0
 }
 ```

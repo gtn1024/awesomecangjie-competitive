@@ -89,7 +89,7 @@ func f(n: Int64): Int64 {
     return sum
 }
 
-main(): Int64 {
+main() {
     initCost()
     let reader = getStdIn()
     let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true)
@@ -97,6 +97,5 @@ main(): Int64 {
     let r = Int64.parse(parts[1])
     let ans = f(r) - f(l)
     println(ans)
-    return 0
 }
 ```

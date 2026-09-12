@@ -410,7 +410,7 @@ func reconstructionDistanceSum(
     return answer
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let firstLine = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = firstLine[0]
@@ -492,6 +492,5 @@ main(): Int64 {
     let increasingSum = reconstructionDistanceSum(n, graphOffset, graphTo, queryOffset, queryVertex, true)
     let decreasingSum = reconstructionDistanceSum(n, graphOffset, graphTo, queryOffset, queryVertex, false)
     println(((increasingSum + decreasingSum) / 2).toString())
-    return 0
 }
 ```

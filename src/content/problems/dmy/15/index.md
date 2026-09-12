@@ -35,7 +35,7 @@ func gcd(x: Int64, y: Int64): Int64 {
     return a
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let ab = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let a = ab[0]
@@ -53,7 +53,6 @@ main(): Int64 {
         i += 1
     }
     println(ans)
-    return 0
 }
 ```
 

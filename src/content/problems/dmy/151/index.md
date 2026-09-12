@@ -53,7 +53,7 @@ $$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
 
     // 假期天数
@@ -158,7 +158,6 @@ main(): Int64 {
     } else {
         println("${ans}")
     }
-    return 0
 }
 
 // 字符 Rune -> 活动 0/1/2
