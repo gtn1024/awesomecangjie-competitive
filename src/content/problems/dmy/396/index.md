@@ -229,7 +229,6 @@ func solve() {
     }
 
     let INF: Int64 = 1000000000000000000
-    let sb = StringBuilder()
     for (qi in 0..qn) {
         var ans: Int64 = -1
         if (flag1[qi] || flag2[qi]) {
@@ -253,10 +252,8 @@ func solve() {
             }
             ans = best
         }
-        sb.append(ans)
-        sb.append("\n")
+        println(ans)
     }
-    print(sb.toString())
 }
 
 main() {
