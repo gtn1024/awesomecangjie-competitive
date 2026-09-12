@@ -75,27 +75,25 @@ main(): Int64 {
     // 中间链上 x-1 个节点中，前 x-2 个度数为 2，最后一个（节点 n）吸收全部额外叶子，
     // 度数为 2 + (n-x-1) = n-x+1。
     let ones = n - x + 1   // 度数为 1 的节点个数
-    let sb = StringBuilder()
     var i = Int64(0)
     while (i < ones) {
         if (i > Int64(0)) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append("1")
+        print("1")
         i++
     }
     // 中间度数为 2 的节点：共 (x-1)-1 = x-2 个
     var j = Int64(0)
     let twos = x - 2
     while (j < twos) {
-        sb.append(" 2")
+        print(" 2")
         j++
     }
     // 最后一个节点（节点 n）吸收全部额外叶子
     let last = n - x + 1
-    sb.append(" ")
-    sb.append(last.toString())
-    println(sb.toString())
+    print(" ")
+    println(last)
     return 0
 }
 ```
