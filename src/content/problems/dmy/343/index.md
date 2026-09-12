@@ -79,16 +79,14 @@ main(): Int64 {
     }
 
     // 处理查询
-    var out = StringBuilder()
     for (_ in 0..q) {
         let k = Int64.parse(reader.readln().getOrThrow())
         if (k >= 1 && k <= Int64(LIMIT) && good[k]) {
-            out.append("YES\n")
+            println("YES")
         } else {
-            out.append("NO\n")
+            println("NO")
         }
     }
-    print(out.toString())
     return 0
 }
 ```
