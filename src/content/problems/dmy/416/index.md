@@ -13,7 +13,7 @@ memoryLimit: 512m
 
 ## 思路
 
-顺时针方向依次为 `N`、`E`、`S`、`W`，把朝向映射为下标 0～3：`R`（顺时针 90°）下标加 1 取模 4，`L`（逆时针 90°）下标加 3 取模 4。初始下标由初始朝向确定，逐步执行操作并把每次结果拼进答案字符串。
+顺时针方向依次为 `N`、`E`、`S`、`W`，把朝向映射为下标 0～3：`R`（顺时针 90°）下标加 1 取模 4，`L`（逆时针 90°）下标加 3 取模 4。初始下标由初始朝向确定，逐步执行操作并把每次结果直接输出。
 
 复杂度：时间 $O(n)$，空间 $O(n)$。
 
@@ -37,16 +37,15 @@ main(): Int64 {
     }
     let n = Int64.parse(dn[1])
     let s = reader.readln().getOrThrow()
-    let sb = StringBuilder()
     for (i in 0..n) {
         if (s[i] == UInt8(0x52)) {
             idx = (idx + 1) % 4
         } else {
             idx = (idx + 3) % 4
         }
-        sb.append(Rune(UInt32(dirs[idx])))
+        print(Rune(UInt32(dirs[idx])))
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
@@ -55,4 +54,4 @@ main(): Int64 {
 
 - 逆时针转 90° 等价于顺时针转 270°，即下标加 3 取模，与顺时针共用同一套取模运算。
 - `'R'` 的 ASCII 码是 `0x52`，字符串按字节比较即可区分 `L` / `R`。
-- 朝向字符从 `"NESW"` 里按下标取字节，转成 `Rune` 后追加进 `StringBuilder`。
+- 朝向字符从 `"NESW"` 里按下标取字节，转成 `Rune` 后直接用 `print` 输出。
