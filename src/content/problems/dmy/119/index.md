@@ -116,7 +116,7 @@ func solve(reader: ConsoleReader): Unit {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
     var i: Int64 = 0
@@ -124,6 +124,5 @@ main(): Int64 {
         solve(reader)
         i += 1
     }
-    return 0
 }
 ```

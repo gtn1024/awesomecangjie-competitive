@@ -68,7 +68,7 @@ func findPos(x: Int64): Int64 {
     return pos
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
@@ -125,7 +125,6 @@ main(): Int64 {
             }
         }
     }
-    return 0
 }
 ```
 

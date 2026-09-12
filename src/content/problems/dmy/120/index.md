@@ -283,13 +283,12 @@ func solve(): Unit {
     }
 }
 
-main(): Int64 {
+main() {
     gdata = readAll()
     glen = gdata.size
     let t = nextInt()
     for (_ in 0..t) {
         solve()
     }
-    return 0
 }
 ```

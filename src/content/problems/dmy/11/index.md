@@ -104,7 +104,7 @@ func dijkstra(s: Int64, n: Int64, adj: Array<ArrayList<Int64>>, heap: MinHeap): 
     return dist
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nmk = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let n = nmk[0]
@@ -181,7 +181,6 @@ main(): Int64 {
         }
     }
     println(ans)
-    return 0
 }
 ```
 

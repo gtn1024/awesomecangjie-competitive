@@ -81,7 +81,7 @@ func powMod(a: Int64, e: Int64): Int64 {
     return res
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let nn = n
@@ -154,6 +154,5 @@ main(): Int64 {
         }
         println(ak)
     }
-    return 0
 }
 ```

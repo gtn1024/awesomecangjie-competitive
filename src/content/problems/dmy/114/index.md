@@ -123,7 +123,7 @@ func findFirst(mn: Array<Int64>, size: Int64, D: Int64, buf: Array<Int64>, pos: 
     return -1
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let T = Int64.parse(reader.readln().getOrThrow())
     for (tt in 0..T) {
@@ -313,6 +313,5 @@ main(): Int64 {
             println(ans[i])
         }
     }
-    return 0
 }
 ```

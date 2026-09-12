@@ -185,7 +185,7 @@ func solve(n: Int64, s1: String, s2: String): Int64 {
     return ans
 }
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let t = Int64.parse(reader.readln().getOrThrow())
     for (tc in 0..t) {
@@ -195,6 +195,5 @@ main(): Int64 {
         let s2 = parts[2]
         println(solve(n, s1, s2))
     }
-    return 0
 }
 ```
