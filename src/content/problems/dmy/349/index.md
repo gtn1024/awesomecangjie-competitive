@@ -13,7 +13,7 @@ memoryLimit: 512m
 
 ## 思路
 
-直接模拟：依次取出 $s$ 的每个字符，各重复输出 $k$ 次即可。输出串总长度为 $n \times k \le 2500$，构造时用 `StringBuilder` 逐字符拼接。
+直接模拟：依次取出 $s$ 的每个字符，各重复输出 $k$ 次即可。输出串总长度为 $n \times k \le 2500$，直接逐字符 `print` 输出，行尾 `println()` 补换行。
 
 复杂度：时间 $O(nk)$，空间 $O(nk)$。
 
@@ -28,13 +28,12 @@ main(): Int64 {
     let p = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ x: String => Int64.parse(x) })
     let k = p[1]
     let s = reader.readln().getOrThrow()
-    let sb = StringBuilder()
     for (r in s.runes()) {
         for (i in 0..k) {
-            sb.append(r)
+            print(r)
         }
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
