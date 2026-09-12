@@ -35,7 +35,7 @@ memoryLimit: 512m
 ## 复杂度
 
 - 交换次数：每根柱至多向左移动 $n-1$ 步，总计 $k \le \dfrac{n(n-1)}{2} < n^2$，满足题目 $0 \le k \le n^2$ 的限制。
-- 时间：$O(n^2)$。$n = 2000$ 时 $k \approx 2 \times 10^6$，输出量大，必须用 `StringBuilder` 拼接后一次性输出。
+- 时间：$O(n^2)$。$n = 2000$ 时 $k \approx 2 \times 10^6$，输出量大，直接用 `println` 输出。
 - 空间：$O(n^2)$ 存操作序列；高度用 `Int64` 不会溢出（最小高度 $\approx 10^9 - 2 \times 10^6 > 0$）。
 
 ## 仓颉实现
@@ -77,18 +77,12 @@ main(): Int64 {
     // 输出：第一行 k，接下来 k 行 "h p"
     // 执行顺序即 ops 的顺序；第一个最先执行（最高轨道），高度递减
     let k = Int64(ops.size)
-    var sb = StringBuilder()
-    sb.append(k.toString())
-    sb.append("\n")
+    println(k)
     var h: Int64 = 1000000000 - 1
     for (i in 0..k) {
-        sb.append(h.toString())
-        sb.append(" ")
-        sb.append(ops[i].toString())
-        sb.append("\n")
+        println("${h} ${ops[i]}")
         h = h - 1
     }
-    print(sb.toString())
     return 0
 }
 ```
@@ -97,4 +91,4 @@ main(): Int64 {
 
 - 把「轨道」抽象为「相邻交换」，把「高度从大到小」抽象为「交换执行顺序」，是本题的核心观察。
 - 插入式冒泡保证已固定的前缀不被破坏，且交换总数严格小于 $n^2$。
-- 输出量可达百万行，必须用 `StringBuilder` 一次性输出，否则会 TLE。
+- 输出量可达百万行，直接用 `println` 输出。
