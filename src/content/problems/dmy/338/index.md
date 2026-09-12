@@ -75,7 +75,7 @@ func countValidY(b: Array<Int64>, m: Int64, need: Int64): Int64 {
     return b[m - left] - b[left - 1]
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = first[0]
@@ -95,6 +95,5 @@ main(): Int64 {
     }
 
     println(answer)
-    return 0
 }
 ```

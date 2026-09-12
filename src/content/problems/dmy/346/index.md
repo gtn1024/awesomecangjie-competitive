@@ -66,7 +66,7 @@ func c3(x: Int64): Int64 {
     return x * (x - 1) * (x - 2) / 6
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -186,6 +186,5 @@ main(): Int64 {
     }
 
     println(answer)
-    return 0
 }
 ```

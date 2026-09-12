@@ -131,7 +131,7 @@ func refineOrder(source: Array<Int64>, target: Array<Int64>, keys: Array<Int64>,
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let q = Int64.parse(reader.readln().getOrThrow())
     let opType = Array<Int64>(q, { _ => 0 })
@@ -268,6 +268,5 @@ main(): Int64 {
         println(answer[i])
         i += 1
     }
-    return 0
 }
 ```

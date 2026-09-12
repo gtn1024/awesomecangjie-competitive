@@ -99,7 +99,7 @@ class BIT {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = first[0]
@@ -180,6 +180,5 @@ main(): Int64 {
         println(ans[j])
         j += 1
     }
-    return 0
 }
 ```

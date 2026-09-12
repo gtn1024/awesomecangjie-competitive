@@ -100,7 +100,7 @@ class Active {
     }
 }
 
-main(): Int64 {
+main() {
     let MOD: Int64 = 998244353
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
@@ -139,6 +139,5 @@ main(): Int64 {
         ans = (ans + (cnt % MOD) * active.sum) % MOD
     }
     println(ans)
-    return 0
 }
 ```

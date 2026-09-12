@@ -106,7 +106,7 @@ func factorize(n0: Int64): ArrayList<Int64> {
     return result
 }
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let n = Int64.parse(reader.readln().getOrThrow())
     let MOD: Int64 = 998244353
@@ -147,6 +147,5 @@ main(): Int64 {
     }
 
     println(answer)
-    return 0
 }
 ```

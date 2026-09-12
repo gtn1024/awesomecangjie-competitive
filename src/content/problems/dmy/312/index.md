@@ -89,7 +89,7 @@ func upperBound(a: Array<Int64>, key: Int64): Int64 {
     return lo
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let firstLine = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let na = Int64.parse(firstLine[0])
@@ -132,6 +132,5 @@ main(): Int64 {
     }
 
     println(ans)
-    return 0
 }
 ```
