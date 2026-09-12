@@ -97,7 +97,7 @@ main(): Int64 {
         ans = (ans + (v % MOD) * c) % MOD
         i = j
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

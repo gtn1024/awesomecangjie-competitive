@@ -56,7 +56,7 @@ main(): Int64 {
     }
 
     let ans = cnt * (pow - 1)
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

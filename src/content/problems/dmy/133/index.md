@@ -80,7 +80,7 @@ main(): Int64 {
         ans += c * (c - 1) / 2
         i = j
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

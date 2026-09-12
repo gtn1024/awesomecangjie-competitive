@@ -149,7 +149,7 @@ main(): Int64 {
         run += cnt[i]
         ans ^= run
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```
