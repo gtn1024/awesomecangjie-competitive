@@ -77,16 +77,14 @@ main(): Int64 {
         }
     }
 
-    let sb = StringBuilder()
-    sb.append((2 * comps).toString())
-    sb.append("\n")
+    println(2 * comps)
     for (i in 1..=n) {
-        sb.append(p[i].toString())
+        print(p[i])
         if (i < n) {
-            sb.append(" ")
+            print(" ")
         }
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
