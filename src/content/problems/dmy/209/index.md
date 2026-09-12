@@ -171,7 +171,7 @@ main(): Int64 {
                 let s2 = bit2.sum(r + 1) - bit2.sum(p + 1)
                 ans = partial + (r + 2) * s1 - s2
             }
-            println(ans.toString())
+            println(ans)
         } else {
             let pos = Int64.parse(line[1]) - 1
             let ch = line[2][0]

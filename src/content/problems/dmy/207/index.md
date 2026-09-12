@@ -130,7 +130,7 @@ main(): Int64 {
     // c=C, X=A, Y=B
     ans = ans + countForTarget(bytes, n, b'A', b'B', cntA, cntB, map)
 
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

@@ -56,7 +56,7 @@ main(): Int64 {
             ans += cnt[i] - k
         }
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

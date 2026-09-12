@@ -107,7 +107,7 @@ main(): Int64 {
         for (i in 0..n) {
             v = (v * 10 + dig[i]) % MOD
         }
-        println(v.toString())
+        println(v)
         return 0
     }
 
@@ -155,7 +155,7 @@ main(): Int64 {
         pw = pw * 10 % MOD
     }
 
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```
