@@ -49,7 +49,7 @@ import std.convert.*
 import std.console.*
 import std.sort.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let line = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = line[0]
@@ -71,7 +71,6 @@ main(): Int64 {
         }
     }
     println(lo)
-    return 0
 }
 
 func check(T: Int64, n: Int64, k: Int64, x: Int64, a: Array<Int64>, minA: Int64, maxA: Int64, need: Int64): Bool {

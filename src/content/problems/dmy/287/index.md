@@ -86,7 +86,7 @@ class FastReader {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = FastReader(getStdIn().readToEnd().getOrThrow())
     let t = reader.nextInt()
     for (_ in 0..t) {
@@ -141,6 +141,5 @@ main(): Int64 {
         }
         println(ans)
     }
-    return 0
 }
 ```

@@ -207,7 +207,7 @@ class ImplicitTreap {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let _ = Int64.parse(reader.readln().getOrThrow())
     let nq = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -232,6 +232,5 @@ main(): Int64 {
             println(answer)
         }
     }
-    return 0
 }
 ```

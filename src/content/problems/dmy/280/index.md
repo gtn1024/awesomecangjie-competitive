@@ -206,7 +206,7 @@ func processBackward(
     state[0] = price[last]
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nq = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = nq[0]
@@ -444,6 +444,5 @@ main(): Int64 {
         }
         println(state[1])
     }
-    return 0
 }
 ```

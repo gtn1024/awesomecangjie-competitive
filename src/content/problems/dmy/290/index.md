@@ -73,7 +73,7 @@ class BigNumber {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let s = reader.readln().getOrThrow()
     // 计算每个字节的数值（非法记为 -1）。ASCII 字节即可。
@@ -121,6 +121,5 @@ main(): Int64 {
         seen.add(r)
     }
     println(seen.size)
-    return 0
 }
 ```
