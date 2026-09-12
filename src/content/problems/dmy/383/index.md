@@ -63,15 +63,14 @@ main(): Int64 {
         i += 1
     }
     // fa[1] = 0，fa[x] = x / minp[x]
-    let sb = StringBuilder()
-    sb.append(0)
+    print(0)
     var x = 2
     while (x <= nn) {
-        sb.append(" ")
-        sb.append(x / minp[x])
+        print(" ")
+        print(x / minp[x])
         x += 1
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
@@ -79,4 +78,4 @@ main(): Int64 {
 要点：
 
 - 埃氏筛中每个合数只被其最小质因子标记一次（先到先得），数组初始为 $0$ 即代表「尚未被标记」。
-- 输出用 `StringBuilder` 一次性拼出，避免 $10^6$ 次逐行打印。
+- 输出在算出每个父节点时直接 `print`，行尾用 `println()` 补换行。
