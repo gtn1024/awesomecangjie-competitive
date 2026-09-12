@@ -42,8 +42,8 @@ main(): Int64 {
     let n = nm[0]
     let m = nm[1]
     let p = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ q: String => Int64.parse(q) })
-    let sb = StringBuilder()
-    for (_ in 0..m) {
+    let swapped = Array<Bool>(m, { _ => false })
+    for (i in 0..m) {
         let ab = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ q: String => Int64.parse(q) })
         let a = ab[0] - 1
         let b = ab[1] - 1
@@ -53,9 +53,7 @@ main(): Int64 {
             let t = p[l]
             p[l] = p[r]
             p[r] = t
-            sb.append("Yes\n")
-        } else {
-            sb.append("No\n")
+            swapped[i] = true
         }
     }
     var win = true
@@ -66,7 +64,9 @@ main(): Int64 {
         }
     }
     println(if (win) { "Win" } else { "Lose" })
-    print(sb.toString())
+    for (i in 0..m) {
+        println(if (swapped[i]) { "Yes" } else { "No" })
+    }
     return 0
 }
 ```
