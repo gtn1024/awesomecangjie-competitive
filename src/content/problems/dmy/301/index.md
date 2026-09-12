@@ -141,19 +141,18 @@ main(): Int64 {
 
     let Tk = matpow(T, k, nn)
 
-    // 结果向量 r = Tk * a
-    var sb = StringBuilder()
+    // 结果向量 r = Tk * a，算出每个答案直接输出
     for (i in 0..nn) {
         var sum: Int64 = 0
         for (j in 0..nn) {
             sum = (sum + Tk[i][j] * a[j]) % MOD
         }
-        sb.append(sum.toString())
+        print(sum)
         if (i + 1 < nn) {
-            sb.append(" ")
+            print(" ")
         }
     }
-    print(sb.toString())
+    println()
     return 0
 }
 ```
