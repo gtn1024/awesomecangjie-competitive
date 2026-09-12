@@ -190,14 +190,11 @@ main(): Int64 {
         bucket[L] += p[i - 1]
     }
 
-    let sb = StringBuilder()
     var acc: Int64 = 0
     for (t in 1..=n) {
         acc += bucket[t]
-        sb.append(acc.toString())
-        sb.append("\n")
+        println(acc)
     }
-    print(sb.toString())
     return 0
 }
 ```
