@@ -171,13 +171,10 @@ main() {
         ans[qu.idx] = query(tree, size, qu.p)
     }
 
-    let sb = StringBuilder()
     i = 0
     while (i < q) {
-        sb.append(ans[i])
-        sb.append("\n")
+        println(ans[i])
         i += 1
     }
-    print(sb.toString())
 }
 ```
