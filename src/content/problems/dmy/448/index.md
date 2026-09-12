@@ -60,8 +60,7 @@ main(): Int64 {
         i += 1
     }
 
-    // 前缀和：覆盖次数为 0 的阈值 x 即为答案
-    let sb = StringBuilder()
+    // 前缀和：覆盖次数为 0 的阈值 x 即为答案，先数出个数 k
     var k: Int64 = 0
     var cur: Int64 = 0
     i = 1
@@ -69,14 +68,25 @@ main(): Int64 {
         cur += diff[i]
         if (cur == 0) {
             k += 1
-            sb.append(i)
-            sb.append(" ")
         }
         i += 1
     }
-
     println(k)
-    println(sb.toString().trimEnd())
+
+    // 第二遍扫描直接输出合法阈值，空格分隔，行尾换行
+    var sep = ""
+    cur = 0
+    i = 1
+    while (i <= nn) {
+        cur += diff[i]
+        if (cur == 0) {
+            print(sep)
+            print(i)
+            sep = " "
+        }
+        i += 1
+    }
+    println()
     return 0
 }
 ```
