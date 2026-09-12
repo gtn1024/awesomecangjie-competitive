@@ -57,7 +57,7 @@ func solve(reader: ConsoleReader) {
     let g = gcd0(m, s)
     let n = m / g
     if (n % 2 == 1) {
-        println(n.toString())
+        println(n)
     } else {
         println("-1")
     }

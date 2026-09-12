@@ -49,7 +49,7 @@ main(): Int64 {
         }
         i += 1
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

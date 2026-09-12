@@ -38,7 +38,7 @@ main(): Int64 {
             ans += 1
         }
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```
