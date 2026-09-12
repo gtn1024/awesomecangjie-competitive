@@ -37,20 +37,19 @@ main(): Int64 {
     for (val in a) {
         present[Int64(val)] = true
     }
-    let sb = StringBuilder()
     var first = true
     var i = Int64(1)
     while (i <= n) {
         if (!present[i]) {
             if (!first) {
-                sb.append(" ")
+                print(" ")
             }
-            sb.append(i)
+            print(i)
             first = false
         }
         i++
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
