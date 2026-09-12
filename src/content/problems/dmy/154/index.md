@@ -45,7 +45,7 @@ main(): Int64 {
             ans = cur
         }
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

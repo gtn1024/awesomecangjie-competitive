@@ -51,7 +51,7 @@ main(): Int64 {
             ans = cnt
         }
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

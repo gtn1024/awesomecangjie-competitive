@@ -49,7 +49,7 @@ main(): Int64 {
     } else {
         ans = a1 + (B - A) * a2 + (T - B) * a3
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

@@ -96,7 +96,7 @@ main(): Int64 {
     let l = Int64.parse(parts[0])
     let r = Int64.parse(parts[1])
     let ans = f(r) - f(l)
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

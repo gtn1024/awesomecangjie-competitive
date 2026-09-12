@@ -49,7 +49,7 @@ main(): Int64 {
         ans += rem / a + 1
         k += 1
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```
