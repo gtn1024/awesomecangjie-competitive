@@ -213,14 +213,13 @@ main(): Int64 {
         }
     }
 
-    let result = StringBuilder()
     for (i in 0..n) {
         if (i > 0) {
-            result.append(" ")
+            print(" ")
         }
-        result.append(answer[i])
+        print(answer[i])
     }
-    println(result.toString())
+    println()
     return 0
 }
 ```
