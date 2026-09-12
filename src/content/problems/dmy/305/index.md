@@ -43,18 +43,17 @@ main(): Int64 {
         diff[r + 1] = diff[r + 1] - 1
         i++
     }
-    let sb = StringBuilder()
     var cur = Int64(0)
     var j = 1
     while (j <= n) {
         cur = cur + diff[j]
         if (j > 1) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(cur % h[j - 1])
+        print(cur % h[j - 1])
         j++
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
