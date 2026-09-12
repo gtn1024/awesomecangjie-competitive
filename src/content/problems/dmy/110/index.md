@@ -42,7 +42,7 @@ $$X = 5^{b-a} \times 10^{a} \quad (b > a)$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
     for (_ in 0..t) {
@@ -74,6 +74,5 @@ main(): Int64 {
         }
         println()
     }
-    return 0
 }
 ```

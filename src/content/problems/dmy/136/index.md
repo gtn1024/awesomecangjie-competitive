@@ -25,7 +25,7 @@ memoryLimit: 512m
 ```cangjie
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     // 16 个字符，空格分隔，分别代表 0..15
     let syms = reader.readln().getOrThrow().split(" ", removeEmpty: true)
@@ -44,6 +44,5 @@ main(): Int64 {
         print(syms[v])
     }
     println()
-    return 0
 }
 ```

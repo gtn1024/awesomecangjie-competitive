@@ -32,7 +32,7 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let x = Int64.parse(reader.readln().getOrThrow())
     var r: Int64 = 0
@@ -48,6 +48,5 @@ main(): Int64 {
     }
     let letters = Array<String>(7, { i => String.fromUtf8(Array<UInt8>(1, { _ => UInt8(65 + i) })) })
     println("R${r}${letters[idx]}")
-    return 0
 }
 ```

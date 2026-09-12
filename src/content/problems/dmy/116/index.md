@@ -32,7 +32,7 @@ $$\left\lfloor \frac{\text{even}}{2} \right\rfloor + \left\lfloor \frac{\text{od
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -46,6 +46,5 @@ main(): Int64 {
         }
     }
     println("${odd / 2 + even / 2}")
-    return 0
 }
 ```

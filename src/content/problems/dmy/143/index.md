@@ -34,7 +34,7 @@ $k$ 的取值很少，因此枚举 $k$。对每个固定的 $k$，剩余金额 $
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let a = line[0]
@@ -50,6 +50,5 @@ main(): Int64 {
         k += 1
     }
     println(ans)
-    return 0
 }
 ```

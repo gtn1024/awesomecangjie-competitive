@@ -36,7 +36,7 @@ $$\text{答案}=(2^n-1)\cdot \text{count}_1$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let s = reader.readln().getOrThrow()
@@ -57,6 +57,5 @@ main(): Int64 {
 
     let ans = cnt * (pow - 1)
     println(ans)
-    return 0
 }
 ```

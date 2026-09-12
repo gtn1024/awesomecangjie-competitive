@@ -28,14 +28,13 @@ memoryLimit: 512m
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let T = Int64.parse(line[0])
     for (_ in 0..T) {
         solve(reader)
     }
-    return 0
 }
 
 func solve(reader: ConsoleReader): Unit {

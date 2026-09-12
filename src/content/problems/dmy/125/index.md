@@ -24,7 +24,7 @@ import std.convert.*
 import std.env.*
 import std.collection.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let header = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = header[0]
@@ -69,7 +69,6 @@ main(): Int64 {
         print(alive[i])
     }
     println()
-    return 0
 }
 ```
 

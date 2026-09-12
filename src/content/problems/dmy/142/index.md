@@ -31,7 +31,7 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let A = line[0]
@@ -50,6 +50,5 @@ main(): Int64 {
         ans = a1 + (B - A) * a2 + (T - B) * a3
     }
     println(ans)
-    return 0
 }
 ```

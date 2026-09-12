@@ -63,7 +63,7 @@ import std.convert.*
 import std.env.*
 import std.sort.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let firstLine = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(firstLine[0])
@@ -165,6 +165,5 @@ main(): Int64 {
         println(ans)
         qi += 1
     }
-    return 0
 }
 ```

@@ -48,7 +48,7 @@ import std.env.*
 import std.convert.*
 import std.collection.*
 
-main(): Int64 {
+main() {
     let MOD: Int64 = 998244353
     let inv2: Int64 = 499122177
     let reader = getStdIn()
@@ -155,6 +155,5 @@ main(): Int64 {
         ans = sA * sB % MOD * sC % MOD * ((sA + sB + sC) % MOD) % MOD
     }
     println(ans)
-    return 0
 }
 ```

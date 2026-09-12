@@ -123,9 +123,8 @@ func solve(reader: ConsoleReader) {
     println(String.fromUtf8(ansBytes[0..ansLen]))
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     solve(reader)
-    return 0
 }
 ```

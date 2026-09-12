@@ -37,7 +37,7 @@ import std.convert.*
 import std.collection.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let s = reader.readln().getOrThrow()
@@ -76,6 +76,5 @@ main(): Int64 {
     let arr = Array<UInt8>(list.size, { i: Int64 => list[i] })
     let result = String.fromUtf8(arr)
     println(result)
-    return 0
 }
 ```

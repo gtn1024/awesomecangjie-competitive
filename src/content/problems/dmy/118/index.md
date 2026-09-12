@@ -30,7 +30,7 @@ $k \bmod \text{len} = 0$ 时该行/列无需移动，直接跳过，省去一次
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(first[0])
@@ -86,6 +86,5 @@ main(): Int64 {
         }
         println()
     }
-    return 0
 }
 ```

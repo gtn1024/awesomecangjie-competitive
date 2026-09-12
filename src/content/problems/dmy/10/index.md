@@ -30,7 +30,7 @@ import std.convert.*
 
 const MAXV = 500000
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
@@ -53,7 +53,6 @@ main(): Int64 {
         let x = Int64.parse(reader.readln().getOrThrow())
         println(ans[x])
     }
-    return 0
 }
 ```
 
