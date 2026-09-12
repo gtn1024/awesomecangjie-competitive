@@ -135,17 +135,16 @@ func solve(reader: ConsoleReader): Unit {
 
     // 赋值：pre[i] = find(i)（根下标，集合内相同、集合间不同）
     // a[i] = pre[i] ^ pre[i-1]，因相邻不同集合故 a[i]>=1，且 <=2n<=1e9
-    var sb = StringBuilder()
     for (j in 1..=n) {
         let preNow = dsu.find(j)
         let prePrev = dsu.find(j - 1)
         let ai = preNow ^ prePrev
         if (j > 1) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(ai)
+        print(ai)
     }
-    println(sb.toString())
+    println()
 }
 
 main(): Int64 {
