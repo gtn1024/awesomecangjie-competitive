@@ -138,7 +138,7 @@ main(): Int64 {
         let cnt = v - w
         ans = (ans + (cnt % MOD) * active.sum) % MOD
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

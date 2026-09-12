@@ -88,7 +88,7 @@ func solve(reader: ConsoleReader): Unit {
     var cnt: Int64 = 0
     while (true) {
         if (diff == 0) {
-            println(cnt.toString())
+            println(cnt)
             return
         }
         // 弹出当前最大值

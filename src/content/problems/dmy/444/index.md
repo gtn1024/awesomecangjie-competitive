@@ -153,7 +153,7 @@ main(): Int64 {
             }
         }
     }
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

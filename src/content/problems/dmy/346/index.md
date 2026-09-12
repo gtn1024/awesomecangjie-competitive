@@ -185,7 +185,7 @@ main(): Int64 {
         bit += 1
     }
 
-    println(answer.toString())
+    println(answer)
     return 0
 }
 ```

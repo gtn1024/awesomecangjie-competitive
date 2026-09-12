@@ -119,7 +119,7 @@ func solve(reader: ConsoleReader): Unit {
                         left = p
                     }
                     let ans = pref[r] - pref[left]
-                    println(ans.toString())
+                    println(ans)
                 }
             }
         }
