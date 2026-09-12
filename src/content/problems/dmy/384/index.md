@@ -167,16 +167,15 @@ main(): Int64 {
 
     // 补图不是二分图：不存在合法划分
     if (bad) {
-        let sb0 = StringBuilder()
         var k0 = 0
         while (k0 < nn) {
             if (k0 > 0) {
-                sb0.append(" ")
+                print(" ")
             }
-            sb0.append(0)
+            print(0)
             k0 += 1
         }
-        println(sb0.toString())
+        println()
         return 0
     }
 
@@ -211,16 +210,15 @@ main(): Int64 {
         c += 1
     }
 
-    let sb = StringBuilder()
     var k = 1
     while (k <= nn) {
         if (k > 1) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(dp[k])
+        print(dp[k])
         k += 1
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
