@@ -173,7 +173,7 @@ main(): Int64 {
             left = mid + 1
         }
     }
-    println(left.toString())
+    println(left)
     return 0
 }
 ```

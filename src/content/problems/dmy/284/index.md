@@ -68,7 +68,7 @@ main(): Int64 {
         k += 1
     }
 
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

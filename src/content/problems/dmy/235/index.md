@@ -149,7 +149,7 @@ main(): Int64 {
     }
 
     let ans = (c1 + c2 + c3 + c4) % MOD
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```

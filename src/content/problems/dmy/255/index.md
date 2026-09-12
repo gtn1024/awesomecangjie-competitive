@@ -73,7 +73,7 @@ func solve() {
         ans = (ans + S2[d * (DMAX + 1) + j] * A[j * STRIDE + n]) % MOD
         j += 1
     }
-    println(ans.toString())
+    println(ans)
 }
 
 main(): Int64 {

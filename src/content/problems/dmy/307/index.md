@@ -156,7 +156,7 @@ main(): Int64 {
     }
     ans = (ans + (k * term4sum) % MOD) % MOD
 
-    println(ans.toString())
+    println(ans)
     return 0
 }
 ```
