@@ -141,7 +141,6 @@ main(): Int64 {
     }
 
     let q = Int64.parse(reader.readln().getOrThrow())
-    let answer = StringBuilder()
     var query: Int64 = 0
     while (query < q) {
         let update = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -163,11 +162,9 @@ main(): Int64 {
             total += tree[cells + state * dimension]
             state += 1
         }
-        answer.append((total % MOD).toString())
-        answer.append("\n")
+        println(total % MOD)
         query += 1
     }
-    print(answer.toString())
     return 0
 }
 ```
