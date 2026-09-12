@@ -163,7 +163,6 @@ main(): Int64 {
     if (m > n) {
         minimumDamage = m - n
     }
-    let output = StringBuilder()
     var damage: Int64 = 0
     while (damage <= m) {
         var answer: Int64 = 0
@@ -175,11 +174,9 @@ main(): Int64 {
             }
             answer = typeOrders * factorials % MOD
         }
-        output.append(answer)
-        output.append("\n")
+        println(answer)
         damage += 1
     }
-    print(output.toString())
     return 0
 }
 ```
