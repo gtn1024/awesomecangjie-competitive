@@ -87,7 +87,6 @@ main(): Int64 {
         i -= 1
     }
 
-    let output = StringBuilder()
     var query: Int64 = 0
     while (query < q) {
         let bounds = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -118,13 +117,12 @@ main(): Int64 {
             right /= 2
         }
         if (currentMaximum - currentMinimum <= k) {
-            output.append("Yes\n")
+            println("Yes")
         } else {
-            output.append("No\n")
+            println("No")
         }
         query += 1
     }
-    print(output.toString())
     return 0
 }
 ```
