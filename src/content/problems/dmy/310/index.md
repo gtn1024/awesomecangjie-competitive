@@ -58,21 +58,18 @@ main(): Int64 {
     let totalLen = Int64(s.size)
 
     var pos: Int64 = 0
-    let sb = StringBuilder()
     var first: Bool = true
     while (pos < totalLen) {
         let firstByte = UInt8(s[pos])
         let idx = firstCharToIdx[firstByte]
-        if (first) {
-            sb.append(idx)
-            first = false
-        } else {
-            sb.append(" ")
-            sb.append(idx)
+        if (!first) {
+            print(" ")
         }
+        print(idx)
+        first = false
         pos += lenArr[idx - 1]
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
