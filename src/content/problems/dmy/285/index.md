@@ -141,16 +141,15 @@ main(): Int64 {
         i -= 1
     }
 
-    let sb = StringBuilder()
     var cur: Int64 = 0
     for (i in 1..=n) {
         cur = (cur + boxDiff[i]) % MOD
         if (i > 1) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(cur)
+        print(cur)
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
