@@ -147,12 +147,11 @@ func solve(reader: ConsoleReader): Unit {
     println()
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let T = Int64.parse(reader.readln().getOrThrow())
     for (_ in 0..T) {
         solve(reader)
     }
-    return 0
 }
 ```

@@ -115,7 +115,7 @@ func removeElem(i: Int64, gv: Array<Int64>, subs: Array<Array<Int64>>, c: Array<
     return ans
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nq = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = nq[0]
@@ -232,6 +232,5 @@ main(): Int64 {
         println(out[i])
         i += 1
     }
-    return 0
 }
 ```

@@ -87,7 +87,7 @@ func g(a0: Int64, b0: Int64, n: Int64, tot: Array<Int64>): Int64 {
     return ans
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let head = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = head[0]
@@ -125,6 +125,5 @@ main(): Int64 {
             println(r)
         }
     }
-    return 0
 }
 ```

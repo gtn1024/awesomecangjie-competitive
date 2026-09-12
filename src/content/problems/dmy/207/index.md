@@ -100,7 +100,7 @@ func countForTarget(bytes: Array<UInt8>, n: Int64, charX: UInt8, charY: UInt8, c
     return total
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let s = reader.readln().getOrThrow()
@@ -131,6 +131,5 @@ main(): Int64 {
     ans = ans + countForTarget(bytes, n, b'A', b'B', cntA, cntB, map)
 
     println(ans)
-    return 0
 }
 ```

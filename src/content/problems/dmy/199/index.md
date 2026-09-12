@@ -87,7 +87,7 @@ func solve(reader: ConsoleReader): Int64 {
     return ans
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
     var i = Int64(0)
@@ -95,6 +95,5 @@ main(): Int64 {
         println("${solve(reader)}")
         i++
     }
-    return 0
 }
 ```

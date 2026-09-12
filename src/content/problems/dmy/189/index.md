@@ -51,7 +51,7 @@ func find(x: Int64): Int64 {
     return cur
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line0 = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let nn = line0[0]
@@ -117,6 +117,5 @@ main(): Int64 {
         }
     }
     println()
-    return 0
 }
 ```

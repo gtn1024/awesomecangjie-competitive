@@ -84,7 +84,7 @@ func buildST(v: Array<Int64>, n: Int64, pw: Array<Int64>): Array<Array<Int64>> {
     return st
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(first[0])
@@ -156,6 +156,5 @@ main(): Int64 {
         let ans = mymin(st[k][left], st[k][right])
         println(ans)
     }
-    return 0
 }
 ```

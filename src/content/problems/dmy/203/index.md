@@ -93,7 +93,7 @@ func pathMax(up: Array<Array<Int64>>, mx: Array<Array<Int64>>, dep: Array<Int64>
     return ans
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let l1 = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = l1[0]
@@ -273,7 +273,6 @@ main(): Int64 {
         println(ans)
         qi = qi + 1
     }
-    return 0
 }
 
 ```
