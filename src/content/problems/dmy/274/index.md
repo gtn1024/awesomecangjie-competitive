@@ -227,14 +227,11 @@ main(): Int64 {
         out[qi] = curAns
     }
 
-    let sb = StringBuilder()
     i = 0
     while (i < q) {
-        sb.append(out[i])
-        sb.append("\n")
+        println(out[i])
         i += 1
     }
-    print(sb.toString())
     return 0
 }
 ```
