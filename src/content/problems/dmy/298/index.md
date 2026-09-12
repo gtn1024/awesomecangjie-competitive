@@ -45,21 +45,19 @@ main(): Int64 {
         reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     })
     // 矩阵乘法 c = a * b
-    var sb = StringBuilder()
     for (i in 0..nn) {
         for (l in 0..nn) {
             var sum: Int64 = 0
             for (j in 0..nn) {
                 sum += a[i][j] * b[j][l]
             }
-            sb.append(sum.toString())
+            print(sum)
             if (l + 1 < nn) {
-                sb.append(" ")
+                print(" ")
             }
         }
-        sb.append("\n")
+        println()
     }
-    print(sb.toString())
     return 0
 }
 ```
