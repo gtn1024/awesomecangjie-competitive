@@ -27,7 +27,7 @@ memoryLimit: 512m
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let v = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     if ((v[0] % 2 == 1) && (v[1] % 2 == 1)) {
@@ -35,7 +35,6 @@ main(): Int64 {
     } else {
         println("No")
     }
-    return 0
 }
 ```
 

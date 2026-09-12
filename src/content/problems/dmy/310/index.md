@@ -36,7 +36,7 @@ import std.convert.*
 import std.collection.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
 
@@ -70,6 +70,5 @@ main(): Int64 {
         pos += lenArr[idx - 1]
     }
     println()
-    return 0
 }
 ```

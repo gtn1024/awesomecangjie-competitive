@@ -91,7 +91,7 @@ func solve(reader: ConsoleReader): Unit {
     }
 }
 
-main(): Int64 {
+main() {
     md[0] = Int64(31)
     md[1] = Int64(28)
     md[2] = Int64(31)
@@ -111,6 +111,5 @@ main(): Int64 {
         solve(reader)
         i += Int64(1)
     }
-    return 0
 }
 ```

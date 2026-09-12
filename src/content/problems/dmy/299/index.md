@@ -45,7 +45,7 @@ import std.env.*
 import std.convert.*
 import std.collection.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let nn = n
@@ -83,7 +83,6 @@ main(): Int64 {
         println("${h} ${ops[i]}")
         h = h - 1
     }
-    return 0
 }
 ```
 

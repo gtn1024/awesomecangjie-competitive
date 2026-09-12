@@ -34,7 +34,7 @@ $$d = 2 - \text{shift}$$
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let x = Int64.parse(reader.readln().getOrThrow())
     let shift = ((x - 2026) % 7 + 7) % 7
@@ -43,6 +43,5 @@ main(): Int64 {
         day += 7
     }
     println("1 ${day}")
-    return 0
 }
 ```

@@ -30,7 +30,7 @@ $10^k - 1$ 是 $k$ 个 9 组成的数，例如 $k = 3$ 时为 $999$。用 $999\c
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let k = Int64.parse(parts[0])
@@ -58,6 +58,5 @@ main(): Int64 {
     let s = start
     let trimmed = Array<UInt8>(k - s, { idx: Int64 => out[s + idx] })
     println(String.fromUtf8(trimmed))
-    return 0
 }
 ```

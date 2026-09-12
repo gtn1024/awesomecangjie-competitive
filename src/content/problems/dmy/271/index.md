@@ -41,7 +41,7 @@ $$
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = first[0]
@@ -74,6 +74,5 @@ main(): Int64 {
         ans += prefixD[r - 1] - prefixD[l - 1]
         writer.writeln(ans.toString())
     }
-    return 0
 }
 ```

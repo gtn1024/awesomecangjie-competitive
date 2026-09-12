@@ -145,8 +145,7 @@ func solve() {
     }
 }
 
-main(): Int64 {
+main() {
     solve()
-    return 0
 }
 ```

@@ -28,7 +28,7 @@ $n \le 1000$，$O(n^2)$ 完全可过。直接双重循环枚举下标 $i$、$j$�
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -47,6 +47,5 @@ main(): Int64 {
         i += 1
     }
     println(ans)
-    return 0
 }
 ```

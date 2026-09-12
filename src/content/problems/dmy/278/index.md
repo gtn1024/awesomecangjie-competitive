@@ -90,7 +90,7 @@ func solve(reader: ConsoleReader): Unit {
     println(1)
 }
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let t = Int64.parse(reader.readln().getOrThrow())
     var c: Int64 = 0
@@ -98,6 +98,5 @@ main(): Int64 {
         solve(reader)
         c += 1
     }
-    return 0
 }
 ```

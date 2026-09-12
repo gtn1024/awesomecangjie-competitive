@@ -31,7 +31,7 @@ $n$ 天后输出 $q$ 即可。累加上界为 $n \cdot x \approx 2 \times 10^{14
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = first[0]
@@ -46,7 +46,6 @@ main(): Int64 {
         }
     }
     println(q)
-    return 0
 }
 ```
 

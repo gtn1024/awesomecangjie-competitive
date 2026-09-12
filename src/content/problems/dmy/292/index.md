@@ -65,7 +65,7 @@ $$
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = parts[0]
@@ -94,6 +94,5 @@ main(): Int64 {
     let last = n - x + 1
     print(" ")
     println(last)
-    return 0
 }
 ```

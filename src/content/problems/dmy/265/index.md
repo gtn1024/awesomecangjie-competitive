@@ -30,7 +30,7 @@ $n \le 5000$ 允许 $O(n^2)$ 的做法。直接枚举所有连续子数组 $[l, 
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(line[0])
@@ -55,6 +55,5 @@ main(): Int64 {
         }
     }
     println(ans)
-    return 0
 }
 ```

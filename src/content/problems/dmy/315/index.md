@@ -32,7 +32,7 @@ $$
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = first[0]
@@ -42,7 +42,6 @@ main(): Int64 {
         x = (x + a[i]) / 2
     }
     println("${x}")
-    return 0
 }
 ```
 

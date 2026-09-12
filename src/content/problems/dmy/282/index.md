@@ -31,7 +31,7 @@ $R \le 10^7$，区间长度 $R - L + 1 \le 10^4$ 很小，但每次询问都要�
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let v = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let L = v[0]
@@ -62,6 +62,5 @@ main(): Int64 {
         k += 1
     }
     println(sum)
-    return 0
 }
 ```

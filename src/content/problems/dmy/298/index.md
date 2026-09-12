@@ -32,7 +32,7 @@ $$c_{i, l} = \sum_{j=1}^{n} a_{i, j} \cdot b_{j, l}$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let nn = n
@@ -58,6 +58,5 @@ main(): Int64 {
         }
         println()
     }
-    return 0
 }
 ```

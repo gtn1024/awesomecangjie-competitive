@@ -40,10 +40,9 @@ $$\text{ans} = \left\lfloor \frac{n + 5}{10} \right\rfloor \times 10$$
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     println(((n + 5) / 10) * 10)
-    return 0
 }
 ```

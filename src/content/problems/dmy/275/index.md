@@ -40,7 +40,7 @@ $$p_1 - (p_2 + p_3 - p_4) = p_1 - p_2 - p_3 + p_4$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let v = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let p1 = v[0]
@@ -48,6 +48,5 @@ main(): Int64 {
     let p3 = v[2]
     let p4 = v[3]
     println(p1 - p2 - p3 + p4)
-    return 0
 }
 ```
