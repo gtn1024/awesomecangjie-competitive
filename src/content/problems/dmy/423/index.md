@@ -53,7 +53,6 @@ main(): Int64 {
         println("")
         return 0
     }
-    let sb = StringBuilder()
     var printed = 0
     if (cnt1 > cnt0) {
         // 1 多：把最靠左的 m 个 1 改成 0
@@ -63,9 +62,9 @@ main(): Int64 {
             }
             if (runes[i] == r'1') {
                 if (printed > 0) {
-                    sb.append(" ")
+                    print(" ")
                 }
-                sb.append(i + 1)
+                print(i + 1)
                 printed++
             }
         }
@@ -76,16 +75,16 @@ main(): Int64 {
             if (runes[i] == r'0') {
                 if (zerosLeft <= m) {
                     if (printed > 0) {
-                        sb.append(" ")
+                        print(" ")
                     }
-                    sb.append(i + 1)
+                    print(i + 1)
                     printed++
                 }
                 zerosLeft--
             }
         }
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
