@@ -49,7 +49,7 @@ import std.console.*
 import std.convert.*
 import std.collection.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let t = Int64.parse(reader.readln().getOrThrow())
     let limit = Int64(2000000000000000000) // 2e18，防止 len 预处理溢出
@@ -94,6 +94,5 @@ main(): Int64 {
             println(Rune(UInt32(c)))
         }
     }
-    return 0
 }
 ```

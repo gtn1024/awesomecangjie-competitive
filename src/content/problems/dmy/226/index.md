@@ -49,7 +49,7 @@ $$d_{j+1}[v'] = \min_{x} \left( d_j[v' \oplus 2^x] + j + b_x \right)$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line0 = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(line0[0])
@@ -120,6 +120,5 @@ main(): Int64 {
         println(best[f])
         k += 1
     }
-    return 0
 }
 ```

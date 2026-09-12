@@ -41,7 +41,7 @@ import std.env.*
 
 const MOD: Int64 = 998244353
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let toks = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = toks[0]
@@ -124,6 +124,5 @@ main(): Int64 {
     }
 
     println(ans)
-    return 0
 }
 ```

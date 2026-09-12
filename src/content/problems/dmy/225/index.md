@@ -57,7 +57,7 @@ $$v = \sum_{i=0}^{n-1} d_i \cdot T_i.$$
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let n = Int64.parse(reader.readln().getOrThrow())
     let s = reader.readln().getOrThrow()
@@ -73,6 +73,5 @@ main(): Int64 {
         i -= 1
     }
     println(answer)
-    return 0
 }
 ```

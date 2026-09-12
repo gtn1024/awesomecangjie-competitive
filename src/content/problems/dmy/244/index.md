@@ -23,12 +23,11 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let x = Int64.parse(reader.readln().getOrThrow())
     let h = x % 24
     println(if (6 <= h && h <= 18) { "I love Shawarma" } else { "Shawarma is the best food" })
-    return 0
 }
 ```
 

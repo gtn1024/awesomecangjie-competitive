@@ -38,7 +38,7 @@ import std.env.*
 import std.convert.*
 import std.collection.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = first[0]
@@ -110,6 +110,5 @@ main(): Int64 {
     }
 
     print("${base + best}")
-    return 0
 }
 ```

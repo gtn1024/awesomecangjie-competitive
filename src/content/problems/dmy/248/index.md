@@ -50,7 +50,7 @@ import std.convert.*
 import std.env.*
 import std.sort.*
 
-main(): Int64 {
+main() {
     let MOD: Int64 = 1000000007
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
@@ -128,7 +128,6 @@ main(): Int64 {
     // 所有 B 点都匹配的完美匹配
     ans = (ans + Int64(fprev[nn])) % MOD
     println(ans)
-    return 0
 }
 ```
 

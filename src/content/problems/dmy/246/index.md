@@ -31,7 +31,7 @@ memoryLimit: 512m
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(first[0])
@@ -76,7 +76,6 @@ main(): Int64 {
     for (i in 0..n) {
         println(String.fromUtf8(grid[i]))
     }
-    return 0
 }
 ```
 

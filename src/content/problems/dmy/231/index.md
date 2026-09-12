@@ -112,7 +112,7 @@ func solve(m: Int64): Int64 {
     return sum
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line = reader.readln().getOrThrow()
     let t = Int64.parse(line)
@@ -121,6 +121,5 @@ main(): Int64 {
         let m = Int64.parse(mline[0])
         println(solve(m).toString())
     }
-    return 0
 }
 ```

@@ -38,7 +38,7 @@ import std.convert.*
 import std.env.*
 import std.collection.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     // 读取 n（题目固定格式，单整数）
     let _ = Int64.parse(reader.readln().getOrThrow())
@@ -66,6 +66,5 @@ main(): Int64 {
 
     let arr = Array<UInt8>(result.size, { i: Int64 => result[i] })
     println(String.fromUtf8(arr))
-    return 0
 }
 ```

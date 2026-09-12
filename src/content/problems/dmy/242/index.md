@@ -108,7 +108,7 @@ func maxOf(x: Int64, y: Int64): Int64 {
     return y
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     gdata = reader.readToEnd().getOrThrow().toArray()
     glen = gdata.size
@@ -326,6 +326,5 @@ main(): Int64 {
         }
         println(tree[1])
     }
-    return 0
 }
 ```

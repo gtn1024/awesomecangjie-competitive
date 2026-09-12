@@ -226,7 +226,7 @@ func floorNode(k: Int64): Int64 {
     return best
 }
 
-main(): Int64 {
+main() {
     initTreap()
     let reader = Console.stdIn
     var buf = Array<Byte>(BUFSIZE, { _ => 0 })
@@ -394,6 +394,5 @@ main(): Int64 {
         insertNode(L, R)
         println(ans)
     }
-    return 0
 }
 ```

@@ -84,7 +84,7 @@ func floorRoot(X: Int64, e: Int64): Int64 {
     return lo
 }
 
-main(): Int64 {
+main() {
     let MOD: Int64 = 666666666
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true)
@@ -150,6 +150,5 @@ main(): Int64 {
 
     let ans = (c1 + c2 + c3 + c4) % MOD
     println(ans)
-    return 0
 }
 ```

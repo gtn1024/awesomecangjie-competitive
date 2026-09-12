@@ -27,7 +27,7 @@ import std.convert.*
 import std.env.*
 import std.sort.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     var money = first[1]
@@ -43,6 +43,5 @@ main(): Int64 {
         count += 1
     }
     println(count)
-    return 0
 }
 ```

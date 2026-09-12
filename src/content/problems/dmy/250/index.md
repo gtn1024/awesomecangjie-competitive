@@ -32,7 +32,7 @@ $$
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let values = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = values[0]
@@ -42,6 +42,5 @@ main(): Int64 {
 
     let answer = (y - 1 + k - x) % n + 1
     println(answer)
-    return 0
 }
 ```

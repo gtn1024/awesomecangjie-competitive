@@ -45,7 +45,7 @@ import std.convert.*
 //   cnt   : 当前行对下已扫过的「角列」(两边界行该列都是空地) 数量，贡献全部角列对数
 //   sf/sg : 距离上一个含花/含草列之后的角列数，用于扣除无花/无草的矩形
 //   sb    : 距离上一个含花或含草列之后的角列数，加回既无花又无草的矩形（容斥）
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = first[0]
@@ -149,6 +149,5 @@ main(): Int64 {
         i += 1
     }
     println(ans)
-    return 0
 }
 ```

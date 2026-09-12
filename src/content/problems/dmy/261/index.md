@@ -193,7 +193,7 @@ class SegTree {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line1 = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(line1[0])
@@ -218,6 +218,5 @@ main(): Int64 {
             println(st.query(1, 1, n, l, r))
         }
     }
-    return 0
 }
 ```

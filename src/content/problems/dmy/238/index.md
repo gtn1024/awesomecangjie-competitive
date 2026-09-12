@@ -33,7 +33,7 @@ $n\le 5000$，子数组总数约为 $\dfrac{n(n+1)}{2}\approx 1.25\times 10^7$�
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -58,6 +58,5 @@ main(): Int64 {
         l = l + 1
     }
     println(ans)
-    return 0
 }
 ```

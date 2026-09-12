@@ -36,7 +36,7 @@ memoryLimit: 512m
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let n = Int64.parse(reader.readln().getOrThrow())
     let a = Array<Array<Int64>>(n, { _ =>
@@ -77,6 +77,5 @@ main(): Int64 {
         }
     }
     println(ans)
-    return 0
 }
 ```

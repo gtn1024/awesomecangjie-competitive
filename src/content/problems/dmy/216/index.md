@@ -30,14 +30,13 @@ memoryLimit: 512m
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let v = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = v[0]
     let m = v[1]
     let ans = if (n < m / 2) { n } else { m / 2 }
     println(ans)
-    return 0
 }
 ```
 

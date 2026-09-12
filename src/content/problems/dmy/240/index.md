@@ -50,7 +50,7 @@ $P=[5,3,2,4,6]$：
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let p = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ s: String => Int64.parse(s) })
@@ -78,6 +78,5 @@ main(): Int64 {
         k = k + 1
     }
     println()
-    return 0
 }
 ```

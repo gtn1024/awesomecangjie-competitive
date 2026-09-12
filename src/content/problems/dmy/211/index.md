@@ -55,7 +55,7 @@ func isNearPal(x: Int64): Bool {
     return m <= 1
 }
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let l = parts[0]
@@ -67,6 +67,5 @@ main(): Int64 {
         }
         x = x + 1
     }
-    return 0
 }
 ```

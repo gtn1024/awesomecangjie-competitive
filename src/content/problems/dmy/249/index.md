@@ -108,7 +108,7 @@ var wbuf = Array<Int64>(ST, { _ => 0 })
 var tmpb = Array<Int64>(ST, { _ => 0 })
 var outb = Array<Int64>(ST, { _ => 0 })
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
 
@@ -275,7 +275,6 @@ main(): Int64 {
         print(ans[u])
     }
     println()
-    return 0
 }
 ```
 

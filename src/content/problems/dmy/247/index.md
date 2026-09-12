@@ -37,7 +37,7 @@ import std.convert.*
 import std.env.*
 import std.sort.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let nn = n
@@ -76,6 +76,5 @@ main(): Int64 {
         }
     }
     println(ans)
-    return 0
 }
 ```

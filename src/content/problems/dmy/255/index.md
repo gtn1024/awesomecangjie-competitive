@@ -76,7 +76,7 @@ func solve() {
     println(ans)
 }
 
-main(): Int64 {
+main() {
     // 第二类斯特林数：i^d = sum_j S2(d, j) * i^(j)
     S2[0] = 1
     var i: Int64 = 1
@@ -112,6 +112,5 @@ main(): Int64 {
         solve()
         cnt += 1
     }
-    return 0
 }
 ```
