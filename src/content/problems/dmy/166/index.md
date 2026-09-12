@@ -56,7 +56,7 @@ import std.env.*
 
 const MOD: Int64 = 998244353
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     var a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -124,6 +124,5 @@ main(): Int64 {
     }
 
     println(ans)
-    return 0
 }
 ```

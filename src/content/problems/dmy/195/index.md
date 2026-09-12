@@ -50,7 +50,7 @@ $$
 import std.convert.*
 import std.console.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let n = Int64.parse(reader.readln().getOrThrow())
     let nn = n
@@ -96,6 +96,5 @@ main(): Int64 {
         print(parent[i])
     }
     println()
-    return 0
 }
 ```

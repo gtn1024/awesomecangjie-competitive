@@ -56,7 +56,7 @@ A 侧同样可能有负快乐，但因为我们枚举了 **所有** 可行的 $a
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let head = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = head[0]
@@ -126,7 +126,6 @@ main(): Int64 {
     }
 
     println(best)
-    return 0
 }
 ```
 

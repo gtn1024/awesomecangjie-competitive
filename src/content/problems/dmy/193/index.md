@@ -45,7 +45,7 @@ $$
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let t = Int64.parse(reader.readln().getOrThrow())
     for (_ in 0..t) {
@@ -66,6 +66,5 @@ main(): Int64 {
         }
         println(d)
     }
-    return 0
 }
 ```

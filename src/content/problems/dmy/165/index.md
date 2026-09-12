@@ -63,7 +63,7 @@ func bfs(start: Int64, b: Int64, c: Int64, p: Int64, dist: Array<Int64>): Unit {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let a = parts[0]
@@ -113,6 +113,5 @@ main(): Int64 {
     } else {
         println(((p2[bx] + p2[by] - 2) % mod).toString())
     }
-    return 0
 }
 ```

@@ -52,7 +52,7 @@ import std.env.*
 import std.convert.*
 import std.collection.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let l1 = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = l1[0]
@@ -176,6 +176,5 @@ main(): Int64 {
     }
 
     println(ans)
-    return 0
 }
 ```

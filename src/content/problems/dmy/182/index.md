@@ -49,7 +49,7 @@ $$
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let p: Int64 = 998244353
     let n = Int64.parse(reader.readln().getOrThrow())
@@ -76,6 +76,5 @@ main(): Int64 {
         let ans = (sAB + dsA + csB + ncd) % p
         println(ans)
     }
-    return 0
 }
 ```

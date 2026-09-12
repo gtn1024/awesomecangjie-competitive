@@ -41,7 +41,7 @@ $$\text{ans} = \sum_{i=1}^{n-1} |p_i|$$
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let nq = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = nq[0]
@@ -84,6 +84,5 @@ main(): Int64 {
             println(-1)
         }
     }
-    return 0
 }
 ```

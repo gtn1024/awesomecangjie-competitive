@@ -29,7 +29,7 @@ $$|[l_1, r_1] \cup [l_2, r_2]| = (r_1 - l_1 + 1) + (r_2 - l_2 + 1) - |[l_1, r_1]
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let (l1, r1, l2, r2) = (parts[0], parts[1], parts[2], parts[3])
@@ -43,6 +43,5 @@ main(): Int64 {
     }
     let ans = len1 + len2 - overlap
     println(ans)
-    return 0
 }
 ```

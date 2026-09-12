@@ -32,7 +32,7 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
     for (_ in 0..t) {
@@ -65,6 +65,5 @@ main(): Int64 {
             println("No")
         }
     }
-    return 0
 }
 ```

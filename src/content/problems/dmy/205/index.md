@@ -32,7 +32,7 @@ $n$ 为奇数时正中间那个字符自成回文（它与自己对称），无�
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let n = Int64.parse(reader.readln().getOrThrow())
     let s = reader.readln().getOrThrow()
@@ -53,6 +53,5 @@ main(): Int64 {
         i++
     }
     println(ans)
-    return 0
 }
 ```

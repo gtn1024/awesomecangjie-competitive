@@ -31,7 +31,7 @@ memoryLimit: 256m
 ```cangjie
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let a = line[0]
@@ -57,6 +57,5 @@ main(): Int64 {
         j += 1
     }
     println()
-    return 0
 }
 ```

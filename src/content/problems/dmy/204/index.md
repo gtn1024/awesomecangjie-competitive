@@ -31,7 +31,7 @@ memoryLimit: 512m
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let header = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = header[0]
@@ -52,6 +52,5 @@ main(): Int64 {
         i++
     }
     println(ans)
-    return 0
 }
 ```

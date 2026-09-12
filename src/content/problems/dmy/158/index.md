@@ -39,7 +39,7 @@ $O(n)$ 时间，$O(n)$ 空间。
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let m = n - 1
@@ -100,6 +100,5 @@ main(): Int64 {
     let pairs = n * (n - 1) / 2
     let ans = pairs * (n - 1) - sumDist
     println(ans)
-    return 0
 }
 ```

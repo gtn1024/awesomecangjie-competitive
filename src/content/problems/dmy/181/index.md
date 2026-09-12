@@ -31,7 +31,7 @@ import std.convert.*
 import std.env.*
 import std.sort.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
     for (_ in 0..t) {
@@ -59,6 +59,5 @@ main(): Int64 {
             println(if (ok) { "Yes" } else { "No" })
         }
     }
-    return 0
 }
 ```

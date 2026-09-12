@@ -58,7 +58,7 @@ import std.convert.*
 
 const MOD: Int64 = 998244353
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(first[0])
@@ -221,6 +221,5 @@ main(): Int64 {
     }
     ans = ans % MOD
     println(ans)
-    return 0
 }
 ```

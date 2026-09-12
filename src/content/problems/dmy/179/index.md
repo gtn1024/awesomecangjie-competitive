@@ -43,7 +43,7 @@ import std.convert.*
 import std.collection.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(first[0])
@@ -133,6 +133,5 @@ main(): Int64 {
     }
 
     println(ans)
-    return 0
 }
 ```

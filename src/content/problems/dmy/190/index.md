@@ -74,7 +74,7 @@ import std.convert.*
 //
 // n <= 200，每个 i 的 Dijkstra 用 O(n^2) 扫描实现，总 O(n^3)。
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nm = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = nm[0]
@@ -207,6 +207,5 @@ main(): Int64 {
         }
     }
     println()
-    return 0
 }
 ```

@@ -26,7 +26,7 @@ memoryLimit: 512m
 ```cangjie
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let s = reader.readln().getOrThrow()
     var x: Int64 = 0
@@ -43,6 +43,5 @@ main(): Int64 {
         }
     }
     println("${x} ${y}")
-    return 0
 }
 ```

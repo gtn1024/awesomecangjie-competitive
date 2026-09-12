@@ -157,7 +157,7 @@ class MinCostFlow {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let parts0 = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = parts0[0]
@@ -310,6 +310,5 @@ main(): Int64 {
         flow += 1
     }
     println((-totalCost).toString())
-    return 0
 }
 ```

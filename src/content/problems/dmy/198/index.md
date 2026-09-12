@@ -35,13 +35,12 @@ $$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let a = n / 100
     let b = n / 10 % 10
     let c = n % 10
     println((222 * (a + b + c)).toString())
-    return 0
 }
 ```

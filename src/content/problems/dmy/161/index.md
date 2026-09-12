@@ -25,7 +25,7 @@ memoryLimit: 512m
 ```cangjie
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let s = reader.readln().getOrThrow()
     let n = s.size
@@ -36,6 +36,5 @@ main(): Int64 {
         print("3")
     }
     println()
-    return 0
 }
 ```

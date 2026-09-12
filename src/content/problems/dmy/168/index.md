@@ -30,7 +30,7 @@ $$x_1 \times x_2 + y_1 \times y_2 = 0$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
     for (_ in 0..t) {
@@ -45,6 +45,5 @@ main(): Int64 {
             println("No")
         }
     }
-    return 0
 }
 ```

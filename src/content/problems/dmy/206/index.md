@@ -93,7 +93,7 @@ func solve(reader: ConsoleReader): Unit {
     println(digits[idx])
 }
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let tt = Int64.parse(reader.readln().getOrThrow())
     var i: Int64 = 0
@@ -101,6 +101,5 @@ main(): Int64 {
         solve(reader)
         i++
     }
-    return 0
 }
 ```
