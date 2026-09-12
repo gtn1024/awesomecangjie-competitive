@@ -105,13 +105,10 @@ main(): Int64 {
     }
     let reader = getStdIn()
     let T = Int64.parse(reader.readln().getOrThrow())
-    let sb = StringBuilder()
     for (i in 0..T) {
         let n = Int64.parse(reader.readln().getOrThrow())
-        sb.append(ans[n])
-        sb.append("\n")
+        println(ans[n])
     }
-    print(sb.toString())
     return 0
 }
 ```
