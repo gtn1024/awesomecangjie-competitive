@@ -24,7 +24,7 @@ import std.env.*
 import std.convert.*
 import std.sort.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
@@ -42,7 +42,6 @@ main(): Int64 {
         }
     }
     println()
-    return 0
 }
 ```
 

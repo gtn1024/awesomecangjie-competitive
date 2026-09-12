@@ -28,7 +28,7 @@ $2^n \times 2^n$ 共 $2^{2n} \le 2^{20}$ 个格子，每个格子的位交错是
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     var size: Int64 = 1
@@ -52,7 +52,6 @@ main(): Int64 {
         }
         println()
     }
-    return 0
 }
 ```
 

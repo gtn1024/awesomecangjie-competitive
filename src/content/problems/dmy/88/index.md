@@ -31,7 +31,7 @@ $$\sum_{k} 2\times x_k\times ((R-L+1)-x_k)\times 2^k.$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line1 = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = line1[0]
@@ -68,7 +68,6 @@ main(): Int64 {
         idx++
     }
     println()
-    return 0
 }
 ```
 

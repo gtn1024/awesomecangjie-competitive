@@ -43,7 +43,7 @@ import std.collection.*
 
 let MOD: Int64 = 998244353
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let q = Int64.parse(reader.readln().getOrThrow())
     // 读入所有询问
@@ -271,7 +271,6 @@ main(): Int64 {
         }
         println(ans)
     }
-    return 0
 }
 ```
 

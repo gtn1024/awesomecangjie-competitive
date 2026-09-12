@@ -33,7 +33,7 @@ $$s = \tfrac12(v_0 + v_1)\,t_1 + v_1(t - t_1) = \frac{v_1^2 - v_0^2}{2a} + v_1 t
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let v = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let v0 = v[0]
@@ -61,7 +61,6 @@ main(): Int64 {
     let f1 = (frac / 10) % 10
     let f0 = frac % 10
     println("${sign}${intpart}.${f2}${f1}${f0}")
-    return 0
 }
 ```
 

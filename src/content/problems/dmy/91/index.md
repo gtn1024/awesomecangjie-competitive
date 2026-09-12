@@ -23,7 +23,7 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let abc = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let mx = abc[0] * 79 + abc[1] * 89 + abc[2] * 100
@@ -31,7 +31,6 @@ main(): Int64 {
     print(mx)
     print(" ")
     println(mn)
-    return 0
 }
 ```
 

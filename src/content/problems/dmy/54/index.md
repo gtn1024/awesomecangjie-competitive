@@ -41,7 +41,7 @@ import std.env.*
 
 let MOD: Int64 = 998244353
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     var B: Int64 = 1
@@ -95,7 +95,6 @@ main(): Int64 {
         }
     }
     println(ans)
-    return 0
 }
 ```
 

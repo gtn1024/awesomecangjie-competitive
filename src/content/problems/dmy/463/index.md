@@ -26,7 +26,7 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let p = getStdIn().readln().getOrThrow().split(" ", removeEmpty: true).map({ s: String => Int64.parse(s) })
     let cnt = Array<Int64>(3, { _ => 0 })
     for (x in p) {
@@ -39,6 +39,5 @@ main(): Int64 {
         }
     }
     println(ans)
-    return 0
 }
 ```

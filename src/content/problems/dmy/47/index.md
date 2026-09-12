@@ -30,7 +30,7 @@ $sum[0]$ 等于区间总数 $\dfrac{len(len+1)}{2}$（$len = n+1$）。从 $i=0$
 import std.convert.*
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let p = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
@@ -59,7 +59,6 @@ main(): Int64 {
         prev = nxt
     }
     println()
-    return 0
 }
 ```
 

@@ -37,7 +37,7 @@ $$s[k]=1+2\sum_{y=2}^{k}\varphi(y)$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let MOD: Int64 = 998244353
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
@@ -78,7 +78,6 @@ main(): Int64 {
         x += 1
     }
     println(ans)
-    return 0
 }
 ```
 

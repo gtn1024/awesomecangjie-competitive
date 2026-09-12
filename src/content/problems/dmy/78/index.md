@@ -55,7 +55,7 @@ $$a_i-b\cdot k-c(i-k-1)+\bigl[dp[x][j-1]+c\cdot x\bigr]$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let p1 = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = p1[0]
@@ -168,7 +168,6 @@ main(): Int64 {
     }
 
     println("${prevdp[nn]}")
-    return 0
 }
 ```
 

@@ -25,7 +25,7 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     var xs = Array<Int64>(n, { _ => 0 })
@@ -58,7 +58,6 @@ main(): Int64 {
         first = false
     }
     println()
-    return 0
 }
 ```
 

@@ -36,7 +36,7 @@ $$dp[i][j] = dp[i-1][j-1] + dp[i][j-i],$$
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let MOD: UInt32 = 998244353
     let MAX: Int64 = 8000
     // dp[i][j] = number of ways to partition j into i positive parts.
@@ -83,7 +83,6 @@ main(): Int64 {
         let ans = Int64(dp[n][m - n])
         println(ans)
     }
-    return 0
 }
 ```
 

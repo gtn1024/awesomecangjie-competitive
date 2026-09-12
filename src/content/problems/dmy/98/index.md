@@ -30,7 +30,7 @@ memoryLimit: 512m
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let n = Int64.parse(reader.readln().getOrThrow())
     let s = reader.readln().getOrThrow()
@@ -47,6 +47,5 @@ main(): Int64 {
         }
     }
     println("${max}")
-    return 0
 }
 ```

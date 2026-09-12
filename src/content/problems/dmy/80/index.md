@@ -25,7 +25,7 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let h = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
@@ -52,7 +52,6 @@ main(): Int64 {
         first = false
     }
     println()
-    return 0
 }
 ```
 

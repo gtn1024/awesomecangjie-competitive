@@ -23,12 +23,11 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let xyt = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let total = (xyt[0] * 60 + xyt[1] + xyt[2]) % 1440
     println("${total / 60} ${total % 60}")
-    return 0
 }
 ```
 

@@ -29,7 +29,7 @@ $$\max(A_i, A_k) \ge 2 \cdot \min(A_i, A_k).$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
@@ -51,7 +51,6 @@ main(): Int64 {
         i = i + 1
     }
     println(ans)
-    return 0
 }
 ```
 

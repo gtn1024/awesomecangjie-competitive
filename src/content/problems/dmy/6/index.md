@@ -34,7 +34,7 @@ import std.convert.*
 
 const MOD = 998244353
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nmk = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let n = nmk[0]
@@ -61,7 +61,6 @@ main(): Int64 {
         }
     }
     println(dp[m][nn])
-    return 0
 }
 ```
 

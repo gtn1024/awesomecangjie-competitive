@@ -34,7 +34,7 @@ $$s[i] = s[(i + k) \bmod n]$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let first = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(first[0])
@@ -50,6 +50,5 @@ main(): Int64 {
         i += 1
     }
     println(ans)
-    return 0
 }
 ```

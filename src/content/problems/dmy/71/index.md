@@ -41,7 +41,7 @@ import std.env.*
 
 let MOD: Int64 = 998244353
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let n = parts[0]
@@ -104,7 +104,6 @@ main(): Int64 {
     }
 
     println(dp[n][x][a])
-    return 0
 }
 ```
 

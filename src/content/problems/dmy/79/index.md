@@ -23,7 +23,7 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let s = reader.readln().getOrThrow()
@@ -35,7 +35,6 @@ main(): Int64 {
         }
     })
     println(String.fromUtf8(bs))
-    return 0
 }
 ```
 
