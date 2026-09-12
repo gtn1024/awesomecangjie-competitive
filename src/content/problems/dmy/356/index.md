@@ -73,7 +73,6 @@ main(): Int64 {
         sum[i] = sum[i] + sum[i - 1]
         sq[i] = sq[i] + sq[i - 1]
     }
-    let sb = StringBuilder()
     for (i in 0..q) {
         let qline = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
         let l = qline[0]
@@ -82,10 +81,8 @@ main(): Int64 {
         let s = sum[r + 1] - sum[l]
         let ss = sq[r + 1] - sq[l]
         let ans = if (c > 0) { ss - 2 * l * s + l * l * c } else { 0 }
-        sb.append(ans)
-        sb.append("\n")
+        println(ans)
     }
-    print(sb.toString())
     return 0
 }
 ```
