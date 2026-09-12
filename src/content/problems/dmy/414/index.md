@@ -178,7 +178,6 @@ main() {
     }
     let a = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     build(1, 1, n, a)
-    var sb = StringBuilder()
     var qi: Int64 = 0
     while (qi < q) {
         let op = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
@@ -186,12 +185,10 @@ main() {
             add(1, 1, n, op[1], op[2], op[3] % MOD)
         } else {
             let ans = query(1, 1, n, op[1], op[2], op[3])
-            sb.append(ans)
-            sb.append('\n')
+            println(ans)
         }
         qi = qi + 1
     }
-    print(sb.toString())
 }
 ```
 
