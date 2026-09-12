@@ -82,14 +82,13 @@ main() {
             used[order[fp]] += 1
         }
     }
-    let sb = StringBuilder()
     for (i in 1..=n) {
         if (i > 1) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(p[i])
+        print(p[i])
     }
-    println(sb.toString())
+    println()
 }
 ```
 
@@ -97,4 +96,4 @@ main() {
 
 - 按「深度、编号」排序后，`seg[k]` 到 `seg[k + 1]` 就是第 $k$ 层所有点，层内天然按编号升序，处理顺序即字典序最优顺序。
 - 候选父亲指针 `fp` 只在当前层内单调后移（每层从 `seg[k - 1]` 重新开始），跳过儿子数已达上限的点，保证每个点取到编号最小的可用父亲。
-- 输出用 `StringBuilder` 统一拼接后一次输出。
+- 输出逐个 `print`、行尾 `println()` 换行，直接输出。
