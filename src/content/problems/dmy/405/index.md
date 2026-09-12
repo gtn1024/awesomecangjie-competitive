@@ -56,7 +56,6 @@ main(): Int64 {
         i++
     }
 
-    let out = StringBuilder()
     var k = 0
     while (k < q) {
         let lr = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
@@ -68,13 +67,9 @@ main(): Int64 {
             pc = peak[r - 1] - peak[l]
             vc = valley[r - 1] - valley[l]
         }
-        out.append(pc)
-        out.append(" ")
-        out.append(vc)
-        out.append("\n")
+        println("${pc} ${vc}")
         k++
     }
-    print(out.toString())
     return 0
 }
 ```
@@ -83,4 +78,4 @@ main(): Int64 {
 
 - 峰顶、谷底预处理与前缀和合并到同一次扫描：`peak[i]` 直接继承 `peak[i-1]`，若当前点满足条件再 `+1`，省去额外标记数组。
 - 区间查询时把 $[l, r]$ 收紧为 $[l+1, r-1]$，对应前缀和 `peak[r-1] - peak[l]`，避免端点本身被错误统计。
-- 输出量大，用 `StringBuilder` 统一拼接后再一次性 `print`，比逐行 `println` 更快。
+- 每算出一个查询结果就直接用 `println` 输出一行，无需额外拼接输出缓冲。
