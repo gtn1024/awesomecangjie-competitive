@@ -41,11 +41,7 @@ main(): Int64 {
             mx = y
         }
     }
-    let out = StringBuilder()
-    out.append(mn)
-    out.append(" ")
-    out.append(mx)
-    println(out.toString())
+    println("${mn} ${mx}")
     return 0
 }
 ```
