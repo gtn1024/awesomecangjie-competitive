@@ -30,20 +30,19 @@ main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let s = reader.readln().getOrThrow()
-    let answer = StringBuilder()
     for (ch in s.runes()) {
         if (ch == r'b') {
-            answer.append(r'd')
+            print(r'd')
         } else if (ch == r'd') {
-            answer.append(r'b')
+            print(r'b')
         } else if (ch == r'p') {
-            answer.append(r'q')
+            print(r'q')
         } else if (ch == r'q') {
-            answer.append(r'p')
+            print(r'p')
         } else {
-            answer.append(ch)
+            print(ch)
         }
     }
-    println(answer.toString())
+    println()
 }
 ```
