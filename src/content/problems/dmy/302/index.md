@@ -175,14 +175,11 @@ main(): Int64 {
         pos += 1
     }
 
-    let sb = StringBuilder()
     var j: Int64 = 0
     while (j < m) {
-        sb.append(ans[j])
-        sb.append("\n")
+        println(ans[j])
         j += 1
     }
-    print(sb.toString())
     return 0
 }
 ```
