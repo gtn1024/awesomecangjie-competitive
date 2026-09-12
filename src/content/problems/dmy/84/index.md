@@ -206,7 +206,7 @@ class Pool {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })[0]
     let p = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ x => Int64.parse(x) })
@@ -336,7 +336,6 @@ main(): Int64 {
     }
 
     println(ans)
-    return 0
 }
 ```
 

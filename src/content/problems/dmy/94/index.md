@@ -53,7 +53,7 @@ func readAll(reader: ConsoleReader): (Array<UInt8>, Int64) {
     return (buf, total)
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let (bytes, m) = readAll(reader)
     // 单趟扫描解析整数；最坏 T(1+2n) <= 2e6，预分配 2.2e6 足够
@@ -99,7 +99,6 @@ main(): Int64 {
         println(need)
         p = baseB + n
     }
-    return 0
 }
 ```
 

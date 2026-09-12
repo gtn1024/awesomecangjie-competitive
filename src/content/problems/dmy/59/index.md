@@ -49,7 +49,7 @@ func powMod(base: Int64, exp: Int64): Int64 {
     return r
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let p = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ x => Int64.parse(x) })
@@ -73,7 +73,6 @@ main(): Int64 {
     }
     let ans = fac * powMod(denom, MOD - 2) % MOD
     println(ans)
-    return 0
 }
 ```
 

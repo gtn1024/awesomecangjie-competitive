@@ -120,11 +120,10 @@ func solve(): Unit {
     }
 }
 
-main(): Int64 {
+main() {
     let t = Int64.parse(reader.readln().getOrThrow())
     for (_ in 0..t) {
         solve()
     }
-    return 0
 }
 ```

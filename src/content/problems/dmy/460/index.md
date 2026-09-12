@@ -110,7 +110,7 @@ class Solver {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let head = reader.readln().getOrThrow().split(" ", removeEmpty: true)
@@ -143,6 +143,5 @@ main(): Int64 {
     let s = Solver(xs, ys)
     s.dfs(n, dir, 0)
     println(s.best.toString())
-    return 0
 }
 ```

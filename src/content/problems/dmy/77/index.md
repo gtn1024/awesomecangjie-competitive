@@ -61,7 +61,7 @@ func qpow(base: Int64, exp: Int64): Int64 {
     return r
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line = reader.readln().getOrThrow()
     let parts = line.split(" ", removeEmpty: true)
@@ -78,7 +78,6 @@ main(): Int64 {
     let kk1 = (k - 1) % MOD
     let ans = (qpow(kk, y) - qpow(kk1, y) + MOD) % MOD
     println("${ans}")
-    return 0
 }
 ```
 

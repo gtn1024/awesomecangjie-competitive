@@ -134,7 +134,7 @@ class SegTree {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let p = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ x: String => Int64.parse(x) })
@@ -195,6 +195,5 @@ main(): Int64 {
         acc += bucket[t]
         println(acc)
     }
-    return 0
 }
 ```
