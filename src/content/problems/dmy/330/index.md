@@ -74,14 +74,13 @@ main(): Int64 {
         current = successor[current]
     }
 
-    let answer = StringBuilder()
     for (i in 0..n) {
         if (i > 0) {
-            answer.append(" ")
+            print(" ")
         }
-        answer.append(startTime[i])
+        print(startTime[i])
     }
-    println(answer.toString())
+    println()
     return 0
 }
 ```
