@@ -68,7 +68,6 @@ main() {
     sort(listA)
     sort(listB)
 
-    let sb = StringBuilder()
     for (_ in 0..q) {
         let tk = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
         let t = tk[0]
@@ -102,9 +101,7 @@ main() {
                 ans = cand
             }
         }
-        sb.append(ans)
-        sb.append('\n')
+        println(ans)
     }
-    print(sb.toString())
 }
 ```
