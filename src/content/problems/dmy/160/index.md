@@ -98,7 +98,7 @@ func treeSum(x0: Int64): Int64 {
     return s
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line0 = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(line0[0])
@@ -241,6 +241,5 @@ main(): Int64 {
         println(ans[i])
         i += 1
     }
-    return 0
 }
 ```

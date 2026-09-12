@@ -105,7 +105,7 @@ class MinHeap {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nm = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = nm[0]
@@ -193,6 +193,5 @@ main(): Int64 {
         ans = dist1[n - 1]
     }
     println(ans)
-    return 0
 }
 ```

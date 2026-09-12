@@ -73,12 +73,11 @@ func solve(reader: ConsoleReader): Int64 {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let t = Int64.parse(reader.readln().getOrThrow())
     for (_ in 0..t) {
         println(solve(reader))
     }
-    return 0
 }
 ```

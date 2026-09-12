@@ -67,7 +67,7 @@ func lowerBound(vals: Array<Int64>, v: Int64): Int64 {
     return lo + 1
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nx = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let n = nx[0]
@@ -111,7 +111,6 @@ main(): Int64 {
         }
     }
     println(ans)
-    return 0
 }
 ```
 

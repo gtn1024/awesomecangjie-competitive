@@ -42,7 +42,7 @@ $f[i][j]$ 表示从 $(1,1)$ 到 $(i,j)$ 的所有路径中，$\geq X$ 的元素�
 import std.console.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = Console.stdIn
     let header = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let n = Int64.parse(header[0])
@@ -66,7 +66,6 @@ main(): Int64 {
         }
     }
     println(ans)
-    return 0
 }
 
 func check(a: Array<Array<Int64>>, n: Int64, m: Int64, k: Int64, x: Int64): Bool {

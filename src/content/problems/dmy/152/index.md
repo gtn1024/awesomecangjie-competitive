@@ -104,7 +104,7 @@ func find(par: Array<Int64>, x: Int64): Int64 {
     return r
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let chunk = Array<Byte>(1 << 20, { _ => 0 })
     var arr = Array<Byte>(1 << 20, { _ => 0 })
@@ -175,6 +175,5 @@ main(): Int64 {
         }
         println(pref[lo] + (n - 1 - lo) * x)
     }
-    return 0
 }
 ```

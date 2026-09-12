@@ -96,7 +96,7 @@ func ways(n: Int64, k: Int64, L: Int64, ck: Array<Int64>, invfk: Int64, fact: Ar
     return s
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let toks = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let R = toks[0]
@@ -164,6 +164,5 @@ main(): Int64 {
         L = L + 1
     }
     println(ansXor)
-    return 0
 }
 ```
