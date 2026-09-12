@@ -89,7 +89,6 @@ class FastReader {
 main(): Int64 {
     let reader = FastReader(getStdIn().readToEnd().getOrThrow())
     let t = reader.nextInt()
-    let out = StringBuilder()
     for (_ in 0..t) {
         let n = reader.nextInt()
         // 设 x_i 为下标 i 处操作的值，则需 x_i - 2x_{i-1} + x_{i-2} = b_i - a_i
@@ -113,12 +112,12 @@ main(): Int64 {
             }
         }
         if (sumD != 0) {
-            out.append("-1\n")
+            println(-1)
             continue
         }
         // 还需 Σ(y + c) = 0 有整数 c（循环边界条件）
         if (sumY % n != 0) {
-            out.append("-1\n")
+            println(-1)
             continue
         }
         let cy = -sumY / n
@@ -140,9 +139,8 @@ main(): Int64 {
             }
             ans += diff
         }
-        out.append("${ans}\n")
+        println(ans)
     }
-    print(out.toString())
     return 0
 }
 ```
