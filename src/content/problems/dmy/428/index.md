@@ -45,11 +45,7 @@ main(): Int64 {
             mx = combo
         }
     }
-    let out = StringBuilder()
-    out.append(score)
-    out.append(" ")
-    out.append(mx)
-    println(out.toString())
+    println("${score} ${mx}")
     return 0
 }
 ```
