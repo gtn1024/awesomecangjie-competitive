@@ -65,14 +65,13 @@ main(): Int64 {
         water[i + 1] += poured
     }
 
-    let answer = StringBuilder()
     for (i in 0..n) {
         if (i > 0) {
-            answer.append(" ")
+            print(" ")
         }
-        answer.append(water[i])
+        print(water[i])
     }
-    println(answer.toString())
+    println()
     return 0
 }
 ```
