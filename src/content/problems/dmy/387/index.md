@@ -111,20 +111,19 @@ main(): Int64 {
         }
     }
 
-    // Prefix sum and build output.
-    let sb = StringBuilder()
+    // Prefix sum and output directly.
     var cur = 0
     var j = 1
     while (j <= n) {
         cur += diff[j]
         if ((cur % 2) != 0) {
-            sb.append('1')
+            print('1')
         } else {
-            sb.append('0')
+            print('0')
         }
         j += 1
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
