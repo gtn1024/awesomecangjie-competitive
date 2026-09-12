@@ -13,7 +13,7 @@ memoryLimit: 512m
 
 ## 思路
 
-合法图片代码格式固定为 `![说明](图片地址)`：前两个字符是 `!` 和 `[`，说明紧跟其后，到第一个 `]` 结束。因此直接遍历字符串，从下标 2 开始收集字符，遇到 `]` 停止，收集到的即为图片说明。
+合法图片代码格式固定为 `![说明](图片地址)`：前两个字符是 `!` 和 `[`，说明紧跟其后，到第一个 `]` 结束。因此直接遍历字符串，从下标 2 开始逐个用 println 直接输出字符，遇到 `]` 停止，输出的即为图片说明。
 
 说明只含英文字母，均为单字节 ASCII，按字节处理也不会出错。
 
@@ -27,13 +27,12 @@ import std.env.*
 main(): Int64 {
     let reader = getStdIn()
     let s = reader.readln().getOrThrow().toRuneArray()
-    let sb = StringBuilder()
     var i: Int64 = 2
     while (s[i] != r']') {
-        sb.append(s[i])
+        print(s[i])
         i++
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
