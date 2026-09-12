@@ -401,7 +401,6 @@ main(): Int64 {
     let pendingLeft = Array<Int64>(64, { _ => 0 })
     let pendingRight = Array<Int64>(64, { _ => 0 })
     let state = Array<Int64>(2, { _ => 0 })
-    let output = StringBuilder()
     for (_ in 0..q) {
         let st = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
         var u = st[0] - 1
@@ -443,10 +442,8 @@ main(): Int64 {
             )
             pendingIndex -= 1
         }
-        output.append(state[1])
-        output.append("\n")
+        println(state[1])
     }
-    print(output.toString())
     return 0
 }
 ```
