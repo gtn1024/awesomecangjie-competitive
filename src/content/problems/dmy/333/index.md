@@ -191,14 +191,11 @@ main(): Int64 {
         right += 1
     }
 
-    let output = StringBuilder()
     i = 0
     while (i < q) {
-        output.append(answers[i])
-        output.append("\n")
+        println(answers[i])
         i += 1
     }
-    print(output.toString())
     return 0
 }
 ```
