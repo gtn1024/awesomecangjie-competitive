@@ -138,16 +138,15 @@ main(): Int64 {
     }
     var ii = Int64(0)
     while (ii < n) {
-        let sb = StringBuilder()
         var jj = Int64(0)
         while (jj < n) {
             if (jj > 0) {
-                sb.append(" ")
+                print(" ")
             }
-            sb.append(ans[ii * n + jj])
+            print(ans[ii * n + jj])
             jj++
         }
-        println(sb.toString())
+        println()
         ii++
     }
     return 0
