@@ -64,16 +64,15 @@ main(): Int64 {
         }
     }
 
-    let sb = StringBuilder()
     var k = Int64(0)
     while (k < n) {
         if (k > 0) {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(dp[k])
+        print(dp[k])
         k = k + 1
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
