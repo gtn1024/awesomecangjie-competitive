@@ -24,7 +24,7 @@ memoryLimit: 512m
 ```cangjie
 import std.env.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let s = reader.readln().getOrThrow().toRuneArray()
     var i: Int64 = 2
@@ -33,7 +33,6 @@ main(): Int64 {
         i++
     }
     println()
-    return 0
 }
 ```
 

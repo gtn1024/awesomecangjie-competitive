@@ -93,7 +93,7 @@ func genShapes(rem: Int64, mn: Int64, cur: ArrayList<Int64>, shapes: ArrayList<A
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nm = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = nm[0]
@@ -201,6 +201,5 @@ main(): Int64 {
         ans = ans * k % MOD
     }
     println(ans)
-    return 0
 }
 ```

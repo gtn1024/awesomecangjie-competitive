@@ -127,7 +127,7 @@ func updatePos(L: Int64, v: Int32) {
     }
 }
 
-main(): Int64 {
+main() {
     readAll(getStdIn())
 
     n = nextInt()
@@ -280,6 +280,5 @@ main(): Int64 {
     }
 
     println(nn - badCnt)
-    return 0
 }
 ```

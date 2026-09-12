@@ -23,7 +23,7 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     var s = "Winter"
@@ -35,7 +35,6 @@ main(): Int64 {
         s = "Autumn"
     }
     println(s)
-    return 0
 }
 ```
 

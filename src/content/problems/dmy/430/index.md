@@ -43,7 +43,7 @@ $$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let n = line[0]
@@ -85,7 +85,6 @@ main(): Int64 {
         i += 1
     }
     println(ans)
-    return 0
 }
 ```
 

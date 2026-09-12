@@ -66,7 +66,7 @@ func check(mid: Int64, x: Int64, y: Int64, u: Int64, v: Int64): Bool {
     return x + y - d <= mid
 }
 
-main(): Int64 {
+main() {
     let line: String = getStdIn().readln().getOrThrow()
     let parts: Array<String> = line.split(" ", removeEmpty: true)
     let x: Int64 = Int64.parse(parts[0])
@@ -86,7 +86,6 @@ main(): Int64 {
         }
     }
     println("${lo}")
-    return 0
 }
 ```
 

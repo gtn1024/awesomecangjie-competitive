@@ -32,7 +32,7 @@ import std.convert.*
 
 const LOG = 31
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let stride = n + 1
@@ -63,7 +63,6 @@ main(): Int64 {
         }
         println(s)
     }
-    return 0
 }
 ```
 

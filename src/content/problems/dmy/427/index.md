@@ -27,13 +27,12 @@ $x > n$ 时 $\lfloor n/x \rfloor = 0$，退化为全部单瓶包装，公式同�
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let nx = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let n = nx[0]
     let x = nx[1]
     println(n / x + n % x)
-    return 0
 }
 ```
 

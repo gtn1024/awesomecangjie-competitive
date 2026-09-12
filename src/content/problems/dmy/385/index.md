@@ -23,7 +23,7 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let xy = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     let x = xy[0]
@@ -31,7 +31,6 @@ main(): Int64 {
     let a = 10 * x + y
     let b = 10 * y + x
     println(if (a > b) { a } else { b })
-    return 0
 }
 ```
 

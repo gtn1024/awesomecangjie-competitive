@@ -23,11 +23,10 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     println("${(n - 1) / 30 + 1} ${(n - 1) % 30 + 1}")
-    return 0
 }
 ```
 

@@ -23,7 +23,7 @@ $10^n$ 是 1 后面跟 $n$ 个 0，共 $n+1$ 位，超出了 `Int64` 的表示�
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     print("1")
@@ -31,7 +31,6 @@ main(): Int64 {
         print("0")
     }
     println()
-    return 0
 }
 ```
 

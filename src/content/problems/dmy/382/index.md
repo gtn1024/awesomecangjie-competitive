@@ -35,7 +35,7 @@ $$dp[i]=\min(dp[i-1],\,dp[i-2],\,dp[i-3])+a_i\cdot[s_i=0],$$
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow().split(" ", removeEmpty: true)[0])
     let s = reader.readln().getOrThrow().toRuneArray()
@@ -59,7 +59,6 @@ main(): Int64 {
         i += 1
     }
     println(dp[n])
-    return 0
 }
 ```
 

@@ -42,7 +42,7 @@ $\operatorname{minp}[x]$（最小质因子）用埃氏筛求出：从小到大�
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow().split(" ", removeEmpty: true)[0])
     let nn = n
@@ -71,7 +71,6 @@ main(): Int64 {
         x += 1
     }
     println()
-    return 0
 }
 ```
 

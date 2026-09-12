@@ -23,7 +23,7 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let dn = reader.readln().getOrThrow().split(" ", removeEmpty: true)
     let dirs = "NESW"
@@ -46,7 +46,6 @@ main(): Int64 {
         print(Rune(UInt32(dirs[idx])))
     }
     println()
-    return 0
 }
 ```
 

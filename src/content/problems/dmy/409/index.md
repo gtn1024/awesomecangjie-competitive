@@ -23,11 +23,10 @@ memoryLimit: 512m
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let ab = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
     println(if (ab[0] == ab[1]) { "Accepted" } else { "Unaccepted" })
-    return 0
 }
 ```
 

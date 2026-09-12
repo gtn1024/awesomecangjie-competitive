@@ -92,7 +92,7 @@ func findFirst(node: Int64, l: Int64, r: Int64, money: Int64): Int64 {
     return findFirst(node * 2 + 1, mid + 1, r, money)
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let line0 = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let nn = line0[0]
@@ -129,7 +129,6 @@ main(): Int64 {
         }
         println()
     }
-    return 0
 }
 ```
 

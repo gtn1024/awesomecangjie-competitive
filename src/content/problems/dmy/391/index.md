@@ -23,7 +23,7 @@ $n$ 条边能组成凸 $n$ 边形当且仅当每条边都小于周长的一半�
 import std.env.*
 import std.convert.*
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
     let l = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p => Int64.parse(p) })
@@ -36,7 +36,6 @@ main(): Int64 {
         }
     }
     println(if (mx * 2 < sum) { "Yes" } else { "No" })
-    return 0
 }
 ```
 

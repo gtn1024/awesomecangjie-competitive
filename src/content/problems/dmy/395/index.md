@@ -127,9 +127,8 @@ func solve(reader: ConsoleReader): Unit {
     }
 }
 
-main(): Int64 {
+main() {
     let reader = getStdIn()
     solve(reader)
-    return 0
 }
 ```
