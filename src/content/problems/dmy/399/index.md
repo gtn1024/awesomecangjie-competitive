@@ -48,7 +48,6 @@ main(): Int64 {
     // val[x] 最近一次处理后的水分，last[x] 最近一次处理的时刻
     let val = Array<Int64>(n, { i => a[i] })
     let last = Array<Int64>(n, { _ => 0 })
-    let sb = StringBuilder()
     for (_ in 0..q) {
         let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true)
         let op = Int64.parse(parts[0])
@@ -63,10 +62,9 @@ main(): Int64 {
             let v = Int64.parse(parts[3])
             val[xi] = val[xi] + v
         } else {
-            sb.append("${val[xi]}\n")
+            println(val[xi])
         }
     }
-    print(sb.toString())
     return 0
 }
 ```
@@ -76,4 +74,4 @@ main(): Int64 {
 - 蒸发结算只与「该盆上次被处理的时刻」有关，与全局时间无关，因此查询和浇水**都**要先结算蒸发再更新 $last_x$。
 - 蒸发量不会让水分降到负数，用 `if-else` 表达式取 $\max(0, \cdot)$。
 - 多次浇水后水分可达 $2 \times 10^{14}$ 量级（$a_x \le 10^9$、$v \le 10^9$、$q \le 2 \times 10^5$），需要用 `Int64`。
-- 输出量大，用 `StringBuilder` 一次性拼接所有查询答案。
+- 查询时算出答案后直接用 `println` 输出。
