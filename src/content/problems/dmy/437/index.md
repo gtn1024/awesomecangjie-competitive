@@ -75,22 +75,19 @@ main() {
         d = d + 1
     }
     let cntLt = Array<Int64>(nn, { _ => 0 })
-    let sb = StringBuilder()
     var i: Int64 = 0
     while (i < nn) {
         var j: Int64 = 0
-        var line = StringBuilder()
         while (j < nn) {
             let dd = (j - i + nn) % nn
             let w = sumAll[dd] - i * mCnt[dd] + nn * cntLt[dd]
             if (j > 0) {
-                line.append(" ")
+                print(" ")
             }
-            line.append(w)
+            print(w)
             j = j + 1
         }
-        sb.append(line.toString())
-        sb.append("\n")
+        println()
         var d3: Int64 = 0
         while (d3 < nn) {
             let td = (i + d3) % nn
@@ -101,6 +98,5 @@ main() {
         }
         i = i + 1
     }
-    print(sb.toString())
 }
 ```
