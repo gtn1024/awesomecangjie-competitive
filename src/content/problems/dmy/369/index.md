@@ -54,7 +54,6 @@ main(): Int64 {
         i += 1
     }
     let total = pre[n - 1]
-    let sb = StringBuilder()
     for (_ in 0..q) {
         let qline = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
         let k = qline[0]
@@ -80,10 +79,8 @@ main(): Int64 {
             }
             idx += 1
         }
-        sb.append(ans)
-        sb.append("\n")
+        println(ans)
     }
-    print(sb.toString())
     return 0
 }
 ```
