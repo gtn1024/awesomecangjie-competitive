@@ -220,22 +220,18 @@ main(): Int64 {
         treap.append(v)
     }
 
-    let output = StringBuilder()
     for (_ in 0..q) {
         let operation = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
         if (operation[0] == 1) {
             let answer = treap.insertAndCut(operation[1], operation[2], operation[3], n)
-            output.append(answer)
-            output.append("\n")
+            println(answer)
         } else if (operation[0] == 2) {
             treap.rangeAdd(operation[1], operation[2], operation[3])
         } else {
             let answer = treap.rangeSum(operation[1], operation[2])
-            output.append(answer)
-            output.append("\n")
+            println(answer)
         }
     }
-    print(output.toString())
     return 0
 }
 ```
