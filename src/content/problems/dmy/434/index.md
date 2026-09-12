@@ -53,23 +53,16 @@ main() {
         }
         i = i + 1
     }
-    let sb = StringBuilder()
     var j = 0
     while (j < m) {
         let x = Int64.parse(reader.readln().getOrThrow())
         if (mp.contains(x)) {
             let rec = mp[x]
-            sb.append(rec[0])
-            sb.append(" ")
-            sb.append(rec[1])
-            sb.append(" ")
-            sb.append(rec[2])
-            sb.append("\n")
+            println("${rec[0]} ${rec[1]} ${rec[2]}")
         } else {
-            sb.append("0 -1 -1\n")
+            println("0 -1 -1")
         }
         j = j + 1
     }
-    print(sb.toString())
 }
 ```
