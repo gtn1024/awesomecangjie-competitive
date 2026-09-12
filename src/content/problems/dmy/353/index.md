@@ -130,13 +130,10 @@ main(): Int64 {
             primes.add(i)
         }
     }
-    var sb = StringBuilder()
     for (i in 0..T) {
         let aa = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })[0]
-        sb.append(solve(aa, primes))
-        sb.append("\n")
+        println(solve(aa, primes))
     }
-    print(sb.toString())
     return 0
 }
 ```
