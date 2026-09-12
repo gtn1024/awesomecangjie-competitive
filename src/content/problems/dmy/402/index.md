@@ -105,7 +105,6 @@ main(): Int64 {
     }
     tree = Array<Int64>(4 * nn + 5, { _ => 0 })
     build(1, 1, nn, a)
-    var sb = StringBuilder()
     for (j in 0..mm) {
         var money = xs[j]
         var line = StringBuilder()
@@ -118,19 +117,18 @@ main(): Int64 {
             if (cnt > 0) {
                 line.append(" ")
             }
-            line.append(p.toString())
+            line.append(p)
             cnt += 1
             money -= a[p]
             update(1, 1, nn, p)
         }
-        sb.append(cnt.toString())
+        print(cnt)
         if (cnt > 0) {
-            sb.append(" ")
-            sb.append(line.toString())
+            print(" ")
+            print(line)
         }
-        sb.append("\n")
+        println()
     }
-    print(sb.toString())
     return 0
 }
 ```
@@ -139,4 +137,4 @@ main(): Int64 {
 
 - 金额与价格之差最多到 $2 \times 10^{14}$ 量级，必须用 `Int64`；$+\infty$ 取 $10^{18}$。
 - 每人的购买编号天然按从小到大输出（每次取的都是全局最左可买位置）。
-- 输出量大，每行用 `StringBuilder` 拼接，最后一次性输出。
+- 输出量大，每人算完直接用 `println` 输出。
