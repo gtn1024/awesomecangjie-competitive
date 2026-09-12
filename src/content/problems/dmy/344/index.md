@@ -103,16 +103,15 @@ main() {
         i += 1
     }
 
-    var sb = StringBuilder()
     var first = true
     for (x in ans) {
         if (first) {
             first = false
         } else {
-            sb.append(" ")
+            print(" ")
         }
-        sb.append(x)
+        print(x)
     }
-    println(sb.toString())
+    println()
 }
 ```
