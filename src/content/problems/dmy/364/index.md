@@ -324,18 +324,10 @@ main(): Int64 {
         cur = z
     }
 
-    let out = StringBuilder()
-    out.append(ans.size)
-    out.append('\n')
-    var firstLine = true
+    println(ans.size)
     for (s in ans) {
-        if (!firstLine) {
-            out.append('\n')
-        }
-        out.append(s)
-        firstLine = false
+        println(s)
     }
-    println(out.toString())
     return 0
 }
 ```
