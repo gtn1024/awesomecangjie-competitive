@@ -59,14 +59,12 @@ main(): Int64 {
         }
     }
     // 输出
-    let sb = StringBuilder()
     for (i in 0..n) {
         for (j in 0..m) {
-            sb.append(Rune(UInt32(grid[i][j])))
+            print(Rune(UInt32(grid[i][j])))
         }
-        sb.append('\n')
+        println()
     }
-    print(sb.toString())
     return 0
 }
 ```
@@ -74,4 +72,4 @@ main(): Int64 {
 要点：
 
 - 每列独立处理，方块受重力作用沉到底部；统计 `#` 个数后直接重填该列，等价于使用任意多次道具后的稳定状态。
-- 矩阵按 UTF-8 字节存储，`#`、`.` 均为 ASCII，直接以 `UInt8` 比较和赋值；输出时用 `Rune(UInt32(...))` 把字节转回字符拼接到 `StringBuilder`。
+- 矩阵按 UTF-8 字节存储，`#`、`.` 均为 ASCII，直接以 `UInt8` 比较和赋值；输出时用 `Rune(UInt32(...))` 把字节转回字符，逐格 `print` 输出，行尾用 `println()` 换行。
