@@ -48,16 +48,14 @@ main(): Int64 {
             j -= 1
         }
     }
-    var sb = StringBuilder()
     for (i in 0..nn) {
         for (j in 0..nn) {
-            sb.append(a[i][j])
-            if (j != nn - 1) {
-                sb.append(" ")
+            if (j != 0) {
+                print(" ")
             }
+            print(a[i][j])
         }
-        println(sb.toString())
-        sb = StringBuilder()
+        println()
     }
     return 0
 }
