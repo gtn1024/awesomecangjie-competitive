@@ -125,7 +125,7 @@ $$
 
 ## 复杂度
 
-每组测试的时间复杂度为 $O(m)$，所有测试合计为 $O(\sum m)$；除输出缓冲外，额外空间复杂度为 $O(1)$。
+每组测试的时间复杂度为 $O(m)$，所有测试合计为 $O(\sum m)$；额外空间复杂度为 $O(1)$。
 
 ## 仓颉实现
 
@@ -155,12 +155,9 @@ main(): Int64 {
     let reader = Console.stdIn
     let firstLine = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
     let t = firstLine[1]
-    let output = StringBuilder()
     for (_ in 0..t) {
-        output.append(solve(reader))
-        output.append("\n")
+        println(solve(reader))
     }
-    print(output.toString())
     return 0
 }
 ```
