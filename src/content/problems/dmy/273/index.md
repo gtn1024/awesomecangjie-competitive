@@ -43,7 +43,7 @@ import std.convert.*
 // 对 K 做贪心（齐肯多夫）分解：选中层级 i 就加一条 c_i -> t 的边
 // 总路径数 = 所有选中层级 f 值之和 = K；点数 = maxLevel + 2 <= 45 <= 50
 
-func build(reader: ConsoleReader): String {
+func build(reader: ConsoleReader): Unit {
     let k = Int64.parse(reader.readln().getOrThrow())
     // 生成不超过 1e9 的斐波那契数列：fib[0] = fib[1] = 1
     var fib = Array<Int64>(60, { _ => 0 })
@@ -91,49 +91,33 @@ func build(reader: ConsoleReader): String {
         }
         l += 1
     }
-    var sb = StringBuilder()
-    sb.append(t)
-    sb.append(" ")
-    sb.append(cnt)
-    sb.append("\n")
+    println("${t} ${cnt}")
     if (maxLevel >= 1) {
-        sb.append("1 2\n")
+        println("1 2")
     }
     lv = 2
     while (lv <= maxLevel) {
-        sb.append(lv)
-        sb.append(" ")
-        sb.append(lv + 1)
-        sb.append("\n")
-        sb.append(lv - 1)
-        sb.append(" ")
-        sb.append(lv + 1)
-        sb.append("\n")
+        println("${lv} ${lv + 1}")
+        println("${lv - 1} ${lv + 1}")
         lv += 1
     }
     l = 0
     while (l < len) {
         if (chosen[l]) {
-            sb.append(l + 1)
-            sb.append(" ")
-            sb.append(t)
-            sb.append("\n")
+            println("${l + 1} ${t}")
         }
         l += 1
     }
-    return sb.toString()
 }
 
 main(): Int64 {
     let reader = getStdIn()
     let t = Int64.parse(reader.readln().getOrThrow())
-    var sb = StringBuilder()
     var i: Int64 = 0
     while (i < t) {
-        sb.append(build(reader))
+        build(reader)
         i += 1
     }
-    print(sb.toString())
     return 0
 }
 ```
