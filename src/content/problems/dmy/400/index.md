@@ -131,7 +131,6 @@ main(): Int64 {
     let fw = Fenwick(nn)
     var total: Int64 = 0
     var ans: Int64 = 0
-    let sb = StringBuilder()
     i = 0
     while (i < qq) {
         let x = xs[i]
@@ -177,10 +176,9 @@ main(): Int64 {
             fw.add(idx, 1)
             total += 1
         }
-        sb.append("${ans}\n")
+        println(ans)
         i += 1
     }
-    print(sb.toString())
     return 0
 }
 ```
@@ -189,4 +187,4 @@ main(): Int64 {
 
 - 答案最大约 $10^{18}$（两盏路灯相距 $10^9$），必须用 `Int64`。
 - `kth(k)` 返回 1-based 下标，取离散化数组中的位置时要减 1；`disc` 中存的是原始路灯编号。
-- 输出量大，用 `StringBuilder` 拼接后一次性输出。
+- 输出量大，直接用 `println` 输出。
