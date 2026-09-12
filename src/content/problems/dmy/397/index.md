@@ -26,16 +26,15 @@ import std.convert.*
 main(): Int64 {
     let reader = getStdIn()
     let n = Int64.parse(reader.readln().getOrThrow())
-    let sb = StringBuilder()
-    sb.append("1")
+    print("1")
     for (i in 0..n) {
-        sb.append("0")
+        print("0")
     }
-    println(sb.toString())
+    println()
     return 0
 }
 ```
 
 要点：
 
-- 拼接 `n + 1` 个字符即可，不需要任何数值运算。
+- 直接用 println 逐个输出 `n + 1` 个字符即可，不需要任何数值运算。
