@@ -263,14 +263,11 @@ main(): Int64 {
         power *= 2
     }
 
-    let output = StringBuilder()
     i = 0
     while (i < queryCount) {
-        output.append(answer[i])
-        output.append("\n")
+        println(answer[i])
         i += 1
     }
-    print(output.toString())
     return 0
 }
 ```
