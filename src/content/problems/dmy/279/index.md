@@ -143,7 +143,6 @@ main(): Int64 {
     let st1 = buildST(v1, n, pw)
     let st2 = buildST(v2, n, pw)
 
-    let sb = StringBuilder()
     for (_ in 0..q) {
         let parts = reader.readln().getOrThrow().split(" ", removeEmpty: true)
         let x = Int64.parse(parts[0])
@@ -155,10 +154,8 @@ main(): Int64 {
         let left = l - 1
         let right = r - pw[k]
         let ans = mymin(st[k][left], st[k][right])
-        sb.append(ans)
-        sb.append("\n")
+        println(ans)
     }
-    print(sb.toString())
     return 0
 }
 ```
