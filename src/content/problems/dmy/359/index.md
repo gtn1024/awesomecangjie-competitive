@@ -198,9 +198,7 @@ main(): Int64 {
         st.pull(p)
         p = p - 1
     }
-    let sb = StringBuilder()
-    sb.append(st.sum[1] - st.mx[1])
-    sb.append("\n")
+    println(st.sum[1] - st.mx[1])
     for (qi in 1..=q) {
         let op = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ s: String => Int64.parse(s) })
         if (op[0] == 1) {
@@ -219,10 +217,8 @@ main(): Int64 {
         } else {
             st.updateWeight(op[1], op[2])
         }
-        sb.append(st.sum[1] - st.mx[1])
-        sb.append("\n")
+        println(st.sum[1] - st.mx[1])
     }
-    print(sb.toString())
     return 0
 }
 ```
