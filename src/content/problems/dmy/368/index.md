@@ -76,12 +76,9 @@ main(): Int64 {
             }
         }
     }
-    let sb = StringBuilder()
     for (i in 1..(nn + 1)) {
-        sb.append(ans[i])
-        sb.append("\n")
+        println(ans[i])
     }
-    print(sb.toString())
     return 0
 }
 ```
