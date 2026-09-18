@@ -37,7 +37,7 @@ $$\mathrm{sum}_y \ge \mathrm{level}_p$$
 
 ## 复杂度
 
-时间 $O(m \log m + n \alpha(n))$，空间 $O(n + m)$。
+时间 $O(m \log m + m \alpha(n))$，空间 $O(n + m)$。
 
 ## 仓颉实现
 
