@@ -29,7 +29,7 @@ memoryLimit: 256m
 
 ## 复杂度
 
-时间 $O(n \cdot C \cdot n \log n)$，其中 $C = a_n - a_1 \le 1000$ 为候选坐标个数；空间 $O(n + C)$。
+时间 $O(n \cdot C \cdot n \log n)$，其中 $C = a_n - a_1 \le 1000$ 为坐标跨度，候选坐标数不超过 $C$；空间 $O(n + C)$。
 
 ## 仓颉实现
 
