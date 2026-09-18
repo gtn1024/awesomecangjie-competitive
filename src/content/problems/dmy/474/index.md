@@ -56,43 +56,21 @@ $$dp[x] = g(x) + \min\Big(0,\ \min_{y \text{ 为 } x \text{ 的儿子}} \big(dp[
 
 ```cangjie
 import std.env.*
-
-var gdata = Array<Byte>(0, { _ => 0 })
-var gpos: Int64 = 0
-
-func nextInt(): Int64 {
-    while (gpos < gdata.size && Int64(gdata[gpos]) <= 32) {
-        gpos += 1
-    }
-    var x: Int64 = 0
-    while (gpos < gdata.size && Int64(gdata[gpos]) > 32) {
-        x = x * 10 + Int64(gdata[gpos]) - 48
-        gpos += 1
-    }
-    return x
-}
+import std.convert.*
 
 main() {
-    gdata = getStdIn().readToEnd().getOrThrow().toArray()
-    let n = nextInt()
-    while (gpos < gdata.size && Int64(gdata[gpos]) <= 32) {
-        gpos += 1
-    }
-    let col = Array<Int64>(n, { _ => 0 })
-    var k: Int64 = 0
-    while (k < n) {
-        col[k] = Int64(gdata[gpos])
-        gpos += 1
-        k += 1
-    }
+    let reader = getStdIn()
+    let n = Int64.parse(reader.readln().getOrThrow())
+    let cs = reader.readln().getOrThrow().toArray()
     let m = n - 1
     let eu = Array<Int64>(m, { _ => 0 })
     let ev = Array<Int64>(m, { _ => 0 })
     let deg = Array<Int64>(n + 2, { _ => 0 })
     var i: Int64 = 0
     while (i < m) {
-        let a = nextInt()
-        let b = nextInt()
+        let e = reader.readln().getOrThrow().split(" ", removeEmpty: true).map({ p: String => Int64.parse(p) })
+        let a = e[0]
+        let b = e[1]
         eu[i] = a
         ev[i] = b
         deg[a] += 1
@@ -149,7 +127,7 @@ main() {
     while (i < m) {
         let a = eu[i]
         let b = ev[i]
-        if (col[a - 1] == col[b - 1]) {
+        if (cs[a - 1] == cs[b - 1]) {
             esame += 1
             g[a] -= 1
             g[b] -= 1
@@ -185,7 +163,7 @@ main() {
         let pe = parent[cx]
         if (pe != 0) {
             var t: Int64 = 1
-            if (col[pe - 1] == col[cx - 1]) {
+            if (cs[pe - 1] == cs[cx - 1]) {
                 t = -1
             }
             let val = dp[cx] - 2 * t
