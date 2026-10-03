@@ -46,6 +46,9 @@ $$T[v] = T_e\big(T[u] - T_e(f[v])\big) + f[v]$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -277,6 +280,8 @@ main() {
     println()
 }
 ```
+
+</details>
 
 要点：
 

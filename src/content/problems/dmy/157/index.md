@@ -52,6 +52,9 @@ A 侧同样可能有负快乐，但因为我们枚举了 **所有** 可行的 $a
 
 ## 代码
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -128,6 +131,8 @@ main() {
     println(best)
 }
 ```
+
+</details>
 
 ## 复杂度
 

@@ -30,6 +30,9 @@ $B$ 枚举 $O(\log M)$ 次，每次二分 $O(\log M)$ 轮，每轮快速幂 $O(\
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -123,3 +126,5 @@ main() {
     }
 }
 ```
+
+</details>

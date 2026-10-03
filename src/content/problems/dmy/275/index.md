@@ -36,6 +36,9 @@ $$p_1 - (p_2 + p_3 - p_4) = p_1 - p_2 - p_3 + p_4$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -50,3 +53,5 @@ main() {
     println(p1 - p2 - p3 + p4)
 }
 ```
+
+</details>

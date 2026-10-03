@@ -26,6 +26,9 @@ $k \bmod \text{len} = 0$ 时该行/列无需移动，直接跳过，省去一次
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -88,3 +91,5 @@ main() {
     }
 }
 ```
+
+</details>

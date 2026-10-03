@@ -32,6 +32,9 @@ $$dp[i][j] = dp[i-1][j-1] + dp[i][j-i],$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.console.*
 import std.convert.*
@@ -85,6 +88,8 @@ main() {
     }
 }
 ```
+
+</details>
 
 要点：
 

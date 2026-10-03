@@ -51,6 +51,9 @@ $$
 
 ## 代码
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.collection.*
@@ -133,3 +136,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

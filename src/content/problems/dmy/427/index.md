@@ -23,6 +23,9 @@ $x > n$ 时 $\lfloor n/x \rfloor = 0$，退化为全部单瓶包装，公式同�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -35,6 +38,8 @@ main() {
     println(n / x + n % x)
 }
 ```
+
+</details>
 
 要点：
 

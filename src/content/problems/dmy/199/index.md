@@ -43,6 +43,9 @@ $$x = \max(0,\ 1-E,\ L+1-E-G,\ G-L-E).$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -97,3 +100,5 @@ main() {
     }
 }
 ```
+
+</details>

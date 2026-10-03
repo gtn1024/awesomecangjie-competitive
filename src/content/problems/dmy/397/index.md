@@ -19,6 +19,9 @@ $10^n$ 是 1 后面跟 $n$ 个 0，共 $n+1$ 位，超出了 `Int64` 的表示�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -33,6 +36,8 @@ main() {
     println()
 }
 ```
+
+</details>
 
 要点：
 

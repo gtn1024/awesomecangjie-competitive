@@ -43,6 +43,9 @@ $$\text{newdp}_b[H] = \sum_{a \le T-b} (T - a - b + 1) \cdot \text{rowsum}(a) - 
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -223,3 +226,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

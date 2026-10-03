@@ -58,6 +58,9 @@ $$\max\Bigl(v-(k+1),\ \max_{k+2 \le p \le j} A_p\Bigr) \le B_j .$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -130,3 +133,5 @@ main() {
     println(cnt)
 }
 ```
+
+</details>

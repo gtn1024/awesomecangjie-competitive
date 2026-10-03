@@ -36,6 +36,9 @@ $$\text{ans} = \left\lfloor \frac{n + 5}{10} \right\rfloor \times 10$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -46,3 +49,5 @@ main() {
     println(((n + 5) / 10) * 10)
 }
 ```
+
+</details>

@@ -44,6 +44,9 @@ $$
 
 ## 代码
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.console.*
@@ -120,3 +123,5 @@ func check(T: Int64, n: Int64, k: Int64, x: Int64, a: Array<Int64>, minA: Int64,
     return false
 }
 ```
+
+</details>

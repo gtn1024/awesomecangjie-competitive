@@ -38,6 +38,9 @@ $\operatorname{minp}[x]$（最小质因子）用埃氏筛求出：从小到大�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -73,6 +76,8 @@ main() {
     println()
 }
 ```
+
+</details>
 
 要点：
 

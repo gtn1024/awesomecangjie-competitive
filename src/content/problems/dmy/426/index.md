@@ -50,6 +50,9 @@ $$g[U \cup S] \mathrel{+}= f[U] \cdot P[S] \qquad (|S| = t,\ S \cap U = \varnoth
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.collection.*
 import std.convert.*
@@ -203,3 +206,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

@@ -54,6 +54,9 @@ $$dp[x] = g(x) + \min\Big(0,\ \min_{y \text{ 为 } x \text{ 的儿子}} \big(dp[
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -179,3 +182,5 @@ main() {
     println(n - (esame + best))
 }
 ```
+
+</details>

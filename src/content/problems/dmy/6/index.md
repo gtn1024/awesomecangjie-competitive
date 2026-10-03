@@ -28,6 +28,9 @@ $$dp[i][j] = \sum_{p=0}^{\min(k,j)} dp[i-1][j-p] \times \binom{n-(j-p)}{p}$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -63,6 +66,8 @@ main() {
     println(dp[m][nn])
 }
 ```
+
+</details>
 
 要点：
 

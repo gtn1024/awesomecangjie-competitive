@@ -27,6 +27,9 @@ $n$ 天后输出 $q$ 即可。累加上界为 $n \cdot x \approx 2 \times 10^{14
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -48,6 +51,8 @@ main() {
     println(q)
 }
 ```
+
+</details>
 
 要点：
 

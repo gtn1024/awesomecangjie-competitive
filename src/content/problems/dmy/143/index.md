@@ -30,6 +30,9 @@ $k$ 的取值很少，因此枚举 $k$。对每个固定的 $k$，剩余金额 $
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -52,3 +55,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

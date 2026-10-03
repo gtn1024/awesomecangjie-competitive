@@ -56,6 +56,9 @@ $X \le 10^9$，试除到 $\sqrt{X} \le 31623$ 即可枚举全部因子；$d^2 + 
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -126,3 +129,5 @@ main() {
     }
 }
 ```
+
+</details>

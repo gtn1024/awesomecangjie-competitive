@@ -44,6 +44,9 @@ $$s_{\text{level}} = \underbrace{s_{\text{level}-1}}_{\text{左半}} \;|\; \text
 
 ## 代码
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.console.*
 import std.convert.*
@@ -96,3 +99,5 @@ main() {
     }
 }
 ```
+
+</details>

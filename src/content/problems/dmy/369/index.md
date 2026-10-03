@@ -36,6 +36,9 @@ memoryLimit: 512m
 
 代码中 `a` 数组按下标从 0 存储，而删除块 $[L, R]$ 中的 $L, R$ 是题面里的 1 基下标；答案最大约 $(n-1) \cdot 2^{31} \approx 4\times 10^{14}$，用 `Int64` 存储。
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -83,6 +86,8 @@ main() {
     }
 }
 ```
+
+</details>
 
 要点：
 

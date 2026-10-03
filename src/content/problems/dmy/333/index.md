@@ -43,6 +43,9 @@ $$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.console.*
 import std.convert.*
@@ -198,3 +201,5 @@ main() {
     }
 }
 ```
+
+</details>

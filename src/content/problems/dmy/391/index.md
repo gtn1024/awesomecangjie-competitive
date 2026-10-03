@@ -19,6 +19,9 @@ $n$ 条边能组成凸 $n$ 边形当且仅当每条边都小于周长的一半�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -38,6 +41,8 @@ main() {
     println(if (mx * 2 < sum) { "Yes" } else { "No" })
 }
 ```
+
+</details>
 
 要点：
 

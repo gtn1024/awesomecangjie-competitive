@@ -28,6 +28,9 @@ $s$ 从大到小枚举避免同一子树被重复使用。答案即 $dp[0][m+1]$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -98,6 +101,8 @@ main() {
     println(dp[0][mm + 1])
 }
 ```
+
+</details>
 
 要点：
 

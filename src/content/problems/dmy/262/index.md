@@ -41,6 +41,9 @@ $$ans = c_m + \sum_{k \ge 1} (-1)^k \left(c_{m - k(3k-1)/2} + c_{m - k(3k+1)/2}\
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -131,3 +134,5 @@ main() {
     println(answer)
 }
 ```
+
+</details>

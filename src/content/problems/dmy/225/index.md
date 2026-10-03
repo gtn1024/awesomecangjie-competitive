@@ -53,6 +53,9 @@ $$v = \sum_{i=0}^{n-1} d_i \cdot T_i.$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.console.*
 import std.convert.*
@@ -75,3 +78,5 @@ main() {
     println(answer)
 }
 ```
+
+</details>

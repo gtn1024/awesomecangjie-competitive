@@ -31,6 +31,9 @@ $$y + \min(y, b_i) \ge E_{i+1}.$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 
@@ -101,6 +104,8 @@ main() {
     }
 }
 ```
+
+</details>
 
 要点：
 

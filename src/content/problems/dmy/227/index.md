@@ -42,6 +42,9 @@ $$G(u, v) = \sum_{x=1}^{n} \min\left(n, \left\lfloor \frac{xu-1}{v} \right\rfloo
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -94,3 +97,5 @@ main() {
     println((s * fact) % MOD)
 }
 ```
+
+</details>

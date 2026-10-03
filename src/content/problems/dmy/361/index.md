@@ -21,6 +21,9 @@ $X = 0$ 时 `next = i + 1`，即下一秒仍可拍摄，与题意一致。
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -43,6 +46,8 @@ main() {
     println(ans)
 }
 ```
+
+</details>
 
 要点：
 

@@ -28,6 +28,9 @@ $n$ 为奇数时正中间那个字符自成回文（它与自己对称），无�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.console.*
 import std.convert.*
@@ -55,3 +58,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

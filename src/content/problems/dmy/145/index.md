@@ -40,6 +40,9 @@ $$f(n) = \sum_{p \geq 0} S\!\left(\left\lfloor \tfrac{n}{10^p} \right\rfloor\rig
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -99,3 +102,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

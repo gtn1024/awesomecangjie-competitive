@@ -29,6 +29,9 @@ $$\sum_{a} cntA[a] \times prefCnt[v/a], \qquad \sum_{a} cntA[a] \times a \times 
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -106,3 +109,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

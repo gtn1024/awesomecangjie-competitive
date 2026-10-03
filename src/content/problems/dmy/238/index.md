@@ -29,6 +29,9 @@ $n\le 5000$，子数组总数约为 $\dfrac{n(n+1)}{2}\approx 1.25\times 10^7$�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -60,3 +63,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

@@ -28,6 +28,9 @@ $x \to y$ 的最小代价就是这个 36 节点图上的最短路。节点数只
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -105,3 +108,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

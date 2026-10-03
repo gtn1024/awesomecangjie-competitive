@@ -39,6 +39,9 @@ $$\text{答案} = \min_i \bigl(a_{f(i)} - a_i\bigr).$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -127,3 +130,5 @@ main() {
     }
 }
 ```
+
+</details>

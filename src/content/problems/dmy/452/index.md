@@ -27,6 +27,9 @@ memoryLimit: 256m
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -59,3 +62,5 @@ main() {
     println("${cnt} ${l} ${r}")
 }
 ```
+
+</details>

@@ -26,6 +26,9 @@ $n$ 的所有因数用 $O(\sqrt n)$ 枚举（连同 $n/i$ 一起收集），再�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -76,3 +79,5 @@ main() {
     }
 }
 ```
+
+</details>

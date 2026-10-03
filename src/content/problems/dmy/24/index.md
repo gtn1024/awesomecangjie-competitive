@@ -27,6 +27,9 @@ $k > 0$ 时每个路口拆成 4 个状态（对应四个行驶方向），边分
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.collection.*
 import std.convert.*
@@ -294,3 +297,5 @@ main() {
     }
 }
 ```
+
+</details>

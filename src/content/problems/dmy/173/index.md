@@ -36,6 +36,9 @@ $A_{i,j} < 2^{30}$，即每个数是 30 位。虽然位数不同，但**所有�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -145,3 +148,5 @@ main(): Int64 {
     return 0
 }
 ```
+
+</details>

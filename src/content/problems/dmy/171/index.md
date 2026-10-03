@@ -41,6 +41,9 @@ $n$ 高达 $5 \times 10^5$，递归 DFS 有爆栈风险，改用 **迭代 DFS**�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 // DFS，维护根到当前节点路径上各前缀和出现次数。
 // 对节点 v，祖先 u 满足路径和 pref[v]-pref[u]==K，即 pref[u]==pref[v]-K。
@@ -178,3 +181,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

@@ -29,6 +29,9 @@ $R_i$ 关于 $i$ 单调递增，用双指针即可在 $O(n)$ 内求出所有 $R_
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.console.*
 import std.convert.*
@@ -66,3 +69,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

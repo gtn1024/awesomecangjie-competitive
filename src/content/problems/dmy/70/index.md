@@ -32,6 +32,9 @@ $$\text{ans} = \sum_{d_1 \mid N}\sum_{d_2 \mid N} \gcd(d_1, d_2)\cdot f[d_1]\cdo
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.collection.ArrayList
 import std.console.*
@@ -108,6 +111,8 @@ main(): Int64 {
     return 0
 }
 ```
+
+</details>
 
 要点：
 

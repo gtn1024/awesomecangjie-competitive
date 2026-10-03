@@ -56,6 +56,9 @@ $E[z]$ 自底向上确定，查询 $\sum_{z \in \operatorname{path}(c,x)} E[z]$ 
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.collection.*
@@ -342,3 +345,5 @@ main() {
     println(g[1])
 }
 ```
+
+</details>

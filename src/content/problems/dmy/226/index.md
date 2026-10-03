@@ -45,6 +45,9 @@ $$d_{j+1}[v'] = \min_{x} \left( d_j[v' \oplus 2^x] + j + b_x \right)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -122,3 +125,5 @@ main() {
     }
 }
 ```
+
+</details>

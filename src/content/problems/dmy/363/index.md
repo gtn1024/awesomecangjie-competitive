@@ -32,6 +32,9 @@ $$D(p)=\begin{cases}k^2, & m = 2k\\ k(k+1), & m = 2k+1\end{cases}$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -71,3 +74,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

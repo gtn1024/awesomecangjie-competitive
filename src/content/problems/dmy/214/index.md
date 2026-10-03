@@ -37,6 +37,9 @@ $$f_{i,k+1} = f_{i,k} \cdot \sum_{j \in \text{右半区}} f_{j,k} \cdot \frac{a_
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -111,3 +114,5 @@ main() {
     println()
 }
 ```
+
+</details>

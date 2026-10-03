@@ -30,6 +30,9 @@ $x^2 - y^2 = (x - y)(x + y) = z^3$。令 $u = x - y$，$v = x + y$，则 $uv = z
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -111,6 +114,8 @@ main() {
     }
 }
 ```
+
+</details>
 
 要点：
 

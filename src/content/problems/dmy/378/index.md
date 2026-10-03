@@ -34,6 +34,9 @@ $$\sum_{e \in P} w_e - \max_{e \in P \cap R} r_e - \max_{e \in P \cap B} b_e$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -180,3 +183,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

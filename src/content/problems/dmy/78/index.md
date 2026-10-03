@@ -51,6 +51,9 @@ $$a_i-b\cdot k-c(i-k-1)+\bigl[dp[x][j-1]+c\cdot x\bigr]$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -170,6 +173,8 @@ main() {
     println("${prevdp[nn]}")
 }
 ```
+
+</details>
 
 要点：
 

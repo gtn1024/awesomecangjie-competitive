@@ -37,6 +37,9 @@ $$val[pos[1]],\ val[pos[1]+1],\ \ldots,\ val[n],\ val[1],\ \ldots,\ val[pos[1]-1
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -79,3 +82,5 @@ main() {
     println()
 }
 ```
+
+</details>

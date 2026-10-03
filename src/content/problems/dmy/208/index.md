@@ -42,6 +42,9 @@ $$D_d(S-1) = D_d(S) - D_{d+1}(S-1)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -182,3 +185,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

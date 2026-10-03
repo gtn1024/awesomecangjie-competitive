@@ -28,6 +28,9 @@ $$
 
 ## 代码
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -70,3 +73,5 @@ main(): Int64 {
     0
 }
 ```
+
+</details>

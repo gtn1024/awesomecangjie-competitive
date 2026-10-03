@@ -29,6 +29,9 @@ $$s = \tfrac12(v_0 + v_1)\,t_1 + v_1(t - t_1) = \frac{v_1^2 - v_0^2}{2a} + v_1 t
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -63,6 +66,8 @@ main() {
     println("${sign}${intpart}.${f2}${f1}${f0}")
 }
 ```
+
+</details>
 
 要点：
 

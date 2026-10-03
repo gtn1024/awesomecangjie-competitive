@@ -39,6 +39,9 @@ $$O(d, o) = \sum_{o' = \max(1, o-m+1)}^{o-1} Z(d, o') + [d = 0, 1 \le o \le m-1]
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -153,3 +156,5 @@ main() {
 }
 
 ```
+
+</details>

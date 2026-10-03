@@ -39,6 +39,9 @@ $$\mathrm{key}_u = a_u - \operatorname{dist}(u,c) \ge \operatorname{dist}(c,v)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 
@@ -406,3 +409,5 @@ main(): Int64 {
     return 0
 }
 ```
+
+</details>

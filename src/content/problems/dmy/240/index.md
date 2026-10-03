@@ -46,6 +46,9 @@ $P=[5,3,2,4,6]$：
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -80,3 +83,5 @@ main() {
     println()
 }
 ```
+
+</details>

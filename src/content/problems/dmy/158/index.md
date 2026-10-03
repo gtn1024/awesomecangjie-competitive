@@ -35,6 +35,9 @@ $O(n)$ 时间，$O(n)$ 空间。
 
 ## 代码
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -102,3 +105,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

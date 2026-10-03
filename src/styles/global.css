@@ -90,6 +90,37 @@ html:not(.light) .astro-code span {
 .problem__body {
   font-family: var(--font-sans);
 }
+.problem__body details {
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--bg-elevated);
+}
+.problem__body details > summary {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-card);
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.problem__body details > summary:hover {
+  background: var(--bg-hover);
+  color: var(--text);
+}
+.problem__body details > summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+.problem__body details[open] > summary {
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+.problem__body details > .astro-code {
+  margin: 0;
+  border: 0;
+  border-radius: 0 0 var(--radius-card) var(--radius-card);
+}
 .problem__body h2 {
   font-family: var(--font-mono);
   font-size: 1.15rem;

@@ -26,6 +26,9 @@ $sum[0]$ 等于区间总数 $\dfrac{len(len+1)}{2}$（$len = n+1$）。从 $i=0$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -61,6 +64,8 @@ main() {
     println()
 }
 ```
+
+</details>
 
 要点：
 

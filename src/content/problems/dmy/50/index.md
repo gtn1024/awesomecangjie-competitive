@@ -19,6 +19,9 @@ $|x - y|$ 最大只有两种可能：最大奇数减最小偶数，或最大偶�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -64,3 +67,5 @@ main() {
     }
 }
 ```
+
+</details>

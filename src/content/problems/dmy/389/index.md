@@ -36,6 +36,9 @@ $$
 
 树深可能达到 $2 \times 10^5$，递归会爆栈，实现中用**迭代 DFS** 求出遍历序，再按逆序合并子树。
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -140,3 +143,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

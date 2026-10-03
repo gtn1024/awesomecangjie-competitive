@@ -26,6 +26,9 @@ $$\min_{i=1}^{m} a_i \times a_{2m+1-i}$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -51,6 +54,8 @@ main() {
     println(ans)
 }
 ```
+
+</details>
 
 要点：
 

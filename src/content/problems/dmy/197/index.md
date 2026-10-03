@@ -43,6 +43,9 @@ $n = 8$ 时无相邻 $1$ 的掩码数为 $N = 55$。时间 $O(N^3 \log m)$，空
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.collection.*
@@ -181,3 +184,5 @@ main() {
     solve()
 }
 ```
+
+</details>

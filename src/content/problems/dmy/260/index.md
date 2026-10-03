@@ -34,6 +34,9 @@ $$dp[i][j] = \max\big(dp[i-1][j],\ dp[i][j-1],\ dp[i-1][j-1] + (b_j - a_i) W(i)\
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -82,3 +85,5 @@ main() {
     println(base + prev[m])
 }
 ```
+
+</details>

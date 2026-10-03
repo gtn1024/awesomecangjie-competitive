@@ -42,6 +42,9 @@ $$f(n) = 2(n-1)f(n-2) + \frac{3}{2}(n-1)(n-2)f(n-3) + \frac{2}{3}(n-1)(n-2)(n-3)
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -119,3 +122,5 @@ main() {
     solve()
 }
 ```
+
+</details>

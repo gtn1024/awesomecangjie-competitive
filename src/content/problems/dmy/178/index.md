@@ -42,6 +42,9 @@ $$\text{ans} = \text{len}R \cdot \text{len}C \cdot \sum_k A_{k,0} + \text{len}R 
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -156,3 +159,5 @@ main() {
     }
 }
 ```
+
+</details>

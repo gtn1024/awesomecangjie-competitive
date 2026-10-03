@@ -25,6 +25,9 @@ $$|[l_1, r_1] \cup [l_2, r_2]| = (r_1 - l_1 + 1) + (r_2 - l_2 + 1) - |[l_1, r_1]
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.console.*
 import std.convert.*
@@ -45,3 +48,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

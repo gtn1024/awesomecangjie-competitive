@@ -24,6 +24,9 @@ $n \le 40$，用折半枚举：前 $\lfloor n/2 \rfloor$ 个与后 $n - \lfloor 
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.collection.*
 import std.convert.*
@@ -169,3 +172,5 @@ main() {
     println(dfs2(items2, a, b, c, pT, pV, t, m, s1, 0, 0, 0, 0, 0))
 }
 ```
+
+</details>

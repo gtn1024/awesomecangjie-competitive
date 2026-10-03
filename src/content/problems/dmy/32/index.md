@@ -21,6 +21,9 @@ $0 \sim n$ 共 $n + 1$ 个数，而集合只有 $n$ 个元素，所以 $\text{ME
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -43,3 +46,5 @@ main() {
     }
 }
 ```
+
+</details>

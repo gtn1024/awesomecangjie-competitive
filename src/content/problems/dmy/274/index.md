@@ -47,6 +47,9 @@ $$a_i a_j \text{ 是顺的} \iff g(a_i) \text{ 与 } g(a_j) \text{ 的质因子�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -234,3 +237,5 @@ main() {
     }
 }
 ```
+
+</details>

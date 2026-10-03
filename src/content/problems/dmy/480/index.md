@@ -87,6 +87,9 @@ $mx_R(r)<mx_L(l)$ 仍限制出一段前缀，$mn_R(r)<mn_L(l)$ 限制出一段�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -244,3 +247,5 @@ main() {
     println(count(1, n))
 }
 ```
+
+</details>

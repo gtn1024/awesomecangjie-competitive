@@ -28,6 +28,9 @@ $$\left\lfloor \frac{\text{even}}{2} \right\rfloor + \left\lfloor \frac{\text{od
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -48,3 +51,5 @@ main() {
     println("${odd / 2 + even / 2}")
 }
 ```
+
+</details>

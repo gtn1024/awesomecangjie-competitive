@@ -32,6 +32,9 @@ $$a_{x+1}:=a_{x+1}+a_x,\quad a_x:=0$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -82,6 +85,8 @@ main() {
     println(ans)
 }
 ```
+
+</details>
 
 ## 要点
 

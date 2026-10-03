@@ -31,6 +31,9 @@ $$\text{ans} = \sum_{x}\max(0,\,\text{cnt}[x] - k)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -59,3 +62,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

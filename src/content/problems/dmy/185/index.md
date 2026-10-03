@@ -40,6 +40,9 @@ $$f(n, k, L) = \sum_{j \ge 0} (-1)^j \binom{k}{j} \binom{n - 1 - jL}{k - 1}$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -166,3 +169,5 @@ main() {
     println(ansXor)
 }
 ```
+
+</details>

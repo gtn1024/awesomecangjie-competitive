@@ -19,6 +19,9 @@ $b$、$d$ 均为正数，两边同乘 $b \times d$ 不改变大小关系，因�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -41,3 +44,5 @@ main() {
     }
 }
 ```
+
+</details>

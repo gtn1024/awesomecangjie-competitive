@@ -32,6 +32,25 @@ pnpm preview    # 本地预览生产构建
 3. 正文建议按「数据规模 / 思路 / 复杂度 / 仓颉实现」组织，仓颉代码使用 `cangjie` 语言标记，公式使用 KaTeX 语法
 4. 本地 `pnpm dev` 验证页面，提交前运行 `pnpm build` 保证类型检查通过
 
+### 按需折叠代码
+
+完整仓颉实现默认用 `<details>` / `<summary>` 包裹并折叠，正文中的短代码片段按需决定是否折叠。摘要文字可自定义：
+
+````markdown
+<details>
+<summary>查看仓颉实现</summary>
+
+```cangjie
+main() {
+    println("Hello, Cangjie!")
+}
+```
+
+</details>
+````
+
+保留代码块前后的空行以正确解析 Markdown。未包裹的代码块正常展示；在 `<details>` 上添加 `open` 属性可默认展开。
+
 ## 如何新增 OJ
 
 在 `src/adapters/` 下新建 `<oj>.ts`，用 `defineOjAdapter` 导出一个 `OjAdapter` 实现（`id`、`displayName`、`normalizeId`、`validateId`、`problemUrl` 为必填，`fetchMetadata` 可选）。无需手动注册，registry 会自动发现。
@@ -43,4 +62,3 @@ pnpm preview    # 本地预览生产构建
 - [Shiki](https://shiki.style/) 语法高亮 + 自定义仓颉 grammar
 - [KaTeX](https://katex.org/) 数学公式
 - [pnpm](https://pnpm.io/) 包管理
-

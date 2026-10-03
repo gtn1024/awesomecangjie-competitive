@@ -24,6 +24,9 @@ $$total - wait[j] - a_i \times (n-1-j)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -58,3 +61,5 @@ main() {
     solve()
 }
 ```
+
+</details>

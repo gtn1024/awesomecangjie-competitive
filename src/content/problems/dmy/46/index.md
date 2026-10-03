@@ -24,6 +24,9 @@ $2^n \times 2^n$ 共 $2^{2n} \le 2^{20}$ 个格子，每个格子的位交错是
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -54,6 +57,8 @@ main() {
     }
 }
 ```
+
+</details>
 
 要点：
 

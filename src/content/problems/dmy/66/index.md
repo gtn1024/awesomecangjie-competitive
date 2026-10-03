@@ -33,6 +33,9 @@ $$s[k]=1+2\sum_{y=2}^{k}\varphi(y)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -80,6 +83,8 @@ main() {
     println(ans)
 }
 ```
+
+</details>
 
 要点：
 

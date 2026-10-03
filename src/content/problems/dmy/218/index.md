@@ -36,6 +36,9 @@ $$\text{答案} = \sum_i c_i - \sum_{\text{count}_h \geq 1} \max_{i : a_i = h}(c
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -85,3 +88,5 @@ main() {
     println("${totalC - saved}")
 }
 ```
+
+</details>

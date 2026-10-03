@@ -36,6 +36,9 @@ $$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -132,6 +135,8 @@ main() {
     if (ans >= INF) { println(-1) } else { println(ans) }
 }
 ```
+
+</details>
 
 要点：
 

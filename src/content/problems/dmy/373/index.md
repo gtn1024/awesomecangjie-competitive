@@ -25,6 +25,9 @@ $$t = \left\lceil \frac{5(y-x)}{2} \right\rceil = \left\lfloor \frac{5(y-x)+1}{2
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -36,6 +39,8 @@ main() {
     println((5 * d + 1) / 2)
 }
 ```
+
+</details>
 
 要点：
 

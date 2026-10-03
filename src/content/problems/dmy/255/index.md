@@ -47,6 +47,9 @@ $$\sum_{j=0}^{d} S_2(d, j)\, A_j(n) \bmod 998244353$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -114,3 +117,5 @@ main() {
     }
 }
 ```
+
+</details>

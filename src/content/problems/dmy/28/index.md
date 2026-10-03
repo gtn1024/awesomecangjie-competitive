@@ -20,6 +20,9 @@ $n$ 可达 $10^{100000}$，以字符串读入并求数位和。变异一次后�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -67,3 +70,5 @@ main() {
     println(x)
 }
 ```
+
+</details>

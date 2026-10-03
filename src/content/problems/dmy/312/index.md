@@ -54,6 +54,9 @@ $h_j=\text{upper\_bound}(a,b_j)$，对每个 $j$ 二分一次即可。
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -134,3 +137,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

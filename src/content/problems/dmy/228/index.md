@@ -35,6 +35,9 @@ $$\text{ans} = \sum_{d} d \cdot G(d) = \sum_{t} F(t) \sum_{d \mid t} d \cdot \mu
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -126,3 +129,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

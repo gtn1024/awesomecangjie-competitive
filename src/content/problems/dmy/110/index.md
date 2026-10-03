@@ -38,6 +38,9 @@ $$X = 5^{b-a} \times 10^{a} \quad (b > a)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -76,3 +79,5 @@ main() {
     }
 }
 ```
+
+</details>

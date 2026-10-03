@@ -26,6 +26,9 @@ $n \le 5000$ 允许 $O(n^2)$ 的做法。直接枚举所有连续子数组 $[l, 
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -57,3 +60,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

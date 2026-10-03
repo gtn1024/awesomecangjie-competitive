@@ -38,6 +38,9 @@ $$f(x) = S(x) + S(x+d) - 2B(x).$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.collection.*
@@ -129,3 +132,5 @@ main() {
     println("${best} ${cnt}")
 }
 ```
+
+</details>

@@ -40,6 +40,9 @@ $$\text{ans} = \text{base} + \max_{1 \le i < j \le w} (W_i - W_j)(c_i - c_j).$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -90,3 +93,5 @@ main() {
     println(base + best)
 }
 ```
+
+</details>

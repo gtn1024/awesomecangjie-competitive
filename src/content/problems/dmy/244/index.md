@@ -19,6 +19,9 @@ memoryLimit: 512m
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -30,6 +33,8 @@ main() {
     println(if (6 <= h && h <= 18) { "I love Shawarma" } else { "Shawarma is the best food" })
 }
 ```
+
+</details>
 
 要点：
 

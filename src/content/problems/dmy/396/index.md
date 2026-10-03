@@ -50,6 +50,9 @@ $$\sum_{i=L}^{R} |w_i - K| = K \cdot cnt - sum_{\le} + (sum_{all} - sum_{\le}) -
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -260,3 +263,5 @@ main() {
     solve()
 }
 ```
+
+</details>

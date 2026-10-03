@@ -52,6 +52,9 @@ $n\le 200$ 时每个 $i$ 的 Dijkstra 用 $O(n^2)$ 扫描选最小值实现，�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -209,3 +212,5 @@ main() {
     println()
 }
 ```
+
+</details>

@@ -35,6 +35,9 @@ $$\binom{\mathrm{avail}_1}{\mathrm{num}}\cdot \binom{\mathrm{avail}_2}{k-\mathrm
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -106,6 +109,8 @@ main() {
     println(dp[n][x][a])
 }
 ```
+
+</details>
 
 要点：
 

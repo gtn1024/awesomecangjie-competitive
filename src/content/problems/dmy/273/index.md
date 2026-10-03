@@ -35,6 +35,9 @@ $$K = \sum_{i \in S} f(c_i)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -120,3 +123,5 @@ main() {
     }
 }
 ```
+
+</details>

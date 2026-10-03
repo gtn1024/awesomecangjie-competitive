@@ -34,6 +34,9 @@ $c_i$ 用差分求出：对每个任务 $(l, r)$，它覆盖通道区间 $[l, r-
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -75,3 +78,5 @@ main() {
     println(total - best)
 }
 ```
+
+</details>

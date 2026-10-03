@@ -37,6 +37,9 @@ $+\infty$ 要大于任何可能的金额（$2 \times 10^{14}$ 量级），取 $1
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -131,6 +134,8 @@ main() {
     }
 }
 ```
+
+</details>
 
 要点：
 

@@ -45,6 +45,9 @@ $$\sum_{x} f_{k-1,x} \cdot g_k[(n-k) - (a_k - x)] \cdot (a_k - x)!$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -130,6 +133,8 @@ main() {
     println(ans)
 }
 ```
+
+</details>
 
 要点：
 

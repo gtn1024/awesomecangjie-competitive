@@ -34,6 +34,9 @@ $$a_{k-d}\ne a_{k+d},\quad 1\le d\le\min(L,R)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -98,6 +101,8 @@ main() {
     println(dp[0][nn - 1])
 }
 ```
+
+</details>
 
 ## 要点
 

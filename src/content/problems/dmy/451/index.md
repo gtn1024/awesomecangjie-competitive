@@ -28,6 +28,9 @@ $n \le 10^3$，$n^3 \le 10^9$，用 `Int64` 计算即可，无需取模。
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -45,3 +48,5 @@ main() {
     }
 }
 ```
+
+</details>

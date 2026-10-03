@@ -49,6 +49,9 @@ $$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -166,3 +169,5 @@ func idx(c: Rune): Int64 {
     return Int64(u - UInt32(65))
 }
 ```
+
+</details>

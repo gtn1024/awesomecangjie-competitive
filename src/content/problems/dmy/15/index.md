@@ -20,6 +20,9 @@ $a$ 与 $b$ 的公因数恰好是 $\gcd(a,b)$ 的因数，所以先辗转相除�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -55,6 +58,8 @@ main() {
     println(ans)
 }
 ```
+
+</details>
 
 要点：
 

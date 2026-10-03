@@ -61,6 +61,9 @@ $$
 
 ## 代码
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -96,3 +99,5 @@ main() {
     println(last)
 }
 ```
+
+</details>

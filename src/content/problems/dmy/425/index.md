@@ -45,6 +45,9 @@ $$\sum_{i \le j}\text{dam}_i(s_i) = \underbrace{\sum_{i \le j}\text{dam}_i(0)}_{
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.collection.*
 import std.convert.*
@@ -236,3 +239,5 @@ main() {
     solve()
 }
 ```
+
+</details>

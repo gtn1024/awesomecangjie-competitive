@@ -54,6 +54,9 @@ $x_n$、$y_n$ 在矩阵快速幂中直接对 $998244353$ 取模，由模运算�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -140,3 +143,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

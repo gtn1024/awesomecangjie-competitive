@@ -57,6 +57,9 @@ $$q + 1 \le j \le \min(v,\ r - 1),$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.sort.*
@@ -167,3 +170,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

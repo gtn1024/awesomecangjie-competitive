@@ -24,6 +24,9 @@ $$ans_y = ans_x + w \times (total - sum[y]) - w \times sum[y]$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.collection.*
 import std.convert.*
@@ -100,3 +103,5 @@ main() {
     }
 }
 ```
+
+</details>

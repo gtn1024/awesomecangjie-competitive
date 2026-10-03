@@ -32,6 +32,9 @@ $d$ 合法，等价于每个实际出现的余数都恰好出现两次，也就�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -123,3 +126,5 @@ main(): Int64 {
     return 0
 }
 ```
+
+</details>

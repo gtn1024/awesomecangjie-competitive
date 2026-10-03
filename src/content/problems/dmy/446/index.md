@@ -38,6 +38,9 @@ $$R(x) + C(y) \le R(x_0) + C(y_0)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -88,3 +91,5 @@ main() {
     println(bestX.toString() + " " + bestY.toString())
 }
 ```
+
+</details>

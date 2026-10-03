@@ -19,6 +19,9 @@ memoryLimit: 512m
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -29,6 +32,8 @@ main() {
     println(if (ab[0] == ab[1]) { "Accepted" } else { "Unaccepted" })
 }
 ```
+
+</details>
 
 要点：
 

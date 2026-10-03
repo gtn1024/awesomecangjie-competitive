@@ -21,6 +21,9 @@ $\left\lfloor \frac{N}{i} \right\rfloor$ 只有 $O(\sqrt N)$ 种取值，按相�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -39,3 +42,5 @@ main() {
     println(n * n - total)
 }
 ```
+
+</details>

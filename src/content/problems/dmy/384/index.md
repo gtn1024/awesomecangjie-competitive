@@ -44,6 +44,9 @@ $$
 - 只存原图邻接矩阵，补图边即「原图无边」。
 - 染色用 BFS（数组模拟队列）；背包数组滚动更新。
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 
@@ -222,3 +225,5 @@ main(): Int64 {
     return 0
 }
 ```
+
+</details>

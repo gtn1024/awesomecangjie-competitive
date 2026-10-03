@@ -22,6 +22,9 @@ $\text{popcount}(A_i) \le 30$，按 $A_j$ 的 popcount 把后缀值分层维护�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -132,3 +135,5 @@ main() {
     println()
 }
 ```
+
+</details>

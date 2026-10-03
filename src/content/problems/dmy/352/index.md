@@ -40,6 +40,9 @@ $k = 0$ 时 $f(0)$ 就是原数，即 $pre_n$。对每个 $l_i$ 取 $k = l_i \bm
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -89,3 +92,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

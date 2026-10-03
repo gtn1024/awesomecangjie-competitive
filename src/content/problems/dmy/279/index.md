@@ -51,6 +51,9 @@ $$f(s,1)=\max(a_{p-1},a_{p+1})$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -158,3 +161,5 @@ main() {
     }
 }
 ```
+
+</details>

@@ -36,6 +36,9 @@ $$G(x_2+1, y_2+1) - G(x_1, y_2+1) - G(x_2+1, y_1) + G(x_1, y_1)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -127,3 +130,5 @@ main() {
     }
 }
 ```
+
+</details>

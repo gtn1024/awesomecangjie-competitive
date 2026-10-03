@@ -32,6 +32,9 @@ $$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -69,3 +72,5 @@ main() {
     }
 }
 ```
+
+</details>

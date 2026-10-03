@@ -30,6 +30,9 @@ $$f(u) = \max\left(h_u,\ \max_{v \in \text{son}(u)}(f(v) + 1)\right)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -85,3 +88,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

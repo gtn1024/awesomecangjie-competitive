@@ -32,6 +32,9 @@ $$ans = \min_{0 \le k \le n}\left( C[k] + D[n-k] + \sum b + pref[k] \right)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -78,3 +81,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

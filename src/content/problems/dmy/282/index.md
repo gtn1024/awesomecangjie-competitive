@@ -27,6 +27,9 @@ $R \le 10^7$，区间长度 $R - L + 1 \le 10^4$ 很小，但每次询问都要�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -64,3 +67,5 @@ main() {
     println(sum)
 }
 ```
+
+</details>

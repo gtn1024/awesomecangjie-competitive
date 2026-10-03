@@ -35,6 +35,9 @@ $i$ 只到 $\sqrt n$，空间 $O(n\sqrt n)$，时间 $O(n\sqrt n)$。
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -97,6 +100,8 @@ main() {
     println(ans)
 }
 ```
+
+</details>
 
 要点：
 

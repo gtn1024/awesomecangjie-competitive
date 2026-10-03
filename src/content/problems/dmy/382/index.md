@@ -31,6 +31,9 @@ $$dp[i]=\min(dp[i-1],\,dp[i-2],\,dp[i-3])+a_i\cdot[s_i=0],$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -61,6 +64,8 @@ main() {
     println(dp[n])
 }
 ```
+
+</details>
 
 ## 要点
 

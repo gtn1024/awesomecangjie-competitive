@@ -34,6 +34,9 @@ $f[i][j]$ 表示从 $(1,1)$ 到 $(i,j)$ 的所有路径中，$\geq X$ 的元素�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 // [R30D]路径第K小
 // 二分答案 X, 判定是否存在路径使 >=X 的元素个数 >= (N+M-1)-K+1.
@@ -97,3 +100,5 @@ func check(a: Array<Array<Int64>>, n: Int64, m: Int64, k: Int64, x: Int64): Bool
     return prev[m - 1] >= need
 }
 ```
+
+</details>

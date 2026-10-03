@@ -36,6 +36,9 @@ $D$ 每个顶点入度等于出度等于 2（城市 $y$ 的两个前驱为 $\lfl
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -108,6 +111,8 @@ main(): Int64 {
     return 0
 }
 ```
+
+</details>
 
 要点：
 

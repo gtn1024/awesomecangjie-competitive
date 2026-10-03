@@ -31,6 +31,9 @@ $X$ 的范围很小（最多 $10^5$），可以直接开一个布尔数组 `bad[
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.console.*
 import std.convert.*
@@ -62,3 +65,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

@@ -38,6 +38,9 @@ $$\text{ans} = \min\left(n,\ \min_{1 \le c \le k} t(c)\right)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.collection.*
@@ -89,3 +92,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

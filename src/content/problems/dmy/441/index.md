@@ -34,6 +34,9 @@ $$base + \max_{1 \le l \le r \le n} \left( L(l) + R(r) \right)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -84,3 +87,5 @@ main() {
     println(base + best)
 }
 ```
+
+</details>

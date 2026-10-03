@@ -37,6 +37,9 @@ $$dp[i][x][1] = \sum_{y \ne x} f[i-1][y] = g[i-1] - f[i-1][x]$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -173,6 +176,8 @@ main() {
     println(ans)
 }
 ```
+
+</details>
 
 要点：
 

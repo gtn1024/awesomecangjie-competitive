@@ -27,6 +27,9 @@ $$\sum_{k} 2\times x_k\times ((R-L+1)-x_k)\times 2^k.$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -70,6 +73,8 @@ main() {
     println()
 }
 ```
+
+</details>
 
 要点：
 

@@ -28,6 +28,9 @@ memoryLimit: 256m
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 // [R23C]最大指数
 // 给 X,Y, A=X*Y. 把 A 表为 a^b, 最大化 b. 输出 a b.
@@ -159,3 +162,5 @@ main() {
     }
 }
 ```
+
+</details>

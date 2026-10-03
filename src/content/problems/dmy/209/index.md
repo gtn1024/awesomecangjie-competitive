@@ -39,6 +39,9 @@ $$(r+1)\sum dir[p]\cdot(p-u) - \sum dir[p]\cdot p\cdot(p-u)$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -225,3 +228,5 @@ main() {
     }
 }
 ```
+
+</details>

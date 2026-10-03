@@ -16,8 +16,10 @@ memoryLimit: 512m
 
 把 $\gcd(i, N)$ 作为公因式提出，原式可化为两个独立的一维和之积：
 
-$$\sum_{i=1}^N\sum_{j=1}^M \gcd(i,N)\cdot\gcd(j,M)
-= \left(\sum_{i=1}^N \gcd(i,N)\right)\left(\sum_{j=1}^M \gcd(j,M)\right)$$
+$$
+\sum_{i=1}^N\sum_{j=1}^M \gcd(i,N)\cdot\gcd(j,M)
+= \left(\sum_{i=1}^N \gcd(i,N)\right)\left(\sum_{j=1}^M \gcd(j,M)\right)
+$$
 
 记 $f(x) = \sum_{i=1}^x \gcd(i, x)$。按最大公因数分组：$\gcd(i, x) = d$ 当且仅当 $d \mid x$ 且 $\gcd(i/d, x/d) = 1$，这样的 $i$ 恰有 $\varphi(x/d)$ 个，所以
 
@@ -28,6 +30,9 @@ $$f(x) = \sum_{d \mid x} d \cdot \varphi(x / d)$$
 复杂度：时间 $O(\max(N,M) + \sqrt N + \sqrt M)$，空间 $O(\max(N,M))$。
 
 ## 仓颉实现
+
+<details>
+<summary>查看仓颉实现</summary>
 
 ```cangjie
 import std.collection.*
@@ -81,3 +86,5 @@ main() {
     println(gcdSum(n, phi) % MOD * (gcdSum(m, phi) % MOD) % MOD)
 }
 ```
+
+</details>

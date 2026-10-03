@@ -19,6 +19,9 @@ $[L, R]$ 中 $K$ 的倍数个数为 $\lfloor R / K \rfloor - \lfloor (L - 1) / K
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -32,3 +35,5 @@ main() {
     println(r / k - (l - 1) / k)
 }
 ```
+
+</details>

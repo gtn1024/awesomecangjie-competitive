@@ -33,6 +33,9 @@ DFS 用显式栈迭代实现，避免递归爆栈；邻接表用前向星数组�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -126,3 +129,5 @@ main() {
     println()
 }
 ```
+
+</details>

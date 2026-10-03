@@ -25,6 +25,9 @@ $$1 + \left\lceil \frac{X - A}{B} \right\rceil = 1 + \left\lfloor \frac{X - A + 
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -39,3 +42,5 @@ main() {
     println(1 + (rest + B - 1) / B)
 }
 ```
+
+</details>

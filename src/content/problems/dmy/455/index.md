@@ -26,6 +26,9 @@ $t \cdot s \equiv 0 \pmod m$ 的最小正解为 $t = m / \gcd(m, s)$。若 $t$ �
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -71,3 +74,5 @@ main() {
     }
 }
 ```
+
+</details>

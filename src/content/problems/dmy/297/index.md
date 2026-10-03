@@ -24,6 +24,9 @@ $n \le 1000$，$O(n^2)$ 完全可过。直接双重循环枚举下标 $i$、$j$�
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.convert.*
 import std.env.*
@@ -49,3 +52,5 @@ main() {
     println(ans)
 }
 ```
+
+</details>

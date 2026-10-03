@@ -26,6 +26,9 @@ $10^k - 1$ 是 $k$ 个 9 组成的数，例如 $k = 3$ 时为 $999$。用 $999\c
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -60,3 +63,5 @@ main() {
     println(String.fromUtf8(trimmed))
 }
 ```
+
+</details>

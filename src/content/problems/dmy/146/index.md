@@ -38,6 +38,9 @@ $$\Pr(k) = \frac{h(n, k)}{(2n-1)!!} \pmod{998244353},$$
 
 ## 仓颉实现
 
+<details>
+<summary>查看仓颉实现</summary>
+
 ```cangjie
 import std.env.*
 import std.convert.*
@@ -104,3 +107,5 @@ main() {
     println()
 }
 ```
+
+</details>
