@@ -59,7 +59,7 @@ $$bad_d \mathrel{+}= [value \ne a_{(x+d)\bmod n}] + [a_{(x-d)\bmod n} \ne value]
 
 ## 复杂度
 
-预处理 $O(n\log n + nK)$；单次修改 $O(K\log n)$，单次询问 $O(K)$，其中 $K$ 为 $n$ 的质因子幂总数（$n \le 2\times 10^5$ 时 $K \le 17$）。总时间 $O\bigl((n + q\log n)K\bigr)$，空间 $O(26n)$（26 棵 Fenwick 树，$n = 2\times 10^5$ 时约 21 MB）。
+预处理 $O(n\log n + nK)$；单次修改 $O(\log n + K)$，单次询问 $O(K)$，其中 $K$ 为 $n$ 的质因子幂总数（$n \le 2\times 10^5$ 时 $K \le 17$）。总时间 $O\bigl(n\log n + (n+q)K + q\log n\bigr)$，空间 $O(26n)$（26 棵 Fenwick 树，$n = 2\times 10^5$ 时约 21 MB）。
 
 ## 仓颉实现
 
