@@ -28,10 +28,10 @@ $$
 \text{答案} = \frac{n(n+1)}2 + \sum_{t=1}^{n-1} C_t .
 $$
 
-**固定切点 $t$，求 $C_t$。** 令 $last_c$ 为字母 $c$ 在 $S[1,t]$ 中最后一次出现的位置（没出现记为 $0$）。固定右端点 $r > t$，记
+**固定切点 $t$，求 $C_t$。** 令 $\mathit{last}_c$ 为字母 $c$ 在 $S[1,t]$ 中最后一次出现的位置（没出现记为 $0$）。固定右端点 $r > t$，记
 
 $$
-B = \max_{c \in S[t+1,r]} last_c .
+B = \max_{c \in S[t+1,r]} \mathit{last}_c .
 $$
 
 右侧出现的每个字母，它在左侧的所有出现位置都必须被排除；而排除它的最后一次出现，就等价于排除它的全部出现。于是 $t$ 可切当且仅当 $l > B$，合法左端点恰有 $t - B$ 个。
@@ -40,19 +40,19 @@ $$
 
 **实现细节。** 从 $r$ 的角度逐段求和需要按首次出现位置给字母排序，实际上换成下面的等价写法，可以让每个切点只用一次线性扫描。
 
-- 用 $nxt_c$ 表示切点右侧字母 $c$ 第一次出现的位置（没有则为 $n+1$）。切点从 $k-1$ 右移到 $k$ 时，只有字母 $S[k]$ 的 $nxt$ 会变，借助「同字母下一次出现」的后继数组即可 $O(1)$ 更新。
-- 把左侧出现过的字母按 $last$ 降序存进 $order$。切点右移一位后，新进入左侧的字母 $S[k]$ 其 $last$ 恰为 $k$，严格大于其他所有字母；其余字母的 $last$ 与相对次序都不变。因此只需把 $S[k]$ 挪到 $order$ 队首，一次移位就完成维护。
-- 设 $order$ 中的字母为 $order[0], \ldots, order[s-1]$，令 $L_i = \min_{j \le i} nxt_{order[j]}$，并约定 $last_{order[s]} = 0$。对右端点 $r$，令 $i^*(r)$ 为第一个满足 $nxt_{order[i]} \le r$ 的下标（不存在时记作 $s$），则 $B(r) = last_{order[i^*(r)]}$，该右端点贡献 $k - B(r)$。
-- 关键一步：因为 $last_{order[0]} = k$（切点字母就在左侧末尾），有
+- 用 $\mathit{nxt}_c$ 表示切点右侧字母 $c$ 第一次出现的位置（没有则为 $n+1$）。切点从 $k-1$ 右移到 $k$ 时，只有字母 $S[k]$ 的 $\mathit{nxt}$ 会变，借助「同字母下一次出现」的后继数组即可 $O(1)$ 更新。
+- 把左侧出现过的字母按 $\mathit{last}$ 降序存进 $\mathit{order}$。切点右移一位后，新进入左侧的字母 $S[k]$ 其 $\mathit{last}$ 恰为 $k$，严格大于其他所有字母；其余字母的 $\mathit{last}$ 与相对次序都不变。因此只需把 $S[k]$ 挪到 $\mathit{order}$ 队首，一次移位就完成维护。
+- 设 $\mathit{order}$ 中的字母为 $\mathit{order}[0], \ldots, \mathit{order}[s-1]$，令 $L_i = \min_{j \le i} \mathit{nxt}_{\mathit{order}[j]}$，并约定 $\mathit{last}_{\mathit{order}[s]} = 0$。对右端点 $r$，令 $i^*(r)$ 为第一个满足 $\mathit{nxt}_{\mathit{order}[i]} \le r$ 的下标（不存在时记作 $s$），则 $B(r) = \mathit{last}_{\mathit{order}[i^*(r)]}$，该右端点贡献 $k - B(r)$。
+- 关键一步：因为 $\mathit{last}_{\mathit{order}[0]} = k$（切点字母就在左侧末尾），有
 
 $$
-k - B(r) = \sum_{i < i^*(r)} \bigl( last_{order[i]} - last_{order[i+1]} \bigr).
+k - B(r) = \sum_{i < i^*(r)} \bigl( \mathit{last}_{\mathit{order}[i]} - \mathit{last}_{\mathit{order}[i+1]} \bigr).
 $$
 
-  交换求和次序，条件 $i < i^*(r)$ 等价于「$order[0..i]$ 这些字母都没有出现在 $S[k+1,r]$ 中」，也就是 $r < L_i$。右端点 $r$ 的取值范围是 $[k+1,n]$，其中满足 $r < L_i$ 的恰有 $L_i - k - 1$ 个，故
+  交换求和次序，条件 $i < i^*(r)$ 等价于「$\mathit{order}[0..i]$ 这些字母都没有出现在 $S[k+1,r]$ 中」，也就是 $r < L_i$。右端点 $r$ 的取值范围是 $[k+1,n]$，其中满足 $r < L_i$ 的恰有 $L_i - k - 1$ 个，故
 
 $$
-C_k = \sum_i \bigl( last_{order[i]} - last_{order[i+1]} \bigr) \, (L_i - k - 1).
+C_k = \sum_i \bigl( \mathit{last}_{\mathit{order}[i]} - \mathit{last}_{\mathit{order}[i+1]} \bigr) \, (L_i - k - 1).
 $$
 
 - $L_i$ 随 $i$ 单调不增，一旦 $L_i = k+1$，本项与后面所有项都是 $0$，可以立即跳出。
